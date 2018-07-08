@@ -1,0 +1,121 @@
+\documentclass[a4paper,11pt,usenames,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{dcolumn}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.1}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+%\newcommand{\grnb}[1]{\textcolor{green}{\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+%\newcommand{\grnb}[1]{\textcolor{ForestGreen}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\LMAL}{L$\;$M\AA L}
+\newcommand{\Dag}{$^\dagger$}
+\newcommand{\gDag}{\phantom{$^\dagger$}}
+%\newcommand{\bomb}{\grnb{$\circledcirc$}}
+%\newcommand{\bomb}{\grnb{$\Circles$}}
+%\newcommand{\bomb}{\grnb{$\varocircle$}}
+\newcommand{\bomb}{\grnb{$\bigodot$}}
+\newcommand{\bklong}{$^\boxdot_\boxdot$}
+\newcommand{\bkwide}{$\boxdot\boxdot$}
+\newcommand{\bkcomp}{$\boxbox$}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (AJS-37 Counter Measures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\begin{center}
+\begin{tabular}{l|l|c|d{6.1}|c|c}
+%\thickhline
+%\multicolumn{5}{c}{} \\
+%\multicolumn{5}{c}{\Large{\textbf{\texttt{ELINT Data Base}}}} \\
+%\thickhline
+%\multicolumn{6}{c}{\Large{\textbf{\texttt{Ground Radars}}}} \\
+\thickhline
+Name                   & Emitter  & Band & f\;\mathrm{[Hz]}   & $T_\mathrm{emit}$ & $T_\mathrm{silent}$\\ \thickhline
+\mr{2}{SA-6 Kub}       & Search   & A    & 967        & 1.0 & 2.0 \\
+                       & Track    & A    & 1763       & 0.1 & 0.1 \\ \hline
+\mr{2}{SA-3 S-125}     & Emitter 1& A    & 447        & 1.0 & 2.0 \\
+                       & Emitter 2& A    & 697        & 1.0 & 2.0 \\ \hline
+\mr{1}{SA-8 Osa}       & Track    & B    & 2800       & 0.5 & 1.5 \\ \hline
+\mr{3}{SA-11 Buk}      & Search   & B    & 1763       & 1.0 & 2.0 \\
+                       & Search   & A    & 697        & 1.0 & 2.0 \\
+                       & Track    & B    & 2998       & 0.1 & 0.1 \\ \hline
+\mr{2}{SA-19 Tunguska} & Search   & B    & 4836       & 1.0 & 2.0 \\
+                       & Track    & B    & 6520       & 0.1 & 0.1 \\ \hline
+\mr{3}{SA-10 S-300PS}  & SR 5N66M & A    & 1110       & 1.0 & 2.0 \\
+                       & SR 65H6E & A    & 447        & 1.0 & 2.0 \\
+                       & Track    & A    & 856        & 0.1 & 0.1 \\ \hline
+\mr{2}{SA-15 Tor}      & Emitter 1& B    & 5553       & 0.1 & 0.1 \\
+                       & Emitter 2& B    & 3844       & 1.0 & 2.0 \\ \hline
+\mr{1}{ZSU-24 Shilka}  & Track    & A    & 100        & 0.1 & 0.1 \\ \hline
+\mr{4}{Hawk}           & SR AN/MPQ-55& A & 967        & 1.0 & 2.0 \\
+                       & SR AN/MPQ-50& A & 447        & 1.0 & 2.0 \\
+                       & Search      & A & 768        & 1.0 & 2.0 \\
+                       & Track       & A & 1427       & 0.1 & 0.1 \\ \hline
+\mr{3}{Roland}         & EWR         & B & 1763       & 1.0 & 2.0 \\
+                       & Search      & B & 4836       & 1.0 & 2.0 \\
+                       & TR ADS      & B & 6520       & 0.1 & 0.1 \\ \hline
+Vulcan                 & Track       & A & 100        & 0.1 & 0.1 \\ \hline
+Gepard                 & Track       & A & 100        & 0.1 & 0.1 \\ \hline
+\mr{2}{Patriot}        & Search      & A & 447        & 1.0 & 2.0 \\
+                       & Track       & A & 856        & 0.1 & 0.1 \\ \hline
+Early Warning Radar    & Emitter 1   & A & 400        & 1.5 & 8.5 \\ \hline
+\thickhline
+\end{tabular}
+\end{center}
+%
+\end{document}

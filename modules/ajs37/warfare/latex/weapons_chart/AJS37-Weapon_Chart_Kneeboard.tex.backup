@@ -1,0 +1,122 @@
+\documentclass[a4paper,11pt,usenames,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.2}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\LMAL}{L$\;$M\AA L}
+\newcommand{\Dag}{$^\dagger$}
+\newcommand{\gDag}{\phantom{$^\dagger$}}
+\newcommand{\bomb}{\grnb{$\bigodot$}}
+\newcommand{\bklong}{$^\boxdot_\boxdot$}
+\newcommand{\bkwide}{$\boxdot\boxdot$}
+\newcommand{\bkcomp}{$\boxbox$}
+
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (AJS-37 Weapons Chart)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\texttt{
+\begin{center}
+\begin{tabular}{l|l|c|c|C{2.3cm}|l}
+%\thickhline
+%\multicolumn{6}{c}{} \\
+%\multicolumn{6}{c}{\huge{\textbf{Weapon Chart}}} \\
+%\multicolumn{6}{c}{} \\
+\thickhline
+\mr{2}{\textbf{Weapon}}         &\mr{2}{\tb{Delivery}}& \tb{Weapon}& \textbf{Master}& \tb{Release}&\mr{2}{\tb{Misc}}\\
+                                &                     & \textbf{Selector}          & \textbf{Mode}        & \textbf{Mode Sel.}&                \\ \thickhline
+\multirow{2}{*}{\textbf{ARAK}}  & Normal              & \mr{2}{ATTACK}    & ANF\Dag              & SERIE             &                \\ \cline{2-2}\cline{4-5}
+		                & Long                &                            & ANF\gDag             & IMPULS            &                \\ \thickhline
+\multirow{2}{*}{\textbf{AKAN}}  & AA                  & AKAN JAKT                  & ANF\gDag             & \multirow{2}{*}{SERIE}&          \\ \cline{2-4}\cline{6-6}
+		                & AG                  & ATTACK                     & ANF\Dag              &                   & \grnb{Target Wingspan}\\ \thickhline
+\multirow{7}{*}{\textbf{M/71}}  & Level               & \multirow{3}{*}{BOMB PLAN} & ANF\gDag             &                   & \bomb{}    \\ \cline{2-2}\cline{4-4}\cline{6-6}
+		                & Direct              &                            & \multirow{2}{*}{NAV\gDag}&                   & \bomb{} Low Drag Bombs \\ \cline{2-2}\cline{6-6}
+		                & CCIP                &                            &                      &                   & \bomb{} High Drag Bombs\\ \Cline{1pt}{2-6}
+		                & Precision           & \multirow{2}{*}{BOMB DYK}  & ANF\gDag             &                   & \multirow{2}{*}{\bomb}\\ \cline{2-2}\cline{4-4}
+		                & Quick               &                            & NAV\gDag             &                   &                       \\ \Cline{1pt}{2-6}
+		                & Radar               & \multirow{2}{*}{BOMB RR}   & ANF\gDag             &                   & \multirow{2}{*}{\bomb}\\ \cline{2-2}\cline{4-4}
+		                & NAV/TOSS            &                            & NAV\gDag             &                   &                \\ \thickhline
+\mr{2}{\tb{Lysbomb}}            & \mr{2}{AG}          &\multirow{2}{*}{ATTACK}    & \multirow{2}{*}{ANF\Dag\gDag}&          & \grnb{VÄ}=$\leftarrow$ \grnb{RAKT}=$\downarrow$ \grnb{HÖ}=$\rightarrow$\\ 
+                                &                     &                           &                               &          & \blub{23X X}=1,\textbf{2},3\,km \\\thickhline             
+\mr{2}{\tb{RB 04}}              & Single              & \multirow{2}{*}{ATTACK}    & \multirow{2}{*}{ANF\Dag}& IMPULS   & \rotb{ENKEL}   \\ \cline{2-2}\cline{5-6}
+		                & Series              &                            &                               & SERIE    & \rotb{GRUPP}   \\ \thickhline
+\mr{3}{\tb{RB 05}}              & Ground              & RB 05 MARK                 & \multirow{3}{*}{ANF\gDag}&                   &                \\ \cline{2-3}
+		                & Naval               & RB 05 SJÖ\phantom{X} &                      &                   &                \\ \cline{2-3}\cline{6-6}
+		                & Aerial              & RB 05 LUFT           &                      &                   & \grnb{Target Wingspan}\\ \thickhline
+\mr{3}{\tb{RB 15}}              & Quick               & \mr{3}{ATTACK}       & NAV\gDag             & \multirow{3}{*}{\parbox{2.3cm}{IMPULS=one SERIE=both}}& \\ \cline{2-2}\cline{4-4}\cline{6-6}
+		                & Standard            &                      & \multirow{2}{*}{ANF\gDag}&                   & \rotb{STD} (single target)        \\ \cline{2-2}\cline{6-6}
+		                & 80000X              &                      &                      &                   & \rotb{VALB}+\blub{80000X X}=0-4\\ \thickhline
+\tb{RB 75}                      & AG                  & RB 75                & ANF\gDag             &                   &                \\ \thickhline
+\mr{2}{\tb{BK 90}}              & Single              & \mr{2}{ATTACK}       & \multirow{2}{*}{ANF\Dag} & IMPULS            & \rotb{STD}=60\,m \rotb{VALB}+\blub{91XXX}\\ \cline{2-2}\cline{5-5}
+		                & Series              &                            &                      & SERIE             & \blub{92X X}=1=\bklong{},2=\bkwide{},3=\bkcomp{} \\ \thickhline
+\textbf{RB 24/74}               & AA (IR)             & IR-RB                      & ANF\gDag             &                   & \grnb{Target Wingspan}\\
+\thickhline
+\multicolumn{6}{l}{Colorcode: \rotb{Targeting Mode Selector}, \grnb{Sight Mode Selector}, \blub{TAKT/IN Code}} \\
+\multicolumn{6}{l}{\,\,\,$^\dagger$\,\,\,\;= ANF or Nav and Trigger unsave} \\
+\multicolumn{6}{l}{\bomb{} = Sight Mode Selector to desired interval} \\
+\thickhline
+\end{tabular}
+\end{center}
+}
+%
+\end{document}

@@ -1,0 +1,427 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+%\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm} % default kneeboard
+\geometry{top=0.5cm,left=1cm,right=4.7cm,bottom=1cm} % viggen geometry
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Mahogany}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% ---------------------------------------------------------------------------------------------------
+% some info
+\pdfinfo{%
+  /Title    (AJS-37 Viggen Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen, Kneeboard, Procedures)
+}
+%
+% ---------------------------------------------------------------------------------------------------
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% ---------------------------------------------------------------------------------------------------
+% Before Engine Start \textsc
+\begin{itemize}
+ \item[] \myHead{Before Engine Start}
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER ON}.
+ \item Ejection seat\dotfill\button{DISARM}
+ \item[\gi] Trigger safety\dotfill\button{SAFE}
+ \item[\gi] Landing gear lever\dotfill\button{OUT}
+ \item[\gi] AFK (autothrottle) lever\dotfill\button{OFF} 
+ \item[\gi] Data cartridge\dotfill\button{INSERT}
+ \item[\yi] Parking brake\dotfill\button{SET}
+ \item[\ri] STR\AA{}LKAST (landing light)\dotfill\button{FR\AA{}N}
+ \item[\ri] NÖDBEL (emergency light)\dotfill\button{FR\AA N}
+ \item[\ri] TÄNDSYSTEM (ignition system) switch\dotfill\button{AUT}
+ \item[\ri] Master mode selector\dotfill\button{BER}
+ \item[\ri] HUVUDSTRÖM (main power) switch\dotfill\button{TILL}
+ \item[\ri] LT-KRAN (low pressure fuel valve) switch\dotfill\button{TILL}
+ \item[\yi] Master caution\dotfill\button{RESET}
+ \item[\ri] High pressure fuel valve \dotfill\button{OPEN}
+ \item[\ri] Generator switch\dotfill\button{TILL}
+ \item[\ri] Cockpit illumination\dotfill\button{AS DESIRED}
+ \item[\ri] RENFLYGN (autopilot yaw correction)\dotfill\button{0}
+ \item[\ri] FR 24 radio\dotfill\button{NORMAL\;+\;LARM}
+ \item[\ri] MIK BAND (flight recorder)\dotfill\button{AS DESIRED}
+ \item[\vi] Warning panel lights\dotfill\button{CHECK}
+ \begin{itemize}
+  \item[\ri] KONTR LAMPTABL\AA{} (warning panel test) button\dotfill\button{PUSH}
+  \begin{itemize}
+   \item[\vi] Indicator lights\dotfill\ok{ON}
+  \end{itemize}
+  \item[\ri] KONTR LAMPTABL\AA{} (warning panel test) button\dotfill\button{RELEASE}
+  \begin{itemize}
+   \item[\vi] Lights marked white\dotfill\ok{REMAIN ON}
+  \end{itemize}
+ \end{itemize}
+ \item[\ri] Radar illumination\dotfill\button{MIDDLE POSITION}
+ %\item ADI FLI 37\dotfill\button{CHECK ALIGNMENT}
+  \end{itemize}
+ % ---------------------------------------------------------------------------------------------------
+\newpage % Before Engine Start (continued) \textsc
+\begin{itemize}
+ \item[] \myHead{Before Engine Start}
+ \item[\ri] Radar panel\dotfill\button{NORMAL SETTINGS}
+ \begin{itemize}
+  \item[\gi] Radar mode switch\dotfill\button{A0}
+  \item[\gi] Antenna elevation\dotfill\button{SNAP POSITION}
+  \item[\ri] Passive mode selector\dotfill\button{OFF}
+  \item[\ri] Puls length selector\dotfill\button{NORMAL}
+  \item[\ri] Amplification mode switch\dotfill\button{LOG}
+  \item[\ri] Altimeter signal modulation selector\dotfill\button{LAND or SJÖ}
+ \end{itemize}
+ \item[\yi] Thrust reverser\dotfill\button{OFF}
+ \item[\yi] FR 22 radio\dotfill\button{SET}
+ \item[\yi] HUD reflector glass\dotfill\button{LOWER POSITION}
+ \item[\yi] SLAV SI (HUD slave switch)\dotfill\button{FR\AA N}
+ \item[\yi] HÖJD CI SI (altitude source)\dotfill\button{LD}
+ \item[\yi] Backup altimeter\dotfill\button{SET}
+ \item[\yi] Engine pressure ratio\dotfill\ok{\textasciitilde\;1.0}
+ \item[\bi] APP-27 RWR and KB pod\dotfill\button{AS REQUIRED}
+ \item[\bi] Exterior lighting\dotfill\button{AS REQUIRED}
+ \item[\bi] IFF system\dotfill\button{TILL}
+ \item[\bi] KURSKORR (course correction)\dotfill\button{SET MAGNETIC DECLINATION}
+ \item[\bi] Windshield/canopy defrost\dotfill\button{OFF}
+ \item[\bi] TILS selector\dotfill\button{MODE A}
+ \item[\bi] Radar altimeter\dotfill\button{TILL}
+ \item[\bi] Circuit brakers\dotfill\button{ALL IN}
+ \item[\bi] Oxygen pressure\dotfill\button{CHECK}
+ \item[\bi] Oxygen flow valve\dotfill\button{TILL}
+ \item[\bi] Weapon selector\dotfill\button{AS REQUIRED}
+ \item[\bi] Weapon sight mode selector\dotfill\button{AS REQUIRED}
+ \item Canopy\dotfill\button{CLOSE}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Engine Start
+\begin{itemize}
+ \item[] \myHead{Engine Start}
+ \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+ \item[\ri] Start switch\dotfill\button{TILL - HOLD FOR 2 SEC}
+ \begin{itemize}
+  \item[\vi] \oranb{STARTSYST} (starter system)\dotfill\ok{ON WITHIN 5 SEC}
+  \item[\vi] \oranb{TÄNDSYST} (ignition system)\dotfill\ok{ON}
+ \end{itemize}
+ \item[\yi] Maximum EGT\dotfill\ok{\textless\;400\degC}
+ \begin{itemize}
+  \item[\yi] If \warn{EGT > 400\degC} (engine might be faulty):
+  \begin{itemize}
+   \item[\gi] Throttle\dotfill\button{CUT-OFF}
+   \item[\ri] Start switch\dotfill\button{FR\AA N}
+  \end{itemize}
+ \end{itemize}
+ \item[\gi] Engine RPM\dotfill\button{55\,-\,64\%}
+ \begin{itemize}
+  \item[\yi] Engine pressure ratio\dotfill\ok{\textasciitilde\;1.0}
+  \item[\bi] Nozzle indicator\dotfill\ok{FULLY OPEN}
+  \item[\yi] Max EGT\dotfill\ok{\textless\;350\degC}
+  \item[\vi] Warning lights\dotfill\button{CHECK}
+  \begin{itemize}
+   \item[\vi] \rotb{OLJETRYCK} (oil pressure)\dotfill\ok{OUT AFTER MAX 60 SEC}
+   \item[\vi] \oranb{BRÄ UPPF} (fuel system)\dotfill\ok{OUT}
+   \item[\vi] \oranb{TANK PUMP}\dotfill\ok{OUT}
+   \item[\vi] \oranb{STARTSYST} (starter system)\dotfill\ok{OUT @ RPM > 58\%}
+   \item[\vi] \oranb{TÄNDSYST} (ignition system)\dotfill\ok{OUT @ RPM > 58\%}
+   \item[\vi] \oranb{X-TANK BRÄ} (drop trank)\dotfill\ok{OUT @ RPM > 70\%}
+  \end{itemize}
+ \end{itemize}
+ \item[\yi] Autopilot SPAK light\dotfill\ok{AUTOMATICALLY ON}
+ \item[\bi] AVISNING MOTOR (engine de-ice) if icing conditions\dotfill\button{ON}
+\end{itemize}
+%
+\begin{itemize}
+ \item[]
+ \item[] \myhead{Ventilation - Dry Start}
+ \item[\ri] TÄNDSYSTEM (igniter)\dotfill\button{MAN}
+ \item[\gi] Throttle\dotfill\button{CUT-OFF}
+ \item[\ri] LT-KRAN (low pressure fuel valve)\dotfill\button{FR\AA N}
+ \begin{itemize}
+  \item[\ri] LT-KRAN warning light\dotfill\ok{OUT}
+ \end{itemize}
+ \item[\ri] Start switch\dotfill\button{TILL}
+ \item[\ri] Start switch\dotfill\button{OFF AFTER 40 SEC}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% After Engine Start
+\begin{itemize}
+ \item[] \myHead{After Engine Start (AC Power)}
+ \item[\yi] Backup instrument illumination\dotfill\button{CHECK}
+ \item[\ri] Roll trim\dotfill\button{CHECK \& CENTER}
+ \item[\ri] Yaw trim (SID TRIM)\dotfill\button{CENTER}
+ \item[\yi] FLI37 ADI\dotfill\button{CHECK \& FAST ERECT}
+ \item[\yi] Backup ADI\dotfill\button{FAST ERECT}
+ \item[\yi] Backup course indicator\dotfill\button{FAST ERECT}
+ \item[\yi] Fuel indicator\dotfill\button{CHECK MAX 5\% DEVIATION}
+ \begin{itemize}
+  \item[\yi] Without external tank\dotfill\ok{106\%}
+  \item[\yi] With external tank\dotfill\ok{131\%}
+ \end{itemize}
+ \item[\bi] CK37 data\dotfill\button{LOAD}
+ \begin{itemize}
+  \item[\vi] \oranb{CK} warning light\dotfill\ok{OUT}
+  \item[\bi] RENSA (clear) button\dotfill\button{PUSH}
+  \item[\bi] Data selector\dotfill\button{REF LOLA}
+  \item[\bi] IN/UT selector\dotfill\button{IN}
+  \item[\bi] Numpad\dotfill\button{9099}
+  \item[\bi] Confirm\dotfill\button{LS/SKU}
+ \end{itemize}
+\end{itemize}
+%
+\begin{itemize}
+ \item[] \myhead{Indicator System Check}
+ \item[\bi] KONTROLL button\dotfill\button{PUSH}
+ \begin{itemize}
+  \item High alpha warning\dotfill\ok{TWO SHORT BURSTS}
+  \item[\vi] \rotb{BRAND} (fire) warning lights\dotfill\ok{ON}
+  \item[\vi] \oranb{LANDSTÄLL} (landing gear) warning light\dotfill\ok{OUT}
+  \item[\yi] Altitude warning light\dotfill\ok{ON}
+  \item[\yi] Indicated fuel\dotfill\ok{29\;$\pm$\;3\%}
+  \item[\bi] Data indicator panel shows\dotfill\ok{1 and CK PROGRAM NUMBER}
+  \item[\ri] FK-light\dotfill\ok{ON}
+ \end{itemize}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Before Taxi
+\begin{itemize}
+ \item[] \myHead{Before Taxi}
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
+ \item[\gi] Control surfaces\dotfill\button{CHECK}
+ \item[\gi] Pitch trim\dotfill\button{SET}
+ \begin{itemize}
+  \item[\ri] Without drop tank\dotfill\button{0\textdegree}
+  \item[\ri] With drop tank\dotfill\button{3\textdegree\;$\uparrow$}
+ \end{itemize}
+ \item[\gi] Brake pressure\dotfill\ok{200\,-\,270\;kp/cm$^2$}
+ \item[\yi] Altimeter\dotfill\button{RESET}
+ \begin{itemize}
+  \item[\yi] Check max deviation from QFE\dotfill\ok{2\;hPa}
+ \end{itemize}
+ \item[\yi] Autopilot SPAK light\dotfill\ok{ON}
+ \item[\ri] Landing lights\dotfill\button{TAXI}
+ \item Ejection seat\dotfill\button{ARM}
+ \begin{itemize}
+  \item[\vi] \oranb{HUV O STOL}\dotfill\ok{OUT}
+ \end{itemize}
+ \item[\vi] Master caution and warning lights\dotfill\button{CHECK}
+ \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+%\newpage
+% Taxi
+\begin{itemize}
+ \item[]
+ \item[] \myHead{Taxi}
+ \item On increasing throttle $\Rightarrow$ check ejector nozzle closed.
+ \item Full rudder deflection $\Rightarrow$ nose wheel rotation of \textasciitilde 30\degC.
+ \item[] Differential braking can be used to reduce turn radius.
+ \item Fuel consumption on ground is \textasciitilde 0.3\% per minute.
+ \item Thrust reversal may be used to reduce speed.
+ %\item In confined areas, thrust reversal may be used to reverse aircraft.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Before-Takeoff
+\begin{itemize}
+ \item[] \myHead{Before Take-off}
+ \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
+ \item Align aircraft with runway centerline.
+ \item[\yi] Main and backup course\dotfill\button{CHECK}
+ \item[\yi] Backup ADI and altimeter\dotfill\button{CHECK}
+ \item[\ri] Master mode selector\dotfill\button{NAV}
+ \item[\gi] Manual course setting\dotfill\button{IF REQUIRED}
+ \item[\ri] Autopilot SPAK light\dotfill\ok{ON}
+ \item[\vi] Master caution and warning lights\dotfill\button{CHECK}
+ \item[\yi] HUD symbology\dotfill\button{CHECK}
+ \item[\ri] Landing light\dotfill\button{ON}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+%\newpage
+% Take-off
+\begin{itemize}
+ \item [] \myHead{Take-off}
+ \item Brakes\dotfill\button{APPLY}
+ \item[\gi] Throttle\dotfill\button{MIL POWER}
+ \begin{itemize}
+  \item[\bi] EGT\dotfill\ok{<\;590\degC{} + AMBIENT TEMP}
+ \end{itemize}
+ \item[\gi] Throttle\dotfill\button{AFTERBURNER IF REQUIRED}
+ \begin{itemize}
+  \item[\yi] AB zone indicator\dotfill\ok{CORRECT ZONE}
+  \item[\bi] Exhaust nozzle indicator\dotfill\ok{ZONE ACHIEVED}
+  \item Pressure ratio\dotfill\button{CHECK}
+  \begin{itemize}
+   \item[\yi] Zone 2\dotfill\ok{\textgreater\;1.8\,-\,1.9}
+   \item[\yi] Zone 3\dotfill\ok{MAX POWER}
+  \end{itemize}
+ \end{itemize}
+ \item Airspeed indicator and time line\dotfill\button{CHECK}
+ \begin{itemize}
+  \item Time line reaches markers (260$\pm$10\;km/h)\dotfill\button{ROTATE}
+ \end{itemize}
+ \item Flight path vector\dotfill\button{SET}
+ \begin{itemize}
+  \item Without afterburner\dotfill\button{HORIZON LINE}
+  \item With afterburner\dotfill\button{HEIGHT OF OUTER PILLARS}
+ \end{itemize}
+\end{itemize}
+\begin{itemize}
+ \item [] \myHead{After Take-off}
+ \item[\gi] Landing gear\dotfill\button{RETRACT}
+ \item HUD reflector glass\dotfill\button{UPPER POS}
+ %\item Climb with selected attitude until flight path vector appears.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Landing - Visual
+\begin{itemize}
+ \item [] \myHead{Landing}
+ \item Airspeed at approach\dotfill\button{\textasciitilde\;550\;km/h}
+ \item Altitude after descent\dotfill\button{\textasciitilde\;500\;m}
+ \item[\gi] Autothrottle AFK\dotfill\button{AS DESIRED}
+ \begin{itemize}
+  \item[\yi] AFK mode 3 ($\alpha=15.5^\circ$)\dotfill\button{AS DESIRED}
+ \end{itemize}
+ \item[\yi] Altimeter\dotfill\button{SET QFE}
+ \item[\yi] SLAV SI\dotfill\button{TILL}
+ \item[\yi] Thrust reverser\dotfill\button{AS REQUIRED}
+ \item[\yi] Backup ADI\dotfill\button{CHECK \& FAST ERECT IF NEEDED}
+ \item[\ri] Brake pressure\dotfill\ok{200\,-\,270 kp/cm$^2$}
+% VISUAL
+ \item \textbf{Visual} approach:
+ \begin{itemize}
+  \item[\ri] Master mode\dotfill\button{LANDN P/O}
+  \item Hold airspeed\dotfill\ok{AOA < 12\textdegree{}}
+  \item Place descent line on runway threshold.
+  \item Place sight dot at runway center line.
+  \item Steer flight path indicator onto descent dot/line.
+ \end{itemize}
+% TILS
+ \item \textbf{TILS} approach:
+ \begin{itemize}
+  \item[\ri] Master mode\dotfill\button{LANDN NAV}
+  \item Runway heading\dotfill\button{SET}
+  \begin{itemize}
+   \item[\bi] Data panel\dotfill\button{BANA}
+   \item[\bi] IN/UT selector\dotfill\button{UT}
+   \item[\bi] Cycle heading\dotfill\button{L/M\AA L}
+  \end{itemize}   
+  \item[\vi] \grnb{TILS} light:\;localizer locked\dotfill\ok{FLASHING}
+  \item[\vi] \grnb{TILS} light:\;localizer \& glidesope used\dotfill\ok{ON STEADY}
+  \item[\ri] For ``Flip-Flop'' approach\dotfill\button{LANDN NAV\;$\rightarrow$\;P/O\;$\rightarrow$\;NAV}
+  \item[\yi] Follow steering commands on HUD and ADI.
+ \end{itemize}
+%
+ \item[\gi] Landing gear (\textasciitilde 15 km from runway)\dotfill\button{EXTEND}
+ \begin{itemize}
+  \item[\vi] Landing gear indicator lights\dotfill\ok{3 GREEN}
+ \end{itemize}
+ \item[\ri] Landing light\dotfill\button{ON}
+ \item HUD reflector glass\dotfill\button{LOWER POS}
+ \item HUD changes to descent rate mode 15/30\;m above runway.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% TILS Approach
+\begin{itemize}
+ \item [] \myHead{TILS Direct Approach}
+ \item Landing approach begins in master mode \rotb{NAV} once a 
+ \item[] landing waypoing L1/L2 becomes the destination.
+ \item \textbf{Phase 1}:\;Starts by setting master mode to \rotb{LANDNING NAV}.
+ \begin{itemize}
+  \item[$\Rightarrow$] LB1/LB2 becomes the new destination.
+ \end{itemize}
+ \item \textbf{Phase 2}:\;Starts when LB1/LB2 is passed or ``Flip-Flop''.
+ \begin{itemize}
+  \item[$\Rightarrow$] LF1/LF2 becomes the new destination.
+ \end{itemize} 
+ \item \textbf{Phase 3}:\;Starts when \grnb{TILS} descent signal is received.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Approach Patterns
+\begin{itemize}
+ \item [] \myHead{Approach Patterns}
+ \item \gelbb{Flip-Flop}:\;LANDNING NAV $\rightarrow$ LANDING P/O $\rightarrow$ LANDNING NAV
+ \item \textbf{New approach}:\;LANDNING NAV $\rightarrow$ NAV $\rightarrow$ LANDNING NAV
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+}
+\end{document}

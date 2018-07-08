@@ -1,0 +1,109 @@
+\documentclass[a4paper,11pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{dcolumn}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.1}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\ut}[1]{\textcolor{blue}{#1}}
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (AJS-37 ELINT Ground Radars)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\begin{center}
+\begin{tabular}{L{4.7cm}|L{2.3cm}|c|d{6.1}|c|c}
+\thickhline
+Name                                                          & Emitter             & Band & f\;\mathrm{[Hz]} & $T_\mathrm{emit}$ & $T_\mathrm{silent}$ \\ \thickhline
+\tb{E}\textsc{arly} \tb{W}\textsc{arning} \tb{R}\textsc{adar} & Emitter 1           & A    &  400  & 1.5 & 8.5                                          \\ \hline
+\mr{2}{\tb{SA-3} \textsc{Goa}}                                & Search              & A    &  447  & 1.0 & 2.0                                          \\
+                                                              & Track               & A    &  697  & 1.0 & 2.0                                          \\
+                                                              & \ut{Track}          &\ut{A}&\ut{1303}&\ut{0.1} & \ut{0.1}                              \\ \hline                                                              
+\mr{2}{\tb{SA-6} \textsc{Gainful}}                            & Search              & A    &  967  & 1.0 & 2.0                                          \\
+                                                              & Track               & A    & 1763  & 0.1 & 0.1                                          \\ \hline
+\mr{1}{\tb{SA-8} \textsc{Gecko}}                              & Track               & B    & 2800  & 0.5 & 1.5                                          \\ \hline
+\mr{3}{\tb{SA-10} \textsc{Grumble}}                           & SR \tiny{5N66M}     & A    & 1110  & 1.0 & 2.0                                          \\
+                                                              & SR \tiny{65H6E}     & A    &  447  & 1.0 & 2.0                                          \\
+                                                              & Track               & A    &  856  & 0.1 & 0.1                                          \\ \hline
+\mr{3}{\tb{SA-11} \textsc{Gadfly}}                            & Search              & B    & 1763  & 1.0 & 2.0                                          \\
+                                                              & Search              & A    &  697  & 1.0 & 2.0                                          \\
+                                                              & Track               & B    & 2998  & 0.1 & 0.1                                          \\ \hline
+\mr{2}{\tb{SA-15} \textsc{Gauntlet}}                          & Emitter 1           & B    & 5553  & 0.1 & 0.1                                          \\
+                                                              & Emitter 2           & B    & 3844  & 1.0 & 2.0                                          \\ \hline
+\mr{2}{\tb{SA-19} \textsc{Grison}}                            & Search              & B    & 4836  & 1.0 & 2.0                                          \\
+                                                              & Track               & B    & 6520  & 0.1 & 0.1                                          \\ \hline
+\mr{1}{\tb{ZSU-23-4} \textsc{Shilka}}                         & Track               & A    &  100  & 0.1 & 0.1                                          \\ \hline
+\tb{M163} \textsc{Vulcan}                                     & Track               & A    &  100  & 0.1 & 0.1                                          \\ \hline
+\mr{4}{\tb{MIM-23} \textsc{Hawk}}                             & SR \tiny{AN/MPQ-55} & A    &  967  & 1.0 & 2.0                                          \\
+                                                              & SR \tiny{AN/MPQ-50} & A    &  447  & 1.0 & 2.0                                          \\
+                                                              & Search              & A    &  768  & 1.0 & 2.0                                          \\
+                                                              & Track               & A    & 1427  & 0.1 & 0.1                                          \\ \hline
+\mr{2}{\tb{MIM-104} \textsc{Patriot}}                         & Search              & A    &  447  & 1.0 & 2.0                                          \\
+                                                              & Track               & A    &  856  & 0.1 & 0.1                                          \\ \hline
+\textsc{Gepard}                                               & Track               & A    &  100  & 0.1 & 0.1                                          \\ \hline                            
+\mr{3}{\textsc{Roland}}                                       & EWR                 & B    & 1763  & 1.0 & 2.0                                          \\
+                                                              & Search              & B    & 4836  & 1.0 & 2.0                                          \\
+                                                              & TR ADS              & B    & 6520  & 0.1 & 0.1                                          \\ \hline
+\thickhline
+\multicolumn{6}{l}{\ut{Only detectable by U22/A pod}}
+\end{tabular}
+\end{center}
+%
+\end{document}

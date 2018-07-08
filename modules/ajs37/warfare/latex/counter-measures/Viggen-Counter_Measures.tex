@@ -1,0 +1,136 @@
+\documentclass[a4paper,11pt,usenames,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+
+% set page geometry
+\geometry{top=3cm,left=0.8cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.2}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rn}[1]{\textcolor{Red}{#1}}
+\newcommand{\bn}[1]{\textcolor{Blue}{#1}}
+\newcommand{\gn}[1]{\textcolor{Green}{#1}}
+\newcommand{\rb}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\gb}[1]{\textcolor{ForestGreen}{\textbf{#1}}}
+\newcommand{\bb}[1]{\textcolor{Blue} {\textbf{#1}}}
+\newcommand{\off}{FR\AA{}N}
+\newcommand{\Dag}{$^\dagger$}
+\newcommand{\gDag}{\phantom{$^\dagger$}}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (AJS-37 Countermeasures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen)
+}
+
+\begin{document}
+%
+%\texttt{
+%\begin{center}
+\begin{tabular}{l|c|c|c|c|c|c|c}
+%\thickhline
+%\multicolumn{8}{c}{} \\
+%\multicolumn{8}{c}{\large{\textbf{\texttt{KB Countermeasures Pod}}}} \\
+%\multicolumn{8}{c}{} \\
+\thickhline
+\tb{Program}                     & \tb{KBM} &\tb{Streak}& \tb{CFS}    & \tb{KBR}    & $f_\mathrm{chaff}$   & $f_\mathrm{flare}$   & $T_\mathrm{chaff}$/sec\\ \thickhline
+\textbf{P1} rapid                &  1       &    0      &\mr{4}{R/R+F}&\gb{I}/\gb{K}&  $1.1\overline{6}$   & ---                  & $90$ \\
+\textbf{P2} medium               &  2       &    0      &             &\gb{I}/\gb{K}&  $0.50$              & ---                  & $210$ \\
+\textbf{P3} slow                 &  3       &    0      &             &\gb{I}/\gb{K}&  $0.22$              & ---                  & $480$ \\
+\textbf{P4} slow streak          &  3       & \gb{4}    &             &\off         &  $0.22$              & ---                  & $480$ / $\bb{960}$\\ \hline
+\gb{Auto}   APP-27               &\mr{2}{A} &\mr{2}{0}  &\mr{2}{R/R+F}& I/K         &  $0.50$              & ---                  & $210$ \\
+\gb{Auto}   U22/A                &          &           &             & K           &  $1.1\overline{6}$   & ---                  & $90$ \\ \hline
+\mr{3}{\textbf{Quick} (\gb{QRB})}&          &           & R           &             &  $0.50$              & ---                  & $210$   \\
+                                 &          &           & R+F         &             &  $0.50$              & $0.5$                & $210$ / \rb{$72$}\\
+                                 &          &           & F           &             &  ---                 & $0.5$                & \rb{$72$}  \\
+\thickhline
+\multicolumn{8}{l}{\tb{KBM}=\tb{KB} \tb{M}ode selector (A=automatic, 0=off, mode=1,2,3).}\\
+\multicolumn{8}{l}{\tb{CFS}=\tb{C}haff/\tb{F}lare \tb{S}elector (R=Chaff, F=Flare, R+F=Chaff+Flare).}\\
+\multicolumn{8}{l}{\tb{KBR}=\tb{KB} \tb{R}elease switch on canopy frame (I=INT, K=KONT).}\\
+\multicolumn{8}{l}{\tb{QRB}=\tb{Q}uick \tb{R}elease \tb{B}utton on throttle. \rn{Quick release overrules other programs}.}\\
+\multicolumn{8}{l}{$f$ = chaff/flare release frequency in Hz. $T$ = total/max release time.} \\
+\multicolumn{8}{l}{Each KB pod contains 36 flares and 105 chaff bundles by default.}\\
+\multicolumn{8}{l}{Colorcode: \gb{Release Activation Switch}, \bb{Carrying two KB pods}, \rn{$T_\mathrm{flare}$/sec}.} \\
+%\multicolumn{8}{l}{} \\
+%\multicolumn{6}{l}{\,\,\,$^\dagger$\,\,\,\;= ANF or Nav and Trigger unsave} \\
+\thickhline
+\end{tabular}\\
+%\end{center}
+%}
+%
+
+\vspace{3.05em}
+%
+%\begin{center}
+\begin{tabular}{l|c|c|l}
+%\thickhline
+%\multicolumn{4}{c}{} \\
+%\multicolumn{4}{c}{\large{\textbf{\texttt{U22/A ECM Pod}}}} \\
+%\multicolumn{4}{c}{} \\
+\thickhline
+\bb{U22/A}               & \textbf{Mode}&\textbf{Band}&\textbf{Function}\\ \thickhline
+Off                      & 0            & ---              & Pod is disabled. \\ \hline
+Pre-heat                 & A            & F                & 3 min pre-heating before pod can emit.\\ \hline
+\mr{3}{Silent recording} &\mr{3}{A}     & G                & Receive and record with low sensitivity.\\
+                         &              & H/J              & Receive and record with high sensitivity.\\
+                         &              & K                & Auto sensitivity cycling between G and J.\\ \hline
+\mr{2}{Active emission}  &\mr{2}{B/D/E} & F/G/H            & \mr{2}{Auto emission when illuminated from front.}\\
+                         &              & J/K              & \\
+%Active emission          & B/D/E        & F/G/H/J/K        & Auto emission when illuminated from front. \\
+\thickhline
+%\multicolumn{4}{c}{} \\
+%\multicolumn{4}{c}{\huge{\textbf{U22 ECM Pod}}} \\
+%\multicolumn{4}{c}{} \\
+%\thickhline
+\gb{U22}                 &         &           &       \\ \hline
+Off                      & 0       & ---       & Pod is disabled.\\ \hline
+Pre-heat                 & A/B     & ---       & 3 min pre-heating before pod can emit.\\ \hline
+Active emission          & A       & ---       & Auto emission when illuminated from front. \\ \hline
+Stand-by                 & B       & ---       & Stand-by mode. No active emission. \\
+\thickhline
+\end{tabular}
+%\end{center}
+%
+\end{document}

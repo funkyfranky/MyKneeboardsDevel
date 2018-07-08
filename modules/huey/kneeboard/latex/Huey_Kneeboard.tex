@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+
+
+\pdfinfo{%
+  /Title    (UH-1H Huey Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (UH1-H, Huey, Kneeboard, Procedures)
+}
+
+\begin{document}
+\texttt{
+% Preflight Check
+\begin{itemize}
+% internal lights
+ \item Dome Lights\dotfill\button{AS REQUIRED}
+% check switch state 
+ \item Pitot Heat\dotfill\button{OFF}
+ \item AC power
+ \begin{itemize}
+ \item Phase\dotfill\button{AC PHASE}
+ \item Inverter\dotfill\button{OFF}
+ \end{itemize}
+ \item DC Power
+ \begin{itemize}
+ \item Voltmeter\dotfill\button{ESS BUS} 
+ \item Main Generator\dotfill\button{ON+COVER}
+ \item Starter Generator\dotfill\button{START}
+ \item Non-ESS Bus\dotfill\button{NORMAL ON}
+ \end{itemize}
+% external lights 
+ \item Anti-Collision Lights\dotfill\button{ON}
+ \item Position lights\dotfill\button{AS REQUIRED} 
+ \item Gov switch\dotfill\button{AUTO}
+ \item De-ice switch\dotfill\button{OFF} 
+% prepare 
+ \item Battery\dotfill\button{ON}
+ \item Low RPM Switch\dotfill\button{OFF}
+ \item Main fuel switch\dotfill\button{ON}
+ \item Hydraulic control\dotfill\button{ON}
+ \item Force trim\dotfill\button{ON}
+ \item Chip det\dotfill\button{BOTH}
+% tests
+ \item Fire warning indicator light\dotfill\button{TEST}
+ \item Caution/warning lights\dotfill\button{TEST}
+ \item Altimeter\dotfill\button{SET QNH}
+ \item Radios\dotfill\button{SET}
+ \item Fuel quantity\dotfill\button{CHECK}
+\end{itemize}
+\newpage
+% Engine Startup
+\begin{itemize}
+ \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+ \item Throttle\dotfill\button{IDLE-START}
+ \begin{itemize}
+  \item Idle release switch\dotfill\button{DOWN}
+  \item Throttle\dotfill\button{FULL OPEN}
+  \item Throttle\dotfill\button{START POSITION}
+  \item Idle release switch\dotfill\button{UP}
+ \end{itemize}
+ \item Starter button\dotfill\button{PRESS and HOLD}
+ \begin{itemize}
+  \item Gas producer N1 15 \%\dotfill\button{THROTTLE IDLE STOP}
+  \item Gas producer N1 40 \%\dotfill\button{STARTER BUTTON RELEASE}
+ \end{itemize}
+ \item Gas producer N1 70 \%\dotfill\button{THROTTLE FULL OPEN}
+ \item Inverter\dotfill\button{ON MAIN}
+ \item Starter Generator\dotfill\button{STBY GEN}
+ \item Engine operation\dotfill\button{CHECK}
+ \begin{itemize}
+  \item EGT\dotfill\ok{400-60\;\degC}
+  \item Engine temperature\dotfill\ok{<\;100\;\degC}
+  \item Engine pressure\dotfill\ok{80-100 PSI}
+  \item Transmission temperature\dotfill\ok{<\;110\;\degC}
+  \item Transmission pressure\dotfill\ok{40-60 PSI}
+  \item AC\dotfill\ok{112-117\;V}
+  \item DC\dotfill\ok{27-28.5\;V}
+ \end{itemize}
+ \item Pitot heat\dotfill\button{AS REQUIRED}
+ \item Radar altimeter\dotfill\button{ON+SET}
+\end{itemize}
+}
+%
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.2}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{\texttt{#1}}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{\texttt{#1}}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{\texttt{#1}}}}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\MAL}{M\AA{}L}
+\newcommand{\LMAL}{L$\;$M\AA{}L}
+\renewcommand{\LMAL}{L/M\AA{}L}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+
+\renewcommand{\sfdefault}{ptm}
+
+
+% some info
+\title{CK37 Input Codes}
+\author{funkyfranky}
+\date{14.02.2017}
+\pdfinfo{%
+  /Title    (CK37 Input Codes)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (CK37, AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\texttt{
+\begin{center}
+\begin{tabular}{L{1.1cm}|l|c|c|l}
+\thickhline
+\mr{2}{\tb{Mode}}             		    & \mr{2}{\tb{Input}}          & \mr{2}{\tb{Confirm}}&\mr{2}{\tb{Function}}   & \mr{2}{\tb{Parameters}}\\
+                                            &                             &                    &                         & \\
+					    \thickhline
+\mr{6}{\parbox{1.0cm}{\tb{REF LOLA}}}       & \tb{9099}                   & LS/SKU             & Load Data               & \tp{Data transfer from cartridge.}\\
+					    & \tb{90}\rotb{XX}            & \LMAL              & L1                      & \tp{Reference number \rotb{XX} of landing base L1.}\\
+					    & \tb{99}\rotb{XX}            & \LMAL              & L2                      & \tp{Reference number \rotb{XX} of divert base L2.}\\
+					    & \tb{DDMMSS}                 & \LMAL              & Lo/La L1                & \tp{\tb{Lo}ngitude/\tb{La}titude of landing base L1.}\\
+					    & \tb{DDMMSS}                 & B1-B9              & Lo/La WP                & \tp{Lo/La (or \refn{} \texttt{9XXX}) of WP B1-B9.}\\
+					    & \tb{DDMMSS}                 & BX\,+\,\rotb{Y}    & Lo/La Bx	         & \tp{Lo/La (or \refn{}) of mark point Bx\rotb{Y} (\rotb{Y}=1-9)}\\
+					    \medhline
+\mr{3}{\parbox{1.0cm}{\tb{BANA GRÄNS}}}     & \rotb{XXX}\grnb{Y}\blub{ZZ} & LS/SKU             & Takeoff RWY             & \tp{Heading \rotb{XXX}.\grnb{Y} [deg] and TILS channel \blub{ZZ}.}\\
+					    & \rotb{XXX}\grnb{Y}\blub{ZZ} & \LMAL              & Landing RWY             & \tp{Heading \rotb{XXX}.\grnb{Y} [deg] and TILS channel \blub{ZZ}.}\\
+					    & \rotb{XXX}\grnb{YYY}        & B1-B9              & Boundary Lines          & \tp{First \rotb{XXX} [deg] and second \grnb{YYY} [deg] line.}\\
+					    \medhline
+\mr{3}{\parbox{1.0cm}{\tb{VIND RUTA \MAL}}} & \rotb{XXX}\grnb{YY}         & LS/SKU             & Forecast Wind           & \tp{Direction \rotb{XXX} [deg] and speed \grnb{YY} [km/h].}\\
+					    & \tb{DDMMSS}                 & B1-B9              & Lo/La R1-R9             & \tp{Long/Lat of recon RUTA points R1-R9.}\\
+					    & \tb{DDMMSS}                 & \LMAL\,+\,\rotb{X} & Lo/La \rot{M}1-\rot{M}9 & \tp{Long/Lat of recon target \rot{M}1-\rot{M}9 (\rotb{X}=1-9).}\\
+					    \medhline
+\mr{4}{\textbf{TID}}			    & \tb{HHMMSS}                 & LS/SKU             & Current Time            & \tp{\texttt{HH}=hours, \texttt{MM}=minutes, \texttt{SS}=seconds.}  \\
+					    & \tb{HHMMSS}                 & B1-B9              & ToT WP                  & \tp{Time on Target for nav WP.}\\
+					    & \tb{HHMMSS}                 & BX                 & ToT RB15                & \tp{Time for RB 15F in target area (at Bx8).}\\
+					    & \rotb{X}\grnb {YY}          & B1-B9              & Ingress $v$             & \tp{Ingress speed \rotb{X}.\grnb{YY} Mach at WP.}\\
+					    \medhline
+\mr{10}{\textbf{TAKT}}			    & \tb{9}                      &                    & Target WP               & \tp{Turn nav WP into target WP (B3$\to$M3).}\\
+					    & \tb{0}                      & B1-B9              & Restore Nav WP          & \tp{Turn target WP into nav WP (M3$\to$B3).}\\
+					    & \rotb{XXX}\grnb{YY}         &                    & Pop-up Point            & \tp{Heading \rotb{XXX} [deg] and distance \grnb{YY} [km].}\\ \cline{2-5}
+					    %& 20ABCD                      & \mr{8}{LS/SKU}     & Loadout                 & \tp{Loadout on pylons (not functional).}\\
+					    & \tb{21}\rotb{X}             & \mr{7}{LS/SKU}     & Fixed Sight             & \tp{\rotb{X}=1 on, \rotb{X}=0 \textbf{off}.}\\
+					    & \tb{22}\rotb{X}             &                    & Lead Correct.           & \tp{\rotb{X}=1 \textbf{off}, \rotb{X}=0 on.}\\
+					    & \tb{23}\rotb{X}             &                    & Lysbomb                 & \tp{Offset distance \rotb{X}=1,\textbf{2},3 [km].}\\
+					    & \tb{25}\rotb{X}             &                    & Radar Lock              & \tp{\rotb{X}=1 \textbf{before unsafe}, \rotb{X}=2 after, \rotb{X}=3 off.}\\
+					    & \tb{30}\rotb{XX}            &                    & Recon Standoff          & \tp{Recon warning distance \rotb{XX} [km] (\textbf{00}-99).}\\
+					    & \tb{51}\rotb{XX}            &                    & Fuel Reserve            & \tp{\rotb{XX} [\%] at landing base L1 (\textbf{10}-99).} \\
+					    & \tb{58}\rotb{X}             &                    & TERNAV                  & \tp{\rotb{X}=1 \textbf{on}, \rotb{X}=0 off.}\\
+					    \medhline
+\mr{5}{\parbox{1.0cm}{\textbf{TAKT RB15}}}  & \tb{800000}                 & \mr{5}{LS/SKU}     & Single Target           & \tp{Large search area.}\\
+					    & \tb{800001}                 &                    & Confined Area           & \tp{Multiple targets N, medium search area.}\\
+					    & \tb{800002}                 &                    & \textbf{Unconfined}     & \tp{\tb{Multiple targets A, medium search area.}}\\
+					    & \tb{800003}                 &                    & Convoy Attack           & \tp{Group target, large search area.}\\
+					    & \tb{800004}                 &                    & Bearing Attack          & \tp{Bearing search mode.}\\
+					    \medhline
+\mr{2}{\parbox{1.0cm}{\textbf{TAKT BK90}}}  & \tb{91}\rotb{XXX}           & \mr{2}{LS/SKU}     & Appr.\,Altitude         & \tp{\rotb{XXX} [m] (030-500), default \textbf{60 m}.}\\
+					    & \tb{92}\rotb{X}             &                    & Area Pattern            & \tp{\rotb{X}=1 long, \rotb{X}=2 wide, \rotb{X}=3 \textbf{compact}.}\\
+					    \thickhline
+\end{tabular}
+\end{center}
+}
+%\newpage
+%This is some text in the default font. \#\\
+%\fontfamily{cmr}\selectfont This is some text in cmr \textsc{Computer Modern Roman}. \#\normalfont\\
+%\fontfamily{lmr}\selectfont This is some text in lmr \textsc{Latin Modern Roman}. \#\normalfont\\
+%\fontfamily{pkb}\selectfont This is some text in pkb \textsc{Bookman}. \#\normalfont\\
+%\fontfamily{bch}\selectfont This is some text in bch \textsc{Charter}. \#\normalfont\\
+%\fontfamily{pnc}\selectfont This is some text in pnc \textsc{New Century Schoolbook}. \#\normalfont\\
+%\fontfamily{ppl}\selectfont This is some text in ppl \textsc{Palatino}. \#\normalfont\\
+%\fontfamily{ptm}\selectfont This is some text in ptm \textsc{Times}. \#\normalfont\\[1em]
+%\fontfamily{cmss}\selectfont This is some text in cmss \textsc{Computer Modern Sans Serif}. \#\normalfont\\
+%\fontfamily{lmss}\selectfont This is some text in lmss \textsc{Latin Modern Sans Serif}. \#\normalfont\\
+%\fontfamily{pag}\selectfont This is some text in pag Avant Garde. \#\normalfont\\
+%\fontfamily{phv}\selectfont This is some text in phv \textsc{Helvetica}. \#\normalfont\\
+%
+\end{document}

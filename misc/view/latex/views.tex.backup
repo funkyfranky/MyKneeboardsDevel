@@ -1,0 +1,122 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.5}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (HAWK Mach Loop)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords {HAWK, Mach}
+}
+
+\begin{document}
+\texttt{
+\begin{center}
+\begin{tabular}{|c|c|l|}
+\hline
+\tb{F-key} & \tb{Modifier} & \tb{View} \\
+\hline
+\mr{4}{F1}  &         & Cockpit\\
+            & LAlt    & HUD only\\
+            & LWin    & Head shift movement on/off\\
+            & LCtrl   & Natrural head movement\\
+\hline
+\mr{4}{F2}  &         & Aircraft view \\
+            & RAlt    & Toggle camera position \\
+            & LAlt    & Toggle local camera control \\
+            & LCtrl   & Own aircraft \\
+\hline            
+\mr{2}{F3}  &         & Fly-by\\
+            & LCtrl   & Fly-by jump\\
+\hline            
+\mr{3}{F4}  &         & Look back\\
+            & LShift  & Arcade chase \\
+            & LCtrl   & Chase \\
+\hline
+\mr{2}{F5}  &         & Nearest aircraft \\
+            & LCtrl   & Ground hostile \\
+\hline
+\mr{1}{F6}  &         & Release weapon\\
+            & LCtrl   & 
+\hline
+\mr{1}{F7}  &         & \\
+\hline
+\mr{1}{F8}  &         & \\
+\hline
+\mr{1}{F9}  &         & \\
+\hline
+\mr{1}{F10} &         & \\
+\hline
+\mr{1}{F11} &         & \\
+\hline
+\mr{1}{F12} &         & \\
+\hline
+\end{tabular}
+\end{center}
+}
+\end{document}

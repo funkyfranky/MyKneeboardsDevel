@@ -1,0 +1,416 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (F-86F Sabre Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (F-86F, Sabre, Kneeboard, Procedures)
+}
+%
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% Preflight Check
+\begin{itemize}
+\item[] \myHead{Preflight Checks}
+\item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
+\item[\bi] Armament switches\dotfill\button{OFF}
+\item[\gi] Throttle\dotfill\button{OFF}
+\item[\gi] Speed brake switch\dotfill\button{NEUTRAL}
+\item[\yi] Landing gear handle\dotfill\button{DOWN}
+\item[\vi] Engine master, emergency ignition, battery switches\dotfill\button{OFF}
+\item Tell \radio{Chief} to turn \radio{GROUND POWER ON}.
+\item[\ri] Landing gear position indicators\dotfill\button{CHECK}
+\item[\ri] Oxygen regulator\dotfill\button{CHECK}
+% add ox check here?
+\item[\ai] Anti-G suit regulator valve\dotfill\button{CHECK}
+\item[\ai] Left circuit breakers\dotfill\button{IN}
+\item[\ai] Ammunition compartment heat emergency shutoff handle\dotfill\button{NORMAL}
+\item[\ai] Cockpit air temperature control switch\dotfill\button{AUTO}
+\item[\ai] Air outlet selector lever\dotfill\button{FLOOR}
+\item[\ai] Cockpit air temperature control rheostat\dotfill\button{AS DESIRED}
+\item[\ai] Cockpit pressure schedule switch\dotfill\button{2.75\;PSI}
+\item[\ai] Cockpit pressure control switch\dotfill\button{PRESS}
+\item[\ai] Windshield anti-icing lever\dotfill\button{OFF}
+\item[\ai] Rudder trim switch\dotfill\button{OFF}
+\item[\ai] Lateral alternate trim switch\dotfill\button{NORMAL}
+\item[\ai] Longitudinal alternate trim switch\dotfill\button{NORMAL GRIP CONT}
+\item[\ai] Flight control switch\dotfill\button{NORMAL}
+\item[\ri] Drop tank selector switch\dotfill\button{ALL TANKS OFF}
+\item[\gi] Speed brake emergency lever\dotfill\button{NORMAL}
+\item[\gi] Wing flap lever\dotfill\button{UP}
+\item[\yi] Emergency fuel switch\dotfill\button{OFF}
+\item[\yi] Emergency jettision handle\dotfill\button{IN}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Prefight Check continued
+\begin{itemize}
+\item[] \myHead{Preflight Checks}
+\item[\ri] Landing and taxi light switch\dotfill\button{OFF}
+\item[\ri] Pitot heat switch\dotfill\button{ON $\Rightarrow$ OFF}
+\item[\ri] Engine anti-ice and screen switch\dotfill\button{EXTEND}
+\item[\yi] Clock, accelerometer\dotfill\button{SET}
+\item[\yi] Altimeter\dotfill\button{SET QFE}
+\item[\yi] Fuel quantity\dotfill\button{CHECK}
+\item[\vi] Totalizer\dotfill\button{SET}
+\item[\yi] Directional indicator\dotfill\button{CHECK AGAINST STAND-BY COMPASS}
+\item[\yi] Attitude indicator\dotfill\button{CHECK}
+\item[\yi] Vertical velocity indicator\dotfill\button{SET}
+\item Function selector switch\dotfill\button{MAG or DG}
+\item[\vi] Generator switch\dotfill\button{ON}
+\item[\vi] Canopy alternate emergency jettision handle\dotfill\button{IN}
+\item[\vi] Flight control emergency override handle\dotfill\button{IN}
+\item[\mi] Lighing controls\dotfill\button{AS REQUIRED}
+\item[\mi] Communication equipment switches\dotfill\button{AS REQUIRED}
+\item[\bi] Landing gear emergency release handle\dotfill\button{IN}
+\item[\bi] Canopy declutch handle\dotfill\button{IN}
+\item[\oi] Sight mechenical caging lever\dotfill\button{CAGE}
+\item[\ai] Instrument power switch\dotfill\button{ALTERNATE $\Rightarrow$ NORMAL}
+\item[\yi] Warning lights and inicators test warning system\dotfill\button{CHECK}
+\item Rudder gust lock handle\dotfill\button{IN}
+\item[\gi] Flight controls\dotfill\button{CHECK}
+\item[\ai] Normal trim switch\dotfill\button{CHECK}
+\item[\yi] Radio compass\dotfill\button{CHECK}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Engine Startup
+\begin{itemize}
+\item[] \myHead{Engine Startup}
+\item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+\item[\vi] Engine master switch\dotfill\button{ON}
+\item[\vi] Battery starter switch\dotfill\button{STARTER $\Rightarrow$ BATTERY}
+\item[\gi] At 3\;\% RPM\dotfill\button{THROTTLE OUTBOARD}
+\item[\gi] At 6\;\% RPM\dotfill\button{THROTTLE IDLE}
+\item Engine\dotfill\button{CHECK}
+\begin{itemize}
+  \item[\yi] EGT\dotfill\ok{600\,-\,690\degC}
+  \item[\yi] Oil pressure\dotfill\ok{CHECK}
+  \item[\yi] Engine RPM\dotfill\ok{500\,-\,800}
+  \item[\yi] Generator warning light\dotfill\ok{OUT}
+\end{itemize}
+\item[\ri] Drop tank selector switch\dotfill\button{SET}
+\begin{itemize}
+  \item[\ri] External tanks inboard\dotfill\button{INBD ON \& JETT}
+  \item[\ri] External tanks outboard\dotfill\button{OUTBD ON \& JETT}
+  \item[\ri] No external tanks\dotfill\button{ALL TANKS OFF}
+\end{itemize}
+\item Tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
+\end{itemize}
+% Warnings
+\begin{itemize}
+\item[] \myhead{Warnings}
+\item[\vi] \textbf{Abort start} by depressing \button{STOP-STARTER} button if
+\begin{itemize}
+  \item[\yi] Voltage drops \warn{below 15\;V} during start
+  \item[\yi] EGT fails to increase within 5\;sec
+  \item[\yi] Engine RPM does not reach \warn{23\%} within 1 minute
+\end{itemize}
+\item Starter is limited to 3 starts during 30 minutes.
+\item \textbf{Overtemperature} conditions:
+\begin{itemize}
+\item[\yi] \warn{950\degC} for 2\;sec during engine start.
+\item[\yi] \warn{690\,-\,750\degC} for 40\;sec or more.
+\item[\yi] \warn{750\,-\,800\degC} for 10\;sec or more.
+\item[\yi] \warn{800\,\degC} for 2\;sec or more.
+\end{itemize}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Ground tests after start-up
+\begin{itemize}
+\item[] \myHead{Ground Tests}
+\item[\gi] Throttle\dotfill\button{IDLE}
+\item[\yi] Hydraulic pressure gage selector\dotfill\button{NORMAL}
+\item[\ai] Flight control switch\dotfill\button{RESET}
+\item[\yi] Alternate-on warning light\dotfill\ok{OUT}
+\item Flight control normal hydraulic system\dotfill\button{CHECK}
+\begin{itemize}
+ \item[\ai] Flight control switch\dotfill\button{NORMAL}
+ \item[\gi] Move control stick\dotfill\ok{PROPER CONTROL SURFACE MOTION}
+ \item[\vi] Pressure after 5 sec\dotfill\ok{2850\,-\,3200\;PSI}
+\end{itemize}
+\item Flight control alternate hydraulic system\dotfill\button{CHECK}
+\begin{itemize}
+ \item[\ai] Flight control switch\dotfill\button{ALTERNATE ON}
+ \item[\yi] Alternate-on warning light\dotfill\ok{ON}
+ \item[\gi] Move control stick\dotfill\ok{PROPER CONTROL SURFACE MOTION}
+ \item[\yi] Pressure after 5 sec\dotfill\ok{2550\,-\,3200\;PSI}
+ \item[\ai] Flight control switch\dotfill\button{RESET}
+ \item[\yi] Alternate-on warning light\dotfill\ok{OUT}
+\end{itemize}
+\item Flight control manual emergency override system\dotfill\button{CHECK}
+\begin{itemize}
+  \item[\yi] Hydraulic pressure gage selector switch\dotfill\button{ALTERNATE}
+  \item[\ai] Flight control switch\dotfill\button{HOLD AT RESET}
+  \item[\mi] Emergency override handle\dotfill\button{PULL TO FULL EXTENSION}
+  \item[\gi] Move control stick\dotfill\ok{PROPER CONTROL SURFACE MOTION}
+  \item[\ai] Flight control switch\dotfill\button{NORMAL}
+  \item[\yi] Alternate-on warning light\dotfill\ok{ON}
+  \item[\yi] Pressure\dotfill\ok{3050\,-\,4000\;PSI}  
+  \item[\mi] Emergency override handle\dotfill\button{IN}
+  \item[\yi] Pressure\dotfill\ok{2550\,-\,3200\;PSI}
+\end{itemize}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Ground tests after start-up continued
+\begin{itemize}
+\item[] \myHead{Ground Tests}
+\item Automatic return to normal flight control system\dotfill\button{CHECK}
+\begin{itemize}
+  \item[\gi] Control stick\dotfill\button{MOVE RAPIDLY}
+  \item[\yi] Alternate-on warning light\dotfill\ok{OUT}
+  \item[\yi] Hydraulic pressure gage selector switch\dotfill\button{NORMAL}
+  \item[\yi] Pressure\dotfill\ok{2550\,-\,3200\;PSI}
+\end{itemize}
+\item Utility hydraulic system\dotfill\button{CHECK}
+\begin{itemize}
+  \item[\yi] Hydraulic pressure gage selector switch\dotfill\button{UTILITY}
+  \item[\gi] Speed brakes switch\dotfill\button{OUT $\Rightarrow$ IN $\Rightarrow$ NEUTRAL}
+  \item[\yi] Pressure\dotfill\ok{$~$3000\;PSI}
+  \item[\yi] Hydraulic pressure gage selector switch\dotfill\button{NORMAL}
+\end{itemize}
+\item[\yi] Loadmeter and voltmeter\dotfill\button{CHECK}
+\item Peform emergency fuel system check if required.
+\item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
+\end{itemize}
+% Emergency Fuel System Check
+\begin{itemize}
+ \item[] \myHead{Emergency Fuel System Check}
+ \item Toe brakes\dotfill\button{HOLD}
+ \item[\gi] Thottle\dotfill\button{80\% RPM}
+ \item[\yi] Emergency fuel switch\dotfill\button{ON}
+ \item[\gi] Throttle - advance cautiously to \dotfill\button{FULL OPEN}
+ \item[\yi] Emergency fuel switch\dotfill\button{OFF}
+ \item[\yi] Emergency fuel switch\dotfill\button{ON}
+ \item[\yi] Observe recovery time and stabilized RPM.
+ \item[\yi] Emergency fuel switch\dotfill\button{OFF}
+\end{itemize}
+% Taxi
+\begin{itemize}
+ \item[] \myHead{Taxi}
+ \item Radio \radio{ATC} and \radio{REQUEST} permission to \radio{TAXI TO RUNWAY}.
+ \item[\gi] Nose wheel steering button\dotfill\button{DEPRESS}
+ \item[\gi] Throttle\dotfill\button{ADVANCE $\Rightarrow$ IDLE}
+ \item[\yi] Turn and slip indicator\dotfill\button{CHECK PROPER DEFLECTION}
+ \item[\yi] Radio compass\dotfill\button{CHECK RELATIVE BEARING}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Before Take-off
+\begin{itemize}
+ \item[] \myHead{Before Take-Off}
+ \item Hold at runway line.
+ \item[\bi] Armament switches off\dotfill\button{CHECK}
+ \item[\gi] Trim for take-off\dotfill\button{CHECK}
+ \item[\gi] Wing flap lever\dotfill\button{DOWN}
+ \item[\ri] Canopy switch\dotfill\button{CLOSE}
+ \item[\ri] Pitot heat\dotfill\button{ON}
+ \item[\ri] Oxygen regulator diluter valve\dotfill\button{NORMAL OXYGEN}
+ \item[\ri] Engine anti-ice and screen switch\dotfill\button{RET $\Rightarrow$ EXTEND}
+ \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
+\end{itemize}
+% Take-off
+\begin{itemize}
+ \item[] \myHead{Take-Off}
+ \item Roll to runway centerline.
+ \item Toe brakes\dotfill\button{HOLD}
+ \item[\gi] Nose wheel steering button\dotfill\button{DEPRESS}
+ \item[\gi] Throttle\dotfill\button{FULL}
+ \item[\gi] At 50 KIAS\dotfill\button{NWS RELEASE}
+ \item[\gi] At 110 KIAS\dotfill\button{ROTATE}
+ \item At 125 KIAS\dotfill\button{TAKE-OFF}
+ \end{itemize}
+% After Take-Off
+\begin{itemize}
+ \item[] \myHead{After Take-Off}
+ \item[\yi] Landing grear handle\dotfill\button{UP}
+ \item Initial climb: hold airspeed below 120\,-\,125 KIAS.
+ \item Level off and accelerate to best climb speed.
+ \item[\gi] Horizontal tail trim\dotfill\button{AS REQUIRED}
+ \item[\ri] Engine anti-ice switch\dotfill\button{RETRACT}
+ \item[\gi] At 155 KIAS wing flap lever\dotfill\button{UP}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Landing
+\begin{itemize}
+ \item[] \myHead{Landing}
+ \item[\bi] Armament switches\dotfill\button{OFF}
+ \item[\oi] Gun sight caging lever\dotfill\button{CAGE}
+ \item[\ri] Engine anti-ice switch\dotfill\button{EXTENT $\Rightarrow$ ANTI-ICE IF REQUIRED}
+% \item Windshield anti-icing lever\dotfill\button{AS REQUIRED}
+ \item[\gi] Speed brake switch\dotfill\button{OUT}
+ \item[\yi] Landing gear handle\dotfill\button{DOWN}
+ \item[\gi] Flap lever\dotfill\button{DOWN}
+ \item Final approach speed\dotfill\button{135 KIAS}
+ \item Touchdown speed\dotfill\button{110 KIAS}
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Guns
+\begin{itemize}
+ \item[] \myHead{Guns}
+ \item[\bi] Gun-missile selector\dotfill\button{SIGHT CAMERA \& RADAR}
+ \item[\bi] Gun selector switch\dotfill\button{ALL GUNS}
+ \item[\gi] Twist throttle grip for radar rangeing\dotfill\button{COUNTER CLOCKWISE}
+ \item[\oi] Sight mechanical caging lever\dotfill\button{UNCAGE}
+ \item[\bi] Sight function selector lever\dotfill\button{GUN}
+ \item[\bi] Target speed switch\dotfill\button{LO or HI}
+ \item[\bi] Gun-missile selector\dotfill\button{GUNS}
+ \item[\oi] Wing span adjustment know\dotfill\button{SET TARGET WING SPAN}
+ \item[\gi] Sight electrical caging button\dotfill\button{DEPRESS and HOLD}
+ \item[\oi] Target indicator light comes ON at rage of \textasciitilde4800\;ft (1500\;m)
+ \item[\gi] Sight electrical caging button\dotfill\button{RELEASE}.
+ \item[\gi] Pull trigger to second detend when ready to fire.
+\end{itemize}
+% Rockets
+\begin{itemize}
+ \item[] \myHead{Rockets}
+ \item[\bi] Gun-missile selector\dotfill\button{SIGHT CAMERA \& RADAR}
+ \item[\ai] Rocket intervalometer\dotfill\button{1 or 9 for droptanks}
+ \item[\gi] Twist throttle grip for radar rangeing\dotfill\button{COUNTER CLOCKWISE}
+ \item[\oi] Sight mechanical caging lever\dotfill\button{UNCAGE}
+ \item[\bi] Sight function selector lever\dotfill\button{ROCKET}
+ \item[\bi] Rocket depression angle lever
+ \begin{itemize}
+ \item[\bi] Dive angle <\,20$^\circ$ and firing range 5000\,-\,6000\;ft\dotfill\button{35-40\;mil}
+ \item[\bi] Dive angle 30-40$^\circ$\dotfill\button{25-35\;mil}
+ \end{itemize}
+ \item[\bi] Rocket release selector switch\dotfill\button{AUTO or SINGLE}
+ \item[\bi] Rocket jettison switch\dotfill\button{OFF}
+ \item[\bi] Rocket fuze delay switch\dotfill\button{INSTANT or DELAY}
+ \item[\gi] Sight electrical caging button\dotfill\button{DEPRESS and HOLD}
+ \item Keep reticle on target and elec. caging button\dotfill\button{RELASE}
+ \item Continue smooth target tracking for 3 sec then fire.
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+% Bombs using sight
+\begin{itemize}
+ \item[] \myHead{Bombs using Sight}
+ \item[\bi] Gun-missile selector\dotfill\button{SIGHT CAMERA \& RADAR}
+ \item[\oi] Sight mechanical caging lever\dotfill\button{UNCAGE}
+ \item[\bi] Demolition bomb release selector switch\dotfill\button{AUTO or MANUAL}
+ \item[\bi] Demolition bomb sequence selector switch\dotfill\button{AS REQUIRED}
+ \item[\bi] Fragmentation bomb selector switch\dotfill\button{OFF}
+ \item[\bi] Sight function selector lever\dotfill\button{BOMB}
+ \item[\bi] Bomb arming switch\dotfill\button{NOSE\,\&\,TAIL or TAIL}
+ \item[\gi] Sight electrical caging button\dotfill\button{DEPRESS and HOLD}
+ \item Push over into dive. Keep reticle center dot on target.
+ \item[\gi] Sight electrical caging button\dotfill\button{RELEASE}
+ \item \textbf{AUTOMATIC} release:
+ \begin{itemize}
+ \item Keep reticle on target during dive.
+ \item[\gi] Depress and hold release button.
+ \item Fly a curved path by increasing pitch steadily.
+ \item Automatic release when reticle circle disappears.
+ \end{itemize}
+ \item \textbf{MANUAL} release:
+ \begin{itemize}
+ \item Keep reticle on target during dive.
+ \item Calculated release point when reticle dot disappears.
+ \item[\gi] Depress bomb release button.
+ \end{itemize}
+\end{itemize}
+%\newpage
+% Missile
+\begin{itemize}
+ \item[] \myHead{Air-to-Air Missiles}
+ \item[\bi] Weapon selector\dotfill\button{MISSILE}
+ \item[\oi] Sight mechanical caging lever\dotfill\button{UNCAGE}
+ \item[\oi] Missile launch mode button\dotfill\button{RH or AS REQUIRED}
+ \item[\oi] Missile volume knop\dotfill\button{AS REQUIRED}
+ \item[\gi] Sight electrical caging button\dotfill\button{DEPRESS and HOLD}
+ \item[\gi] When in range - sight electrical caging button\dotfill\button{RELEASE}.
+ \item Listen to missile ready tone.
+ \item[\gi] Pull and hold trigger to second detend until missile away.
+\end{itemize}
+}
+\end{document}
+% ---------------------------------------------------------------------------------------------------

@@ -1,0 +1,212 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (Spitfire Mk. IX Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (Spitfire, Kneeboard, Procedures)
+}
+%
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% Preflight Check
+\begin{itemize}
+ \item[] \myHead{Preflight Checks}
+ \item Idle cutoff lever\dotfill\button{CUT-OFF}
+ \item Undercarriage lever\dotfill\button{DOWN}
+ \item Drop tank fuel cock lever\dotfill\button{OFF}
+ \item Main fuel tank cock lever\dotfill\button{OFF}
+ \item Elevator, aileron, runder controls\dotfill\button{CHECK}
+ \item Magneto ingniters\dotfill\button{OFF}
+ \item Fuel tank pressure cock\dotfill\button{OFF}
+ \item Pneumatic supply pressure\dotfill\ok{>\,200\;PSI}
+ \item Altimeter\dotfill\button{QFE}
+ \item Flaps\dotfill\button{CHECK}
+ \item Canopy\dotfill\button{CHECK}
+ \item Throttle forward\dotfill\button{CHECK}
+ \begin{itemize}
+  \item Landing gear down indicator\dotfill\ok{ON}
+  \item Fuel pressure warning light\dotfill\ok{ON}
+ \end{itemize}
+ \item Throttle\dotfill\button{FULLY BACK}
+ \item Fuel quantity\dotfill\button{CHECK}
+\end{itemize}
+\newpage
+% Engine Startup
+\begin{itemize}
+ %\item If required, tell \radio{Chief} to turn \radio{GROUND POWER ON}. 
+ \item[] \myHead{Engine Start}
+ \item Brake\dotfill\button{SET}
+ \item Main fuel tank cock lever\dotfill\button{ON}
+ \item Throttle forward\dotfill\button{0.5-1.0\;Inch}
+ \item Propeller RPM lever\dotfill\button{FULLY FORWARD}
+ \item Carburettor air intake lever\dotfill\button{FILTER IN OPERATION}
+ \item Engine primer pump\dotfill\button{UNSCREW CAP}
+ \item Engine primer pump\dotfill\button{PUMP 5 TIMES}
+ \item Fuel wobble pump\dotfill\button{UNTIL LOW PRESSURE LIGHT OFF}
+ \item Magneto igniters\dotfill\button{ON}
+ \item Booster coil and starter cover\dotfill\button{OPEN}
+ \item Engine start
+ \begin{itemize}
+  \item Starter button\dotfill\button{HOLD}
+  \item Booster coil button\dotfill\button{ON}
+  \item Mixture control lever\dotfill\button{RUN}
+ \end{itemize}
+ \item Booster coil and starter cover\dotfill\button{CLOSE}
+ \item Engine primer pump\dotfill\button{SCREW CAP}
+ \item Pitot heat\dotfill\button{AS REQUIRED}
+ \item Fuel pump switch\dotfill\button{ON}
+ \item Oxygen valve\dotfill\button{OPEN}
+ \item Engine warm-up
+ \begin{itemize}
+  \item Throttle\dotfill\button{1000\,-\,1200\;RPM}
+  \item Oil pressure\dotfill\ok{60\,-\,120\;PSI}
+  \item Oil temperature\dotfill\ok{>\,20\degC}
+  \item Coolant temperature\dotfill\ok{>\,60\degC}
+ \end{itemize}
+\end{itemize}
+\newpage
+% Taxi & Take-Off
+\begin{itemize}
+ \item[] \myHead{Taxi}
+ \item Throttle idle\dotfill\button{1000\,-\,1200\;RPM}
+ \item Oil pressure\dotfill\ok{30\,-\,60\;PSI}
+ \item Oil temperature\dotfill\ok{20\,-\,80\degC}
+ \item Coolant temperature\dotfill\ok{60\,-\,120\degC}
+ \item Breaks\dotfill\button{CHECK}
+ \begin{itemize}
+  \item Stick\dotfill\button{FULLY BACK}
+  \item Breaks\dotfill\button{SET}
+  \item Throttle\dotfill\button{1800\;RPM}
+  \item Throttle\dotfill\button{1000\;RPM}
+  \item Breaks\dotfill\button{RELEASE}
+ \end{itemize}
+ \item Stick\dotfill\button{FULLY BACK}
+ \item Throttle\dotfill\button{1500\;RPM}
+ \item S-turns to runway using rudder and breaks.
+\end{itemize}
+% Take-off
+\begin{itemize}
+ \item[] \myHead{Take-off}
+ \item Elevator trim\dotfill\button{1 UNIT DOWN}
+ \item Rudder trim\dotfill\button{1 ROTATION RIGHT}
+ \item Flaps\dotfill\button{RETRACT}
+ \item Stick\dotfill\button{FULLY BACK}
+ \item Throttle\dotfill\button{+8 BOOST}
+ \item Compensate engine torque by slight rudder input.
+ \item Rotate at 90 mph.
+ \item Press wheel brake lever to stop wheels from spinning.
+ \item Raise landing gear at 140 mph.
+ \item Climb at +12 boost and 2850 RPM.
+ \item At 1000 ft carburettor lever\dotfill\button{NORMAL INTAKE}
+\end{itemize}
+\newpage
+% Landing
+\begin{itemize}
+ \item[] \myHead{Landing}
+ \item Throttle\dotfill\button{2600 RPM}
+ \item Boost\dotfill\button{+6}
+ \item Overfly runway at 100\,-\,200 ft and 260\,-\,280 mph.
+ \item At runway center pitch up and to the left.
+ \item At 90\degC reduce boost to +2.
+ \item Roll out to downwind leg at 1000 ft.
+ \item At <\,160 mph extent landing gear.
+ \item Once left wing is at runway threshold
+ \begin{itemize}
+   \item Start decending left turn
+   \item Extend flaps
+ \end{itemize} 
+ \item Base leg: continuous decending turn to runway threshold.
+ \item Hit runway threshold at 90 mph and 2000 RPM.
+ \item Flare for 3-point landing at 60\,-\,70 mph.
+ \item On the ground use slight rudder to maintain straight.
+ \item Use wheel brakes once rudder becomes uneffective.
+ \item Raise flaps.
+\end{itemize}
+}
+\end{document}
+% ---------------------------------------------------------------------------------------------------

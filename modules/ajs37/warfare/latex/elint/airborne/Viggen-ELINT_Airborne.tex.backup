@@ -1,0 +1,109 @@
+\documentclass[a4paper,11pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{dcolumn}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.1}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+%\newcommand{\grnb}[1]{\textcolor{green}{\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+%\newcommand{\grnb}[1]{\textcolor{ForestGreen}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\LMAL}{L$\;$M\AA L}
+\newcommand{\Dag}{$^\dagger$}
+\newcommand{\gDag}{\phantom{$^\dagger$}}
+%\newcommand{\bomb}{\grnb{$\circledcirc$}}
+%\newcommand{\bomb}{\grnb{$\Circles$}}
+%\newcommand{\bomb}{\grnb{$\varocircle$}}
+\newcommand{\bomb}{\grnb{$\bigodot$}}
+\newcommand{\bklong}{$^\boxdot_\boxdot$}
+\newcommand{\bkwide}{$\boxdot\boxdot$}
+\newcommand{\bkcomp}{$\boxbox$}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+
+% some info
+%\title{}
+%\author{funkyfranky}
+%\date{14.02.2017}
+\pdfinfo{%
+  /Title    (ELINT Database Naval Radars)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\begin{center}
+\begin{tabular}{L{4.7cm}|L{2.3cm}|c|d{6.1}|c|c}
+%\thickhline
+%\multicolumn{5}{c}{} \\
+%\multicolumn{5}{c}{\Large{\textbf{\texttt{ELINT Data Base}}}} \\
+%\thickhline
+%\multicolumn{6}{c}{\Large{\textbf{\texttt{Ground Radars}}}} \\
+\thickhline
+Name                                      & Emitter  & Band & f\;\mathrm{[Hz]} & $T_\mathrm{emit}$ & $T_\mathrm{silent}$\\ \thickhline
+\mr{1}{\textsc{E-2D Hawkeye}}             & Emitter 1& A    &  300  & 0.5 & 5.2 \\ \hline
+\mr{1}{\textsc{E-3A Sentry}}              & Emitter 1& A    &  300  & 0.5 & 5.2 \\ \hline
+\mr{1}{\textsc{A-50 Mainstay}}            & Emitter 1& A    &  200  & 1.0 & 5.2 \\ \hline
+\mr{1}{\textsc{AJS-37 Viggen}}            & Emitter 1& B    & 1000  & 0.5 & 1.2 \\ \hline
+\mr{2}{\textsc{MiG-21bis Fishbed}}        & Emitter 1& B    & 1000  & 0.5 & 1.2 \\
+\mr{2}{\textsc{MiG-29A/G/S Fulcrum}}      & Emitter 2& B    & 3400  & 0.2 & 0.5 \\
+                                          & Emitter 3& B    & 5400  & 0.2 & 0.5 \\ \hline
+\mr{2}{\textsc{Su-27 Flanker}}            & Emitter 1& B    & 1000  & 0.5 & 1.2 \\
+\mr{2}{\textsc{Su-33 Flanker-D}}	  & Emitter 2& B    & 3400  & 0.2 & 0.5 \\
+                                          & Emitter 3& B    & 5400  & 0.2 & 0.5 \\ \hline                                          
+\mr{3}{\textsc{M-2000C Mirage}}           & Emitter 1& B    & 1000  & 0.5 & 1.2 \\
+                                          & Emitter 2& B    & 5400  & 0.2 & 0.5 \\
+                                          & Emitter 3& B    & 3400  & 0.2 & 0.5 \\ \hline
+\mr{3}{\textsc{F-15C Eagle}}              & Emitter 1& B    &  900  & 0.5 & 1.2 \\
+                                          & Emitter 2& B    & 1200  & 0.2 & 0.5 \\
+                                          & Emitter 3& B    & 5900  & 0.2 & 0.5 \\ \hline
+\thickhline
+\end{tabular}
+\end{center}
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amssymb,amsmath}
+%\usepackage{avant}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.2}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+\newcolumntype{T}{!{\vrule width 3pt}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\rb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grn}[1]{\textcolor{Green}{#1}}
+\newcommand{\gb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\vb}[1]{\textcolor{Plum}{\textbf{#1}}}
+\newcommand{\blu}[1]{\textcolor{blue} {#1}}
+\newcommand{\bb}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\LMAL}{L/M\AA L}
+\newcommand{\MAL}{M\AA L}
+\newcommand{\LOLA}{Lo/La}
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+
+% some info
+\title{CK37 Input Codes}
+\author{funkyfranky}
+\date{14.02.2017}
+\pdfinfo{%
+  /Title    (CK37 Output Codes)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (CK37, AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\texttt{
+\begin{center}
+\begin{tabular}{L{1.1cm}|cTc|c|c|c|c|cTl}
+\thickhline
+\mr{2}{\tb{Mode}}                        &\mr{2}{\tb{Button}}&                   \multicolumn{6}{cT}{\tb{Display}}                                        & \mr{2}{\tb{Display shows}} \\ \cline{3-8}
+                           		    &                & \tb{1}       & \tb{2}       & \tb{3}       & \tb{4}        & \tb{5}        & \tb{6}        &  \\
+\thickhline
+\mr{2}{\parbox{1.0cm}{\tb{AKT POS}}}	    & \mr{2}{}       &\mr{2}{\bb{D}}&\mr{2}{\bb{D}}&\mr{2}{\bb{M}}& \mr{2}{\bb{M}}& \mr{2}{\gb{X}}& \mr{2}{\rb{Y}}& \tp{\blu{\LOLA{}} of current position.}\\ 
+                                            &                &              &              &              &               &               &               & \tp{\grn{TERNAV status} and \rot{position error} [km].}\\
+					    \medhline
+\mr{5}{\parbox{1.0cm}{\tb{REF LOLA}}}	    &                &              &              &              &               &               &               & \tp{\blu{\LOLA} or \grn{\refn} of current destination.} \\ \cline{2-2}\cline{9-9}
+					    & \gb{LS/SKU}    &\mr{2}{\bb{D}}&\mr{2}{\bb{D}}&\mr{2}{\bb{M}}&\mr{2}{\bb{M}} &\mr{2}{\bb{S}} &\mr{2}{\bb{S}} & \tp{\blu{\LOLA} or \grn{\refn} of LS starting base.} \\ \cline{2-2}\cline{9-9}
+					    & \rb{\LMAL}     &\mr{2}{\gb{9}}&\mr{2}{\gb{X}}&\mr{2}{\gb{X}}&\mr{2}{\gb{X}} &\mr{2}{\tb{0}} &\mr{2}{\tb{0}} & \tp{\blu{\LOLA} or \grn{\refn} of L1/L2 landing base.} \\ \cline{2-2}\cline{9-9}
+					    & \tb{B1-B9}     &              &              &              &               &               &               & \tp{\blu{\LOLA} or \grn{\refn} of depressed WP.}\\ \cline{2-2}\cline{9-9}
+				        &\vb{BX}\,+\,\bb{1-9}&              &              &              &               &               &               & \tp{\blu{\LOLA} or \grn{\refn} of Bx mark point.}\\
+					    \medhline
+\mr{3}{\parbox{1.0cm}{\tb{BANA GRÄNS}}}     &                & \tb{X}       & \tb{X}       & \tb{X}       & \tb{X}        & \tb{X}        & \tb{X}        & \tp{Output depends on current destination.}\\ \cline{2-9}
+					    & \rb{\LMAL}     & \bb{D}       & \bb{D}       & \bb{D}       & \bb{D}        & \gb{X}        & \gb{X}        & \tp{\blu{RWY heading} and \grn{TILS channel}.} \\ \cline{2-9}
+					    & \tb{B1-B9}     & \bb{D}       & \bb{D}       & \bb{D}       & \gb{D}        & \gb{D}        & \gb{D}        & \tp{\blu{First} and \grn{second} boundary line heading.} \\
+					    \medhline
+\mr{3}{\parbox{1.0cm}{\tb{VIND RUTA \MAL}}} &                & \bb{D}       & \bb{D}       & \bb{D}       & \gb{X}        & \gb{X}        & \tb{0}        & \tp{Doppler wind \blu{direction} \& \grn{speed} {\small[km/h]}.}\\ \cline{2-9}
+					    & \gb{LS/SKU}    & \bb{D}       & \bb{D}       & \bb{D}       & \gb{X}        & \gb{X}        & $\Box$        & \tp{Forecast wind \blu{direction} \& \grn{speed} {\small[km/h]}.}\\ \cline{2-9}
+					    &\bb{1-9}        & \tb{D}       & \tb{D}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{\LOLA{} of SPA/\MAL{} target.}\\
+					    \medhline
+\mr{7}{\textbf{TID}}		    	    &                &\mr{2}{\bb{X}}&\mr{2}{\tb{H}}&\mr{2}{\tb{M}}&\mr{2}{\tb{M}} &\mr{2}{\tb{S}} &\mr{2}{\tb{S}} & \tp{Deviation of ETA with respect to ToT.}\\
+					    &                &              &              &              &               &               &               & \tp{\bb{\texttt{X}}=\bb{$\Box$} ahead, \bb{\texttt{X}}=\bb{9} behind schedule.} \\ \cline{3-9}
+					    &                & \tb{7}       & \tb{H}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{Relative ETA -- if no ToT was set.}\\ \cline{2-9}
+					    & \gb{LS/SKU}    & \tb{H}       & \tb{H}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{Current time.}\\ \cline{2-9}
+					  &\mr{2}{\tb{B1-B9}}& \tb{H}       & \tb{H}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{ToT for target WP.}\\ \cline{3-9}
+					    &                & \gb{X}       & \rb{Y}       & \rb{Y}       & \tb{0}        & \tb{0}        & \tb{0}        & \tp{Ingrees speed M \texttt{\gb{X}.\rb{YY}} for WP.}\\ \cline{2-9}					    
+					   % &                & \tb{0}       & \tb{0}       & \tb{0}       & \tb{0}        & \tb{0}        & \tb{0}        & \tp{No target or ingress WP depressed.}\\ \cline{2-9}
+					    & \vb{BX}        & \tb{H}       & \tb{H}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{ToT for RB 15 at Bx8.}\\ \cline{2-9}
+					    &\bb{1-9}        & \tb{H}       & \tb{H}       & \tb{M}       & \tb{M}        & \tb{S}        & \tb{S}        & \tp{Timestamp of SPA/\MAL{} target.}\\
+					    \medhline
+\mr{2}{\tb{TAKT}}			    &                & \tb{X}$_7$   & \tb{X}$_6$   & \tb{X}$_5$   & \tb{X}$_3$    & \tb{X}$_2$    & \tb{X}$_1$    & \tp{Weapon status on pylon $i$ {\small(\texttt{X}$_i$=0 empty)}.}\\\cline{2-9}
+					    & \tb{B1-B9}     & \tb{9}       & \tb{0}       & \tb{0}       & \tb{0}        & \tb{0}        & \tb{0}        & \tp{Depressed WP button is a target WP.}\\ 
+\thickhline
+%\multicolumn{9}{l}{\tp{\small          \tb{Abbr.}: D=Degree, H=Hour, M=Minute, S=Second, X,Y=variables depending on context.}}\\
+%\multicolumn{9}{l}{\tp{\small \phantom{\tb{Abbr.}: }LO/LA=Logitude/Latitude (alternating). ToT=Time on Target. BL=Boundary Line.}}\\
+%\multicolumn{9}{l}{\tp{\small \phantom{\tb{Abbr.}: }LS=Starting base, L1/L2=primary/divert landing base. \#=Reference Number. $\Box$=Blank/Empty.}}\\
+%\thickhline
+\end{tabular}
+\end{center}
+}
+%
+\end{document}

@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt,usenames,dvipsnames]{letter}
+
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+
+% set page geometry
+\geometry{top=3cm,left=0.2cm,right=0.2cm,bottom=1cm}
+%\geometry{a4paper,total={10mm,200mm},left=20mm,top=10mm,right=20mm,bottom=1cm}
+
+\pagestyle{empty}
+
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% increase row height
+\renewcommand{\arraystretch}{1.2}
+
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+%\newcommand{\grnb}[1]{\textcolor{ForestGreen}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\LMAL}{L$\;$M\AA L}
+\newcommand{\tp}[1]{\textsf{#1}}
+
+% some info
+\title{CK37 Input Codes}
+\author{funkyfranky}
+\date{14.02.2017}
+\pdfinfo{%
+  /Title    (CK37 Input Codes)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (CK37, AJS-37, Viggen)
+}
+
+\begin{document}
+%
+\texttt{
+\begin{center}
+\begin{tabular}{L{1.1cm}|l|c|c|l}
+%\thickhline
+%\multicolumn{5}{c}{} \\
+%\multicolumn{5}{c}{\huge{\textbf{CK37 Input Codes}}} \\
+%\multicolumn{5}{c}{} \\
+\thickhline
+\textbf{Mode}             		    & \textbf{Input}              & \textbf{Confirm}   & \textbf{Function}       & \textbf{Parameters}\\
+					    \thickhline
+\multirow{6}{*}{\parbox{1.0cm}{\textbf{REF LOLA}}}& 9099                  & LS/SKU             & Load Data               & \tp{Data transfer from cartridge.}\\
+					    & 90\rotb{XX}                 & \LMAL              & L1                      & \tp{Reference number \rotb{XX} of landing base L1.}\\
+					    & 99\rotb{XX}                 & \LMAL              & L2                      & \tp{Reference number \rotb{XX} of divert base L2.}\\
+					    & DDMMSS                      & B1-B9              & Lo/La WP                & \tp{Longitude/Latitude of nav WP B1-B9.}\\
+					    & DDMMSS                      & \LMAL              & Lo/La L1                & \tp{Long/Lat of landing base L1.}\\
+					    & DDMMSS                      & BX\,+\,\rotb{Y}    & Lo/La Bx	         & \tp{Long/Lat of mark point Bx\rotb{Y} (\rotb{Y}=1-9).}\\
+					    \medhline
+\multirow{4}{*}{\textbf{TID}}		    & HHMMSS                      & LS/SKU             & Current Time            & \tp{HH=hours, MM=minutes, SS=seconds.}  \\
+					    & HHMMSS                      & B1-B9              & ToT WP                  & \tp{Time on target for nav WP.}\\
+					    & HHMMSS                      & BX                 & ToT RB15                & \tp{Time for RB 15F in target area (at Bx8).}\\
+					    & \rotb{XXX}                  & B1-B9              & Ingress $v$             & \tp{Speed \rotb{X}.\rotb{XX} Mach (095=0.95M) at WP B1-B9.}\\
+					    \medhline
+\multirow{3}{*}{\parbox{1.0cm}{\textbf{BANA GRÄNS}}}& \rotb{XXX}\grnb{Y}\blub{ZZ} & LS/SKU     & Takeoff RWY             & \tp{Heading \rotb{XXX}.\grnb{Y} [deg] and TILS channel \blub{ZZ}.}\\
+					    & \rotb{XXX}\grnb{Y}\blub{ZZ} & \LMAL              & Landing RWY             & \tp{Heading \rotb{XXX}.\grnb{Y} [deg] and TILS channel \blub{ZZ}.}\\
+					    & \rotb{XXX}\grnb{YYY}        & B1-B9              & Boundaries              & \tp{\rotb{XXX} [deg] 1st and \grnb{YYY} [deg] 2nd line.}\\
+					    \medhline
+\multirow{3}{*}{\parbox{1.0cm}{\textbf{VIND RUTA M\AA{}L}}}& \rotb{XXX}\grnb{YY}& LS/SKU       & Wind                    & \tp{Direction \rotb{XXX} [deg] and speed \grnb{YY} [km/h].}\\
+					    & DDMMSS                      & B1-B9              & Lo/La R1-R9             & \tp{Long/Lat of recon RUTA points R1-R9.}\\
+					    & DDMMSS                      & \LMAL\,+\,\rotb{X} & Lo/La \rot{M}1-\rot{M}9 & \tp{Long/Lat of recon target \rot{M}1-\rot{M}9 (\rotb{X}=1-9).}\\
+					    \medhline
+\multirow{11}{*}{\textbf{TAKT}}		    & 9	                          & B1-B9              & Target WP               & \tp{Turn nav WP into target WP (B3$\to$M3).}\\
+					    & 0                           & B1-B9              & Restore Nav WP          & Turn target WP into nav WP (M3$\to$B3).\\
+					    & \rotb{XXX}\grnb{YY}         & B1-B9              & Pop-up Point            & Heading \rotb{XXX} [deg] and distance \grnb{YY} [km].\\
+					    & 20ABCD                      & LS/SKU             & Loadout                 & Loadout on pylons (not functional).\\
+					    & 21\rotb{X}                  & LS/SKU             & Fixed Sight             & \rotb{X}=1 on, \rotb{X}=0 \textbf{off}.\\
+					    & 22\rotb{X}                  & LS/SKU             & Lead Correct.           & \rotb{X}=1 \textbf{off}, \rotb{X}=0 on.\\
+					    & 23\rotb{X}                  & LS/SKU             & Lysbomb                 & Offset distance \rotb{X}=1,\textbf{2},3 [km].\\
+					    & 25\rotb{X}                  & LS/SKU             & Radar Lock              & \rotb{X}=1 \textbf{before unsafe}, \rotb{X}=2 after, \rotb{X}=3 off.\\
+					    & 30\rotb{XX}                 & LS/SKU             & Standoff Warn           & Recon warning distance \rotb{XX} [km] (\textbf{00}-99).\\
+					    & 51\rotb{XX}                 & LS/SKU             & Fuel Reserve            & \rotb{XX} [\%] at landing base L1 (\textbf{10}-99). \\
+					    & 58\rotb{X}                  & LS/SKU             & TERNAV                  & \rotb{X}=1 \textbf{on}, \rotb{X}=0 off.\\
+%					    & 666                         & LS/SKU             & HAL 9000                & Summon the deamon.\\
+					    \medhline
+\multirow{5}{*}{\parbox{1.0cm}{\textbf{TAKT RB15}}}& 800000                      & LS/SKU             & Single Target           & Large search area.\\
+					    & 800001                      & LS/SKU             & Confined Area           & Multiple targets N, medium search area.\\
+					    & 800002                      & LS/SKU             & \textbf{Unconfined}     & \textbf{Multiple targets A, medium search area.}\\
+					    & 800003                      & LS/SKU             & Convoy Attack           & Group target, large search area.\\
+					    & 800004                      & LS/SKU             & Bearing Attack          & Bearing search mode.\\
+					    \medhline
+\multirow{2}{*}{\parbox{1.0cm}{\textbf{TAKT BK90}}}	    & 91\rotb{XXX}                & LS/SKU             & Altitude                & \rotb{XXX} [m] (030-500), default \textbf{60 m}.\\
+					    & 92\rotb{X}                  & LS/SKU             & Area Pattern            & \rotb{X}=1 long, \rotb{X}=2 wide, \rotb{X}=3 \textbf{compact}.\\
+					    \thickhline
+\end{tabular}
+\end{center}
+}
+%
+\end{document}

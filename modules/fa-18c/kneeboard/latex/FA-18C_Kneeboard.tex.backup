@@ -1,0 +1,334 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{Red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (F/A-18C Hornet Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (F/A-18C, Hoenet, Kneeboard, Procedures)
+}
+%
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% SCRAMBLE START (Extended)
+\begin{itemize}
+ \item[] \myHead{Scramble Operation}
+ \item[\ri] Battery switch\dotfill\button{ON}
+ \item[\ri] Fire detection switch\dotfill\button{FIRE TEST A $\Rightarrow$ B}
+ \item[\ri] APU switch\dotfill\button{ON}
+ \item[\ri] ENG CRANK switch\dotfill\button{RIGHT POS}
+ \item[\ri] Right throttle (RPM > 25\%)\dotfill\button{IDLE}
+ \item[\ri] BLEED AIR knob (RPM > 60\%)\dotfill\button{CW\;360\textdegree}
+ \item[\ri] Caution and warning lights switch\dotfill\button{TEST}
+ \item[\ri] DDIs, MPCD and HUD\dotfill\button{ON}
+ \item[\ri] Left DDI - select page\dotfill\button{FCS}
+ \item[\ri] Right DDI - select page\dotfill\button{BIT}
+ \item[\ri] COMM 1 and COMM 2 radios\dotfill\button{AS REQUIRED}
+ \item[\ri] Right engine\dotfill\button{CHECK}
+ \item[\ri] ENG CRANK switch\dotfill\button{LEFT POS}
+ \item[\ri] Left throttle (RPM > 25\%)\dotfill\button{IDLE}
+ \item[\ri] INS knob\dotfill\button{GND or CV}
+ \item[\ri] RADAR knob\dotfill\button{OPER}
+ \item[\ri] OBOGS switch\dotfill\button{ON}
+ \item[\ri] OXY FLOW knob\dotfill\button{ON}
+ \item[\ri] FCS RESET button\dotfill\button{DEPRESS}
+ \item[\ri] Flap switch\dotfill\button{AUTO}
+ \item[\ri] Takeoff trim button\dotfill\button{DEPRESS}
+ \item[\ri] FCS bit switch and FCS OBS on BIT/FCS page\dotfill\button{DEPRESS}
+ \item[\ri] Four down test\dotfill\button{CHECK}
+ \item[\ri] Hand brake\dotfill\button{RELEASE}
+ \item[\ri] BINGO fuel\dotfill\button{SET}
+ \item[\ri] Standby barometric altimeter\dotfill\button{SET}
+ \item[\ri] RADAR altimeter\dotfill\button{200/40 ft}
+ \item[\ri] Standby attitude indicator\dotfill\button{UNCAGE}
+ \item[\ri] Attitude source\dotfill\button{STBY}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% PRE-FLIGHT
+\begin{itemize}
+ \item[] \myHead{Preflight Checks}
+ \item[\ri] Parking brake\dotfill\ok{SET}
+ \item[\ri] ANTI SKID switch\dotfill\ok{ON}/\boat{OFF}
+ \item[\ri] Master Arm switch\dotfill\ok{SAFE}
+ \item[\ri] OXY FLOW knob\dotfill\ok{ON}
+ \item[\ri] Wing fold handle\dotfill\ok{MATCHES WING POS}
+ \item[\ri] Ejection seat handle\dotfill\ok{SAFE}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% ENGINE START
+\begin{itemize}
+ \item[] \myHead{Engine Start} 
+ \item[\ri] BATT switch\dotfill\button{ON}
+ \begin{itemize}
+  \item Essential and utility batteries\dotfill\ok{\textasciitilde\,28\;V}
+ \end{itemize}
+ \item[\ri] FIRE warning test\dotfill\button{PERFORM}
+ \begin{itemize}
+  \item[\ri] FIRE test switch\dotfill\button{TEST A \& HOLD}
+  %\item[\ri] FIRE test switch\dotfill\button{NORM}
+  \item[\ri] Wait 10\;sec for tape to rewind or reset battery switch.
+  \item[\ri] FIRE test switch\dotfill\button{TEST B \& HOLD}
+ \end{itemize}
+ \item[\ri] APU switch\dotfill\button{ON}
+ \begin{itemize}
+  \item[\ri] APU ACC caution light\dotfill\ok{ON}
+  \item[\ri] APU READY light\dotfill\ok{GREEN}
+ \end{itemize}
+ \item[\ri] ENG CRANK switch\dotfill\button{RIGHT POS}
+ \item[\ri] Right throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
+ \item[\ri] GPWS voice alerts\dotfill\button{CHECK}
+ \begin{itemize}
+  \item OFP 15C\dotfill\ok{ROLL LEFT, ROLL LEFT}
+  \item OFP 13C\dotfill\ok{ROLL OUT, ROLL OUT}
+ \end{itemize}
+ \item[\ri]EMI/IFEI - right engine\dotfill\button{CHECK}
+ \begin{itemize}
+  \item RPM N$_2$\dotfill\ok{63-70\%}
+  \item Temperature\dotfill\ok{190-590\degC}
+  \item Fuel flow\dotfill\ok{420-900\;PPH}
+  \item Nozzle position\dotfill\ok{73-84\%}
+  \item Oil pressure\dotfill\ok{45-110\;PSI}
+ \end{itemize} 
+ \item[\ri] BLEED AIR knob (\ok{RPM\;>\;60\%})\dotfill\button{CW\;360\textdegree}
+ %\item[\ri] Master caution\dotfill\button{CANCEL}
+ \item[\ri] Caution and warning lights switch\dotfill\button{TEST}
+ \item[\ri] Internal lighting\dotfill\button{AS REQUIRED}
+ \item[\ri] Canopy\dotfill\button{CLOSE}
+ \item[\ri] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
+ \item[\ri] COMM\;1 and COMM\;2 radios\dotfill\button{AS REQUIRED}
+ \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+ \item[\ri] Master caution button\dotfill\button{DEPRESS}
+ \begin{itemize}
+  \item L-DDI - FCS page\dotfill\warn{2 or R}
+ \end{itemize}
+ \item[\ri] R-DDI: FCS BIT page\dotfill\button{OBS STOP}
+ \item[\ri] ENG CRANK switch\dotfill\button{LEFT POS}
+ \item[\ri] Left throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
+ \item[\ri] Master caution buttion\dotfill\button{DEPRESS}
+ \begin{itemize}
+  %\item Left DDI Caution and advisories\dotfill\ok{CHECK}
+  \item Left DDI\dotfill\warn{1 or L}
+ \end{itemize} 
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Before Taxi
+\begin{itemize}
+ \item[] \myHead{Before Taxi}
+ \item[\ri] MPCD: HSI page\dotfill\button{OBS DATA}
+ \begin{itemize}
+  \item A/C coordinates\dotfill\button{CHECK}
+ \end{itemize} 
+ \item[\ri] INS knob\dotfill\button{GND}/\boat{CV}
+ \item[\ri] RADAR knob\dotfill\button{OPER}
+ \item[\ri] WING FOLD\dotfill\button{SPREAD \& LOCK}
+ \item[\ri] FCS RESET button\dotfill\button{DEPRESS}
+ \begin{itemize}
+  \item L-DDI: FCS page\dotfill\warn{X} (WINGS FOLDED: AILERON \ok{X})
+ \end{itemize}
+ \item[\ri] Flap switch\dotfill\button{AUTO}
+ \item[\ri] FCS (cold weather)\dotfill\button{BIT}
+ \begin{itemize}
+  \item FCS switch\dotfill\button{DEPRESS\,\&\,HOLD}
+  \item R-DDI: FCS page\dotfill\button{OBS FCS-MC}
+  \item R-DDI: FCS-MC page\dotfill\button{OBS FCS}
+ \end{itemize}
+ \item[\ri] Flap switch\dotfill\button{HALF}
+ \item[\ri] Takeoff trim button\dotfill\button{DEPRESS}
+ \begin{itemize}
+  \item Stabilator\dotfill\button{12\textdegree}
+ \end{itemize}
+ \item[\ri] OBOGS switch\dotfill\button{ON}
+ \item[\ri] Four down test:
+ \begin{itemize}
+  \item Pitot heat\dotfill\button{ON\;$\Rightarrow$\;OFF}
+  \item Arrestor hook\dotfill\button{DOWN\;$\Rightarrow$\;UP}
+  \item Speed brake\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item Refulling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item Launch bar\dotfill\boat{EXTEND\;$\Rightarrow$\;RETRACT}
+ \end{itemize}
+ \item[\ri] Standby attitude indicator\dotfill\button{UNCAGE}
+ %\item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
+ \item[\ri] Soft altitudes\dotfill\button{SET}
+ \begin{itemize}
+  \item MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
+  \item UFC enter\dotfill\button{450 ft}
+ \end{itemize}  
+ \item[\ri] BINGO fuel\dotfill\button{SET} 
+ %\item[\ri] Attitude source\dotfill\button{STBY} 
+ \item[\ri] Hand brake\dotfill\button{RELEASE}
+ \item[\ri] Standby barometric altimeter\dotfill\button{SET}
+ \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+%\newpage
+% TAXI
+% % \begin{itemize}
+% %  \item[] \myHead{Taxi}
+% %  \item[\ri] Normal breakes\dotfill\ok{CHECK}
+% %  \item[\ri] Nosewheel steering\dotfill\ok{CHECK}
+% % \end{itemize}
+% ---------------------------------------------------------------------------------------------------
+% \newpage
+% % Before Takeoff
+% \begin{itemize}
+%  \item[] \myHead{Before Takeoff}
+%  \item[\ri] Canopy\dotfill\ok{CLOSED}
+%  \item[\ri] IFF\dotfill\ok{ON}
+%  \item[\ri] PARK BRK handle\dotfill\ok{FULLY STOWED}
+%  \item[\ri] MENU checklist\dotfill\ok{COMPLETE}
+%  \item[\ri] Engines\dotfill\ok{MIL CHECK (if desired)}
+% \end{itemize} 
+% ---------------------------------------------------------------------------------------------------
+%
+}
+\end{document}
+%
+%
+% ---------------------------------------------------------------------------------------------------
+% \newpage
+% % PRE-FLIGHT
+% \begin{itemize}
+%  \item[] \myHead{Preflight}
+%  \item[\ri] battery on
+%  \item[\ri] Essential and untility batteries check 28 V
+%  \item[\ri] Break pressure ~3000 pounds
+%  \item[\ri] Fire test left, fire test right
+%  \item[\ri] apu start
+%  \item[\ri] apu accumulator light lit check (right site caution panel)
+%  \item[\ri] apu green light at apu switch
+%  \item[\ri] right engine crank
+%  \item[\ri] RPM > 25 \% Throttle Idle
+%  \item[\ri] Master caution cancel
+%  \item[\ri] RPM > 66 \% Bleed air knop 360 CW (open bleed air valves closed during fire test.
+%  \item[\ri] Light test
+%  \item[\ri] Internal lighting set
+%  \item[\ri] Canopy close
+%  \item[\ri] left/rigt DDI
+%  \item[\ri] HUD, cental MPCD
+%  \item[\ri] radios set frequency
+%  \item[\ri] request startup
+%  \item[\ri] master caution button press to reset caution advisory on left DDI
+%  \item[\ri] Right DDT hit stop button to stop blinking
+%  \item[\ri] Left DDI: fcs page
+%  \item[\ri] Left DDI check no ``2''s or ``R''s visible (engine 2 - right engine)
+%  \item[\ri] Check AC coordinates.
+%  \item[\ri] Center MPCD: data pushbutton. Check coordinates match.
+%  \item[\ri] INS switch GRND or CV.
+%  \item[\ri] MPCD HSI page check alignment (3.5-4 minutes)
+%  \item[\ri] Crank left engine.
+%  \item[\ri] RPM > 25\% ==> Throttle idle.
+%  \item[\ri] Master caution push ==> restack caution and advisories on left DDI
+%  \item[\ri] Left DDI check no 1s or Ls
+%  \item[\ri] FCS reset button push ==> x's clear
+%  \item[\ri] OBOS on
+%  \item[\ri] RADAR on
+%  \item[\ri] Faps auto
+%  \item[\ri] FPS bit test:
+%  \item[\ri] FCS switch on right side hold
+%  \item[\ri] FCS bit page on right DDI
+%  \item[\ri] FCS OBS button ==> cold weather test, 
+%  \item[\ri] Flaps half
+%  \item[\ri] Takeoff trim button ==> stap 12 degC
+%  \item[\ri] uncage Standby attitude indicator
+%  \item[\ri] altimeter set to QFE
+%  \item[\ri] altitude warning to 450 ft ground or 370(?) carrier
+%  \item[\ri] soft altitudes: 
+%  \item[\ri] Center MFCD Data page then A/C
+%  \item[\ri] baro 50000
+%  \item[\ri] OBS Radar alt, UFC enter 450 ft enter (boat 370 ft)
+%  \item[\ri] Bingo fuel set 80000 pounds
+%  \item[\ri] TACAN set as required
+%  \item[\ri] EW sweep on
+%  \item[\ri] MPCD HSI page
+%  \item[\ri] INS to NAV
+%  \item[\ri] Four down check
+%  \item[\ri] -pitot heat on, hook down, speed brake out, refulleing probe out
+%  \item[\ri] LEFT DDI: BLIN button ==> Check errors, BLIN Button
+%  \item[\ri] LEFT DDI: checklist page
+%  \item[\ri] Right DDI: FCS page
+%  \item[\ri] parking brake off
+%  \item[\ri] NWS is on check
+%  \item[\ri] TAXI
+% \end{itemize}

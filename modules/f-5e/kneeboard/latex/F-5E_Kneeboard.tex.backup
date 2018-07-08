@@ -1,0 +1,535 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (F-5E-3 Tiger II Procedures)
+  /Author   (funkyfranky)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords (F-5E, Tiger II, Kneeboard, Procedures)
+}
+%
+%\item[] \myHead{Preflight Checks}
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% ------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{itemize}
+ \item[] \myHead{Preflight Checks}
+ \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
+  %left console
+ \item[] \tb{Left console:}
+ \item[\mi] Circuit breakers\dotfill\button{CHECK}
+ \item[\mi] Rudder trim knob\dotfill\button{CENTERED}
+ \item[\mi] Radar mode selector\dotfill\button{OFF}
+ \item[\gi] Throttles\dotfill\button{OFF}
+ \item[\gi] Flap lever\dotfill\button{THUMB SW}
+ \item[\gi] Flap thumb switch\dotfill\button{UP}
+ \item[\gi] Speed brake switch\dotfill\button{NEUTRAL}
+ \item[\gi] Nose strut switch\dotfill\button{RETRACT}
+  % left vertical
+ \item[]\tb{Left vertical:}
+ \item[\bi] Fuel shutoff switches - left and right\dotfill\button{GUARDS CLOSED}
+ \item[\bi] Armament light control knob\dotfill\button{AS REQUIRED}
+ \item[\bi] Landing gear alternate release handlse\dotfill\button{FULLY STOWED}
+ \item[\bi] Landing \& taxi light switch\dotfill\button{OFF}
+ \item[\bi] Missile volume control\dotfill\button{FULLY COUNTERCLOCKWISE}
+ \item[\bi] Armament and jettison switches\dotfill\button{OFF and SAFE}
+ %\item External stores jettison handle\dotfill\button{IN}
+  % instrument panel
+ \item[]\tb{Instrument panel:}
+ \item[\yi] Landing gear lever\dotfill\button{LG DOWN}
+ \item[\yi] Drag chute handle\dotfill\button{IN}
+ \item[\yi] Flight instruments\dotfill\button{CHECK and SET}
+ \item[\yi] Optical sight mode selector\dotfill\button{AS REQUIRED}
+ \item[\yi] Aux intake doors indicator\dotfill\ok{BARBER POLE}
+  % pedestal
+ \item[]\tb{Pedestal:}
+ \item[\ai] UHF radio and frequency\dotfill\button{AS REQUIRED}
+ \item[\ai] TACAN\dotfill\button{AS REQUIRED}
+ \item[\ai] NAV MODE switch\dotfill\button{AS REQUIRED}
+ \item[\ai] Antenna switch\dotfill\button{AS REQUIRED}
+ \item[\ai] Circuit breakers\dotfill\button{CHECK}
+\end{itemize}
+% ------------ 
+\newpage
+% Preflight page 2
+\begin{itemize} 
+ % right vertical
+ \item[] \myHead{Preflight Checks}
+ \item[]\tb{Right vertical:}
+ \item[\ni] Cockpit pressurization and temp.\;controls\dotfill\button{AS REQUIRED}
+ \item[\ni] Anti-ice switch\dotfill\button{OFF}
+ \item[\ni] External fuel transfer switches\dotfill\button{OFF}
+ \item[\ni] Fuel boost pump switches\dotfill\button{LEFT and RIGHT}
+ \item[\ni] Crossfeed switch\dotfill\button{OFF}
+ \item[\ni] Auto balance switch\dotfill\button{CENTERED}
+ \item[\ni] Canopy jettison T-handle\dotfill\button{IN}
+ \item[\ni] Battery switch\dotfill\button{BATT}
+ \item[\yi] Aux intake doors indicator\dotfill\ok{CLOSE} 
+ \item[\ni] Generator switches\dotfill\button{L\;GEN and R\;GEN}
+ % right console
+ \item[]\tb{Right console:}
+ \item[\ri] Oxygen system\dotfill\button{CHECK}
+ \begin{itemize}
+  \item[\ri] Supply pressure gage\dotfill\ok{65-110\;PSI}
+  \item[\ri] Quantity indicator\dotfill\button{CHECK}
+  \item[\ri] Supply lever\dotfill\button{ON}
+  \item[\ri] Diluter lever\dotfill\button{NORMAL}
+  \item[\ri] Emergency lever\dotfill\button{NORMAL}
+ \end{itemize}
+ \item[\ri] IFF/SIF\dotfill\button{STBY}
+ \item[\ri] Fuel and oxygen check switch\dotfill\button{GAGE\;TEST and QTY\;CHECK}
+ \item[\ri] Compass switch\dotfill\button{AS REQUIRED}
+ \item[\ri] Internal and external lights\dotfill\button{AS REQUIRED}
+ \item[\ri] Rotating beacon\dotfill\button{AS REQUIRED}
+ \item[\ri] Light warning test switch\dotfill\button{TEST}
+ \item[\ri] Circuit breakers\dotfill\button{CHECK}
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER ON}.
+\end{itemize}
+% ----------------------------------- 
+\newpage
+% Engine Start-up
+\begin{itemize}
+ \item[] \myHead{Engine Startup}
+ \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+ \item Tell \radio{Chief} to \radio{CONNECT GROUND AIR Supply} unit.
+ \item Tell \radio{Chief} to \radio{APPLY GROUND AIR} to motor left engine.
+ \item When left engine RPM reaches 10\;\%
+ \begin{itemize}
+  \item[\gi] Left engine throttle\dotfill\button{IDLE}
+  \item[\bi] Left engine start\dotfill\button{PUSH}
+ \end{itemize}
+ \item Left engine should stabalize within 35 sec\dotfill\button{CHECK}
+  \begin{itemize}
+  \item[\yi] RPM\dotfill\ok{49-52\;\%}
+  \item[\yi] EGT\dotfill\ok{>\,140\;\degC}
+  %\item Nozzle position\dotfill\ok{60-79\;\%}
+  \item[\yi] Nozzle position\dotfill\ok{70-80\;\%}
+  \item[\yi] Fuel flow rate\dotfill\ok{$\sim$\,400\;pph}
+  \item[\yi] Oil pressure\dotfill\ok{5-20\;psi}
+  \item[\yi] Hydraulic pressure\dotfill\ok{2800-3200\;psi}
+  \item[\ri] Generator caustion light\dotfill\ok{OUT}
+  \item[\yi]Auxiliary intake doors indicator\dotfill\ok{BARBER POLE}
+ \end{itemize}
+ \item Tell \radio{Chief} to \radio{APPLY GROUND AIR} to motor right engine.
+ \item When right engine RPM reaches 10\;\%
+ \begin{itemize}
+  \item[\gi] Reft engine throttle\dotfill\button{IDLE}
+  \item[\gi] Reft engine start\dotfill\button{PUSH}
+ \end{itemize}
+ \item Right engine should stabalize within 35 sec\dotfill\button{CHECK}
+ \item[\yi] Auxiliary intake doors indicator\dotfill\ok{OPEN}
+ \item Tell \radio{Chief} to \radio{DISCONNECT GROUND AIR Supply} unit.
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
+\end{itemize}
+% --------------------------------------
+\newpage
+% Crossbleed start
+\begin{itemize}
+ \item[] \myHead{Crossbleed Start}
+ \item Tell \radio{Chief} to \radio{DISCONNECT GROUND AIR Supply} unit.
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
+ \item Left engine RPM\dotfill\button{95\;\%}
+ \item Reft engine start button\dotfill\button{PUSH}
+ \item At 10\;\% engine RPM\dotfill\button{RIGHT THROTTLE IDLE}
+ \item Engine instruments\dotfill\button{CHECK}
+ \item After right engine at idle RPM\dotfill\button{LEFT THROTTLE IDLE}
+ \item Generator caution lights\dotfill\button{OUT}
+ \item Aux intake doors indicator\dotfill\button{OPEN}
+\end{itemize}
+% -------------------------------------------------------
+\newpage
+% Before Taxi
+\begin{itemize}
+ \item[] \myHead{Before Taxi}
+ \item Speed brakes\dotfill\button{RETRACT}
+ \item Flap thumb switch\dotfill\button{AUTO}
+ \item Flaps fully extended\dotfill\button{CHECK}
+ \item Damper switches\dotfill\button{YAW and PITCH}
+ \item Pitch damper cutoff switch\dotfill\button{CHECK}
+ \begin{itemize}
+  \item Pitch damper cutoff switch\dotfill\button{ACTUATE}
+  \item Pitch damper switch\dotfill\button{MOVES TO OFF}  
+ \end{itemize}
+ \item Pitch damper switch\dotfill\button{PITCH}
+ \item Flight controls\dotfill\button{CHECK}
+ \item Pitch trim to take-off configuration\dotfill\button{$\ge$ 6}
+ \item Aileron trim\dotfill\button{CHECK and set AS REQUIRED}
+ \item Altimeter pressure\dotfill\button{QFE}
+ \item Altimeter\dotfill\button{CHECK}
+ \begin{itemize}
+ \item Mode control lever\dotfill\button{PNEU}
+ \item PNEU light\dotfill\ok{ON}
+ \item Mode control lever\dotfill\button{ELECT}
+ \item PNEU light\dotfill\ok{OFF}
+ \item Pressure difference between modes\dotfill\ok{<\;75\;ft}
+ \end{itemize}
+ \item Standby attitude inicator\dotfill\button{UNCAGE}
+ \item Primary and standby attitude indicator\dotfill\button{-3\textdegree{}}
+ \item Canopy lever\dotfill\button{CLOSE}
+ \item Pitot heat check\dotfill\button{ON then OFF}
+ \item Master caution light\dotfill\button{RESET}
+ \item Caution panel warning lights off\dotfill\button{CHECK}
+ \item Radar Warning Receiver\dotfill\button{POWER ON}
+ \item Radar mode selector (\rot{10 min before overheating})\dotfill\button{STBY}
+ \item Taxi lights\dotfill\button{ON}
+ \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
+\end{itemize}
+% --------------------------------------------------------------------------------------------
+\newpage
+% Taxi
+\begin{itemize}
+ \item[] \myHead{Taxi}
+ \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
+ \item Nose wheel steering\dotfill\button{ENGAGE}
+ \item Throttle setting to get rolling\dotfill\button{70\;\%}
+ \item Taxi to runway at $\sim$\;60\;\% engine RPM.
+\end{itemize}
+% ---------
+% Before Take-off
+\begin{itemize}
+ \item[] \myHead{Before Take-Off}
+ \item Hold at runway line.
+ \item Pitch trim take-off configuration\dotfill\button{CHECK}
+ \item Pitot heat\dotfill\button{ON}
+ \item Engine anti-ice\dotfill\button{ON if T<4\degC}
+ \item Nose strut switch\dotfill\button{EXTEND}
+ \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
+\end{itemize}
+% \newpage
+% Pitch trim table
+\begin{tabular}{c|l|c|c}
+\hline
+ \tb{Weight [lbs]}    & \tb{Configuration}                  & \tb{Pitch}    & \tb{Speed}   \\ \hline
+ \mr{1}{15000}        & clean                               & \mr{1}{6}     & \mr{1}{145}  \\ \hline
+ \mr{1}{15500-16000}  & ammo, missiles                      & \mr{1}{7}     & \mr{1}{155}  \\ \hline
+ \mr{1}{17000-18000}  & ammo, missiles, central tank        & \mr{1}{8}     & \mr{1}{166}  \\ \hline
+ \mr{1}{19000}        & ammo, missiles, 3x tank 150         & \mr{1}{7}     & \mr{1}{167}  \\ \hline
+ \mr{2}{19000-21000}  & ammo, missiles. bombs,              & \mr{2}{7}     & \mr{2}{172}  \\ 
+                      & rockets, central tank               &               &              \\ \hline
+ \mr{1}{22000}        & ammo, missiles, 3x tank 275         & \mr{1}{7}     & \mr{1}{179}  \\ \hline
+ \mr{1}{23000}        & ammo, missiles, bombs, rockets      & \mr{1}{7}     & \mr{1}{187}  \\ \hline
+\end{tabular}
+% -------------------------------------------------------------------------------------------------------------------
+%\newpage
+% Take-off
+\begin{itemize}
+ \item[] \myHead{Take-Off}
+ \item Roll to runway centerline.
+ \item Breaks\dotfill\button{HOLD}
+ \item Throttle\dotfill\button{MIL}
+\begin{itemize}
+ \item Temperature\dotfill\ok{665-675\degC}
+ \item Nozzle position\dotfill\ok{0-16\;\%}
+\end{itemize}
+ \item NWS button depressed and held, release breaks.
+ \item At 60\;KIAS release NWS button.
+ \item If required, throttle to full.
+ \item Rotate at $\sim$\;10\;KIAS before liftoff speed.
+\end{itemize}
+% ------------------------------------------------------------------------------------------------------------------------
+\newpage
+% After Take-Off
+\begin{itemize}
+ \item[] \myHead{After Take-Off}
+ \item Landing gear lever\dotfill\button{UP}
+ \item Pitch trim and flaps position\dotfill\button{AS REQUIRED}
+ \item Aux intake doors indicator\dotfill\ok{CLOSE}
+ \item Climb speed\dotfill\ok{>\;300\;KIAS}
+ \item Flap thumb switch\dotfill\button{AS REQUIRED}
+ \item Fuel management
+ \begin{itemize}
+ \item External fuel tanks: transfer swtiches\dotfill\button{ON}
+ \item No ext. fuel tanks: autobalance switch\dotfill\button{LEFT LOW}
+ \end{itemize}
+ \item At altitude above 8000\;ft
+ \begin{itemize}
+ \item Indicated oxygen consumption\dotfill\button{CHECK}
+ \item Cockpit pressurization\dotfill\button{CHECK}
+ \item Altimeter mode\dotfill\button{AS REQUIRED}
+ \end{itemize}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------------
+\newpage
+% Before Landing
+\begin{itemize}
+ \item[] \myHead{Before Landing}
+ \item Radio \radio{ATC} for \radio{INBOUND}.
+ \item Altimeter\dotfill\button{QFE}
+ \item Fuel balancing switch\dotfill\button{CENTER}
+ \item Crossfeed switch\dotfill\button{OFF}
+ \item Hydraulic pressure\dotfill\ok{2800-3200\;PSI}
+ \item Flap lever\dotfill\button{THUMB SW}
+ \item Flap thumb switch\dotfill\button{AUTO}
+\end{itemize}
+% \newpage
+% Landing approach
+\begin{itemize}
+ \item[] \myHead{Landing}
+ \item Radio \radio{ATC} and \radio{REQUEST LANDING}.
+ \item[] \tb{Upwind leg:}
+ \item Enter traffic pattern at 300 KIAS.
+ \item Descend to 1500\;ft AGL 3 miles before end of runway.
+ \item[] \tb{Crosswind leg:}
+ \item Maintain 1500\;ft AGL
+ \item[] \tb{Downwind leg:}
+ \item Landing gear lever (\warn{<260 KIAS})\dotfill\button{DOWN}
+ \item Gear indicator lights\dotfill\ok{GREEN}
+ \item Speed brake\dotfill\button{AS REQUIRED}
+ \item[] \tb{Base leg:}
+ \item Decelecate to $\sim$165 KIAS and keep altitude of 1500\;ft.
+ \item AOA indexer\dotfill\ok{ON SPEED}
+ \item[] \tb{Final approach:}
+ \item Decent rate $\sim$1000\;ft/min.
+ \item Decrease speed to 145 KIAS.
+ \item AOA indexer\dotfill\ok{ON SPEED}
+ \item Approaching runway decrease vertical speed to 400\;ft/min.
+ \item Flare at $\sim$20\;ft and smoothly decrease speed to idle.
+ \item Touchdown at 135 KIAS.
+ \item Deploy drag chute and carefully apply wheel breaks.
+\end{itemize}
+% ---------------------------------------------------------------------------------------
+\newpage
+% After Landing
+\begin{itemize}
+ % After landing
+ \item[] \myHead{After Landing}
+ \item Jettison drag chute.
+ \item Cockpit pressurization switch\dotfill\button{RAM DUMP}
+ \item Flap thumb switch\dotfill\button{UP}
+ \item Speed brake\dotfill\button{OUT}
+ \item Radar mode selector\dotfill\button{OFF}
+ \item Optical sight mode selector\dotfill\button{OFF}
+ \item Pitot heat and engine anti-ice switches\dotfill\button{OFF}
+\end{itemize}
+%\newpage
+%  % Engine shutdown
+\begin{itemize}
+ \item[] \myHead{Engine Shutdown}
+ \item Cockpit pressurization switch\dotfill\button{RAM DUMP}
+ \item Canopy\dotfill\button{OPEN}
+ \item Cockpit pressurization switch\dotfill\button{NORMAL/CABIN PRESS}
+ \item All unguarded switches (except batt, gen, boos pumps)\dotfill\button{OFF}
+ \item Throttles\dotfill\button{OFF}
+ \item Standby attitude indicator\dotfill\button{CAGE and LOCK}
+ \item Generator switches\dotfill\button{OFF}
+ \item Boost pump switches\dotfill\button{OFF}
+ \item Battery switch\dotfill\button{OFF}
+\end{itemize}
+%---------------------------------------------------------------------------
+\newpage
+% Air-to-Ground: Guns & Rockets
+\begin{itemize}
+ \item[] \myHead{Air-to-Ground:\;Gun\;\&\;Rockets}
+ \item Weapon switch\dotfill\button{GUNS MSL \& CAMR}
+ \item Sight mode selector\dotfill\button{MAN}
+ \item Reticule depression knob\dotfill\button{SET}
+ \item Rocket employment:
+ \begin{itemize}
+   \item External stores switch\dotfill\button{RKT/DISP}
+   \item Pylons with LAU\dotfill\button{ON}
+ \end{itemize}
+ \item Climb to initial altitude (5000-6000 ft AGL).
+ \item Adjust initial speed (350-370 knots).
+ \item Set target up at 10 o'clock and roll-in when ready.
+ \item Align sight pipper with target.
+ \item Watch dive angle and speed.
+ \item At release altitude
+ \begin{itemize}
+  \item Guns: pull trigger to second detent
+  \item Rockets: press bomb-rocket release button.
+ \end{itemize}
+\item Perform 4G pullout within 2 seconds.
+\end{itemize}
+%\newpage
+% Air-to-Ground Guns Table
+\begin{itemize}
+ \item[] \myHead{Gruns Table}
+ \item[]
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ Dive   & \mcl{2}{\ok{Initial}} & \mcl{2}{\warn{Release}} & Reticule\\
+ Angle  & Altitude & Speed   & Altitude & Speed   & Depression\\ \hline
+\tb{20} & 5000     & 350-370 & 2000     & 400     & 12        \\ \hline
+\tb{30} & 6000     & 350-370 & 3000     & 400     & 8         \\ \hline
+\end{tabular}
+\end{itemize}
+\begin{itemize}
+ \item[]\myHead{Rockets Table}
+ \item[]
+%\newpage
+% Air-to-Ground Rockets
+\begin{tabular}{c|c|c|c|c|c|c}
+\hline
+ Dive           & \mcl{2}{\ok{Initial}}          & \mcl{2}{\warn{Release}}    & Reticule   & Rocket \\
+ Angle          & Alt     & Speed           & Alt     & Speed       & Depression & Type   \\ \hline
+\mr{2}{\tb{20}} & \mr{2}{5000} & \mr{2}{350-370} & \mr{2}{1500} & \mr{2}{400} & 14         & HYDRA  \\ \cline{6-7}
+                &              &                 &              &             & 34         & FFAR   \\ \hline
+\mr{2}{\tb{30}} & \mr{2}{6000} & \mr{2}{350}     & \mr{2}{2000} & \mr{2}{400} & 10         & HYDRA  \\ \cline{6-7}
+                &              &                 &              &             & 30         & FFAR   \\ \hline
+\end{tabular}
+\end{itemize}
+% -------------------------------------------------------------------------------
+\newpage
+% Air-to-Ground: Bombs
+\begin{itemize}
+ \item[]\myHead{Air-to-Grund:\;Bombs}
+ \item Weapon switch\dotfill\button{GUNS MSL \& CAMR}
+ \item Sight mode selector\dotfill\button{MAN}
+ \item Reticule depression knob\dotfill\button{SET}
+ \item External stores switch\dotfill\button{BOMB or RIPL}
+ \item If riple release, INTERVAL switch\dotfill\button{AS REQUIRED}
+ \item Pylons with bombs loaded\dotfill\button{ON}
+ \item Climb to initial altitude (5000-6000 ft AGL).
+ \item Adjust initial speed to 350 knots.
+ \item Set target up at 10 o'clock and roll-in when ready.
+ \item Align sight pipper with target.
+ \item Watch dive angle and speed.
+ \item At release altitude press bomb-rocket release button
+ \item Perform 4G pullout within 2 seconds.
+\end{itemize}
+%\newpage
+% Dive Bombing Table
+\begin{itemize}
+ \item[]\myHead{Bombs Table}
+ \item[]
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ Dive   & \mcl{2}{\ok{Initial}} & \mcl{2}{\warn{Release}} & Reticule\\
+ Angle  & Altitude & Speed & Altitude & Speed   & Depression\\ \hline
+\tb{20} & 5000     & 350   & 1500     & 380-400 & 80        \\ \hline
+\tb{30} & 6000     & 350   & 2000     & 440-450 & 79        \\ \hline
+\end{tabular}
+\end{itemize}
+% ---------------------------------------------------------------------------------
+\newpage
+% Air-to-Air: Missiles
+\begin{itemize}
+ \item[] \myHead{Air-to-Air:\;Missiles}
+ \item Weapon switch\dotfill\button{GUNS MSL \& CAMR}
+ \item Sight mode selector\dotfill\button{MSL}
+ \item Armament panel outer pylon switches\dotfill\button{UP}
+ \item Radar mode selector\dotfill\button{OPER}
+ \item Radar range selector - \warn{MSL} or \ok{DM}\dotfill\button{\warn{40} or \ok{10}}
+ \item Radar elevation antenna\dotfill\button{AS REQUIRED}
+ \item Align target to horizontal center of the radar display.
+ \item \warn{MSL} Mode
+ \begin{itemize}
+ \item TDC on target icon and lock with ACQ button.
+  \end{itemize}
+  \item \ok{DM} Mode
+ \begin{itemize}
+ \item 5 NM from target, DOGFIGHT/RESUME switch forward.
+ %\item[] Missile will lock the nearest target
+  \end{itemize}
+ \item When in range, LK ON light and IN RANGE light illumiate.
+ \item[] Red dot appears next to gunsight reticle.
+ \item Press weapon release button to fire.
+ %\item[] Unlock/abort
+ \item Unlock target by DOGFIGHT/RESUME CENTER-PRESS.
+ \item Abort by pressing the MISSILE UNCAGE switch.
+\end{itemize}
+% ------------------------------------------------------------------------------------
+%\newpage
+% Air-to-Air: Guns
+\begin{itemize}
+ \item[] \myHead{Air-to-Air:\;Guns}
+ \item Weapon switch\dotfill\button{GUNS MSL \& CAMR}
+ \item Sight mode selector\dotfill\button{A/A1 or A/A2}
+ \item Radar mode selector\dotfill\button{OPER}
+ \item Radar range selector\dotfill\button{10}
+ \item Radar elevation antenna\dotfill\button{AS REQUIRED}
+ \item Align target to horizontal center of the radar display.
+ \item 1 NM from target engage DG mode by DOGFIGHT/RESUME aft.
+ %\item[] Radar will automatically lock the nearest target.
+ \item When in range, LK ON light and IN RANGE light illumiate.
+ \item[] Red dot appears next to gunsight reticle.
+ \item Press trigger to second detent to fire.
+ %\item Unlock target by DOGFIGHT/RESUME CENTER-PRESS.
+\end{itemize}
+% -----------------------------------------------------------
+}
+\end{document}
+% ---------------------------------------------------------------------------------------------------
