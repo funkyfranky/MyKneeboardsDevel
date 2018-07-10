@@ -63,11 +63,17 @@
 \renewcommand{\labelitemii}{{$\bullet$\;}}
 \renewcommand{\labelitemiii}{$\bullet$\;}
 \renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
 \newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
-\newcommand{\ri}{\textcolor{red}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
 \newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
 \newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
 \newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
 %
 \newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
 \newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
@@ -92,84 +98,82 @@
 % SCRAMBLE START (Extended)
 \begin{itemize}
  \item[] \myHead{Scramble Operation}
- \item[\ri] Battery switch\dotfill\button{ON}
- \item[\ri] APU switch\dotfill\button{ON}
+ \item[\ri] BATT switch\dotfill\button{ON}
+ \item[\mi] APU switch\dotfill\button{ON}
  \begin{itemize}
-  \item APU READY light\dotfill\ok{GREEN}
+  \item[\mi] APU READY light\dotfill\ok{GREEN}
  \end{itemize}
- \item[\ri] OBOGS switch\dotfill\button{ON}
- \item[\ri] ENG CRANK switch\dotfill\button{RIGHT POS}
- \item[\ri] Right throttle (\ok{RPM\;>\;16\%})\dotfill\button{IDLE}
- \item[\ri] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
- \item[\ri] COMM\;1 \& COMM\;2 radios\dotfill\button{AS REQUIRED}
+ \item[\mi] OBOGS switch\dotfill\button{ON}
+ \item[\mi] ENG CRANK switch\dotfill\button{RIGHT POS}
+ \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
+ \item[\yi] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
+ \item[\oi] COMM\;1 \& COMM\;2 radios\dotfill\button{AS REQUIRED}
  \item[\ri] RADAR knob\dotfill\button{OPER}
- \item[\ri] INS knob\dotfill\button{GND}/\boat{CV} 
- \item[\ri] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
- \item[\ri] L-DDI: select page\dotfill\button{FCS}
- \item[\ri] R-DDI: BIT page\dotfill\button{OSB STOP}
- \item[\ri] ENG CRANK switch\dotfill\button{LEFT POS}
- \item[\ri] Left throttle (\ok{RPM\;>\;16\%})\dotfill\button{IDLE}
+ \item[\ri] INS knob\dotfill\button{GND}/\boat{CV}
+ \item[\bi] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
+ \item[\yi] L-DDI: select page\dotfill\button{FCS}
+ \item[\yi] R-DDI: BIT page\dotfill\button{OSB STOP}
+ \item[\mi] ENG CRANK switch\dotfill\button{LEFT POS}
+ \item[\gi] Left throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
  \item[\ri] Canopy\dotfill\button{CLOSE}
- \item[\ri] FLAP switch\dotfill\button{HALF}
- \item[\ri] T/O TRIM button\dotfill\button{DEPRESS}
- \item[\ri] FCS RESET button\dotfill\button{DEPRESS}
- \item[\ri] Standby ADI\dotfill\button{UNCAGE}
- \item[\ri] RADAR altimeter\dotfill\button{450}/\boat{370}\button{\;ft}
- \item[\ri] BINGO fuel\dotfill\button{AS REQUIRED}
- \item[\ri] L/R-DDIs:\,select pages\dotfill\button{CHECKLIST\,/\,FCS}
+ \item[\bi] FLAP switch\dotfill\button{HALF}
+ \item[\mi] T/O TRIM button\dotfill\button{DEPRESS}
+ \item[\mi] FCS RESET button\dotfill\button{DEPRESS}
+ \item[\ni] Standby ADI\dotfill\button{UNCAGE}
+ \item[\ni] RADAR altimeter\dotfill\button{450}/\boat{370}\button{\;ft}
+ \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED}
+ \item[\yi] L/R-DDIs:\,select pages\dotfill\button{CHECKLIST\,/\,FCS}
  \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
- \item[\ri] Parking brake\dotfill\button{RELEASE}
+ \item[\bi] Parking brake\dotfill\button{RELEASE}
  \item[\ri] Ejection seat handle\dotfill\button{ARM}
- \item[\ri] ALR-67 power button\dotfill\button{ON}  
- \item[\ri] Standby barometric altimeter\dotfill\button{QFE}
+ \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
+ \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
+ \item[\yi] L/R-DDIs:\,select pages\dotfill\button{HUD\,/\,RADAR}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \newpage
 % PRE-FLIGHT
 \begin{itemize}
  \item[] \myHead{Preflight Checks}
- \item[\ri] Parking brake\dotfill\ok{SET}
- \item[\ri] ANTI SKID switch\dotfill\ok{ON}/\boat{OFF}
- \item[\ri] Master Arm switch\dotfill\ok{SAFE}
- \item[\ri] OXY FLOW knob\dotfill\ok{ON}
- \item[\ri] Wing fold handle\dotfill\ok{MATCHES WING POS}
- \item[\ri] Ejection seat handle\dotfill\ok{SAFE}
+ \item[\bi] Parking brake\dotfill\ok{SET}
+ \item[\bi] ANTI SKID switch\dotfill\ok{ON}/\boat{OFF}
+ \item[\bi] Master Arm switch\dotfill\ok{SAFE}
+ \item[\ni] Wing fold handle\dotfill\ok{MATCHES WING POS}
+ \item[\ni] Ejection seat handle\dotfill\ok{SAFE}
+ \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
 %\newpage
 % ENGINE START
 \begin{itemize}
  \item[] \myHead{Engine Start} 
  \item[\ri] BATT switch\dotfill\button{ON}
  \begin{itemize}
-  \item Essential and utility batteries\dotfill\ok{\textasciitilde\,28\;V}
+  \item[\ni] Essential and utility batteries\dotfill\ok{\textasciitilde\,28\;V}
  \end{itemize}
- \item[\ri] FIRE warning test\dotfill\button{PERFORM}
+ \item[\bi] Brake pressure\dotfill\ok{\textasciitilde\,3000\;PSI}
+ \item FIRE warning test\dotfill\button{PERFORM}
  \begin{itemize}
-  \item[\ri] FIRE test switch\dotfill\button{TEST A \& HOLD}
-  %\item[\ri] FIRE test switch\dotfill\button{NORM}
-  \item[\ri] Wait 10\;sec for tape to rewind or reset battery switch.
-  \item[\ri] FIRE test switch\dotfill\button{TEST B \& HOLD}
+  \item[\gi] FIRE test switch\dotfill\button{TEST A \& HOLD}
+  \item Wait 10\;sec for tape to rewind or reset battery switch.
+  \item[\gi] FIRE test switch\dotfill\button{TEST B \& HOLD}
  \end{itemize}
- \item[\ri] APU switch\dotfill\button{ON}
+ \item[\mi] APU switch\dotfill\button{ON}
  \begin{itemize}
-  \item[\ri] APU ACC caution light\dotfill\ok{ON}
-  \item[\ri] APU READY light\dotfill\ok{GREEN}
+  \item[\ni] APU ACC caution light\dotfill\ok{ON}
+  \item[\mi] APU READY light\dotfill\ok{GREEN}
  \end{itemize}
- \item[\ri] ENG CRANK switch\dotfill\button{RIGHT POS}
- \item[\ri] Right throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
- \item[\ri] GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT, ROLL LEFT}
-% \begin{itemize}
-%  \item OFP 15C\dotfill\ok{ROLL LEFT, ROLL LEFT}
-%  \item OFP 13C\dotfill\ok{ROLL OUT, ROLL OUT}
-% \end{itemize}
- \item[\ri]EMI/IFEI - right engine\dotfill\button{CHECK}
+ \item[\mi] ENG CRANK switch\dotfill\button{RIGHT POS}
+ \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
+ \item GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT, ROLL LEFT}
+ \item[\bi]EMI/IFEI - right engine\dotfill\button{CHECK}
  \begin{itemize}
-  \item RPM N$_2$\dotfill\ok{63\,-\,70\%}
-  \item Temperature\dotfill\ok{190\,-\,590\degC}
-  \item Fuel flow\dotfill\ok{420\,-\,900\;PPH}
-  \item Nozzle position\dotfill\ok{73\,-\,84\%}
-  \item Oil pressure\dotfill\ok{45\,-\,110\;PSI}
+  \item[\bi] N$_2$ RPM\dotfill\ok{63\,-\,70\%}
+  \item[\bi] EGT\dotfill\ok{190\,-\,590\degC}
+  \item[\bi] FF\dotfill\ok{420\,-\,900\;PPH}
+  \item[\bi] NOZ\dotfill\ok{73\,-\,84\%}
+  \item[\bi] OIL\dotfill\ok{45\,-\,110\;PSI}
  \end{itemize}
 \end{itemize}
  % ---------------------------------------------------------------------------------------------------
@@ -178,103 +182,168 @@
 \begin{itemize}
  \item[] \myHead{Engine Start} 
  \item[\ri] BLEED AIR knob (\ok{RPM\;>\;60\%})\dotfill\button{CW\;360\textdegree}
- %\item[\ri] Master caution\dotfill\button{CANCEL}
  \item[\ri] Caution and warning lights switch\dotfill\button{TEST}
  \item[\ri] Internal lighting\dotfill\button{AS REQUIRED}
  \item[\ri] Canopy\dotfill\button{CLOSE}
- \item[\ri] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
- \item[\ri] COMM\;1 and COMM\;2 radios\dotfill\button{AS REQUIRED}
+ \item[\yi] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
+ \item[\oi] COMM\;1 and COMM\;2 radios\dotfill\button{AS REQUIRED}
  \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
- \item[\ri] Master caution button\dotfill\button{DEPRESS}
+ \item[\oi] Master caution button\dotfill\button{DEPRESS}
  \begin{itemize}
-  \item L-DDI - FCS page\dotfill\warn{2 or R}
+  \item[\yi] L-DDI - FCS page\dotfill\warn{2 or R}
  \end{itemize}
- \item[\ri] R-DDI: FCS BIT page\dotfill\button{OBS STOP}
- \item[\ri] ENG CRANK switch\dotfill\button{LEFT POS}
- \item[\ri] Left throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
- \item[\ri] Master caution buttion\dotfill\button{DEPRESS}
+ \item[\yi] R-DDI: FCS BIT page\dotfill\button{OBS STOP}
+ \item[\mi] ENG CRANK switch\dotfill\button{LEFT POS}
+ \item[\gi] Left throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
+ \item[\oi] Master caution buttion\dotfill\button{DEPRESS}
  \begin{itemize}
   %\item Left DDI Caution and advisories\dotfill\ok{CHECK}
-  \item Left DDI\dotfill\warn{1 or L}
+  \item[\yi] Left DDI\dotfill\warn{1 or L}
  \end{itemize} 
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
-\newpage
+\vspace{0.5em}
+%\newpage
 % Before Taxi
 \begin{itemize}
  \item[] \myHead{Before Taxi}
- \item[\ri] MPCD: HSI page\dotfill\button{OBS DATA}
+ \item[\yi] MPCD: HSI page\dotfill\button{OBS DATA}
  \begin{itemize}
-  \item A/C coordinates\dotfill\button{CHECK}
+  \item[\yi] A/C coordinates\dotfill\button{CHECK}
  \end{itemize} 
- \item[\ri] INS knob\dotfill\button{GND}/\boat{CV}
- \item[\ri] RADAR knob\dotfill\button{OPER}
- \item[\ri] WING FOLD\dotfill\button{SPREAD \& LOCK}
- \item[\ri] FCS RESET button\dotfill\button{DEPRESS}
+ \item[\si] RADAR knob\dotfill\button{OPER}
+ \item[\si] INS knob\dotfill\button{GND}/\boat{CV}
+ \item[\mi] FCS RESET button\dotfill\button{DEPRESS}
  \begin{itemize}
-  \item L-DDI: FCS page\dotfill\warn{X} (WINGS FOLDED: AILERON \ok{X})
+  \item[\yi] L-DDI: FCS page\dotfill\warn{X} (WINGS FOLDED: AILERON \ok{X})
  \end{itemize}
- \item[\ri] Flap switch\dotfill\button{AUTO}
- \item[\ri] FCS (cold weather)\dotfill\button{BIT}
+ \item[\bi] Flap switch\dotfill\button{AUTO}
+ \item FCS (cold weather)\dotfill\button{BIT}
  \begin{itemize}
-  \item FCS switch\dotfill\button{DEPRESS\,\&\,HOLD}
-  \item R-DDI: FCS page\dotfill\button{OBS FCS-MC}
-  \item R-DDI: FCS-MC page\dotfill\button{OBS FCS}
+  \item[\si] FCS switch\dotfill\button{DEPRESS\,\&\,HOLD}
+  \item[\yi] R-DDI: FCS page\dotfill\button{OBS FCS-MC}
+  \item[\yi] R-DDI: FCS-MC page\dotfill\button{OBS FCS}
  \end{itemize}
- \item[\ri] Flap switch\dotfill\button{HALF}
- \item[\ri] Takeoff trim button\dotfill\button{DEPRESS}
+\end{itemize} 
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Before Taxi (continued)
+\begin{itemize}
+ \item[] \myHead{Before Taxi}
+ \item[\bi] Flap switch\dotfill\button{HALF}
+ \item[\mi] Takeoff trim button\dotfill\button{DEPRESS}
  \begin{itemize}
-  \item Stabilator\dotfill\button{12\textdegree}
+  \item[\yi] Stabilator\dotfill\button{12\textdegree}/\boat{16\textdegree-19\textdegree}
  \end{itemize}
- \item[\ri] OBOGS switch\dotfill\button{ON}
- \item[\ri] Four down test:
+ \item[\mi] OBOGS switch\dotfill\button{ON}
+ \item Four down test:
  \begin{itemize}
-  \item Pitot heat\dotfill\button{ON\;$\Rightarrow$\;OFF}
-  \item Arrestor hook\dotfill\button{DOWN\;$\Rightarrow$\;UP}
-  \item Speed brake\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
-  \item Refulling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
-  \item Launch bar\dotfill\boat{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item[\ri] Pitot heat\dotfill\button{ON\;$\Rightarrow$\;AUTO}
+  \item[\ni] Arrestor hook\dotfill\button{DOWN\;$\Rightarrow$\;UP}
+  \item[\gi] Speed brake\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item[\ri] Refueling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item[\bi] Launch bar\dotfill\boat{EXTEND\;$\Rightarrow$\;RETRACT}
  \end{itemize}
- \item[\ri] Standby attitude indicator\dotfill\button{UNCAGE}
- %\item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
- \item[\ri] Soft altitudes\dotfill\button{SET}
+ \item[\ni] Standby attitude indicator\dotfill\button{UNCAGE}
+ \item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
+ \item Soft altitudes\dotfill\button{SET}
  \begin{itemize}
-  \item MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
-  \item UFC enter\dotfill\button{450}/\boat{370}\button{\;ft}
+  \item[\yi] MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
+  \item[\oi] UFC enter\dotfill\button{450}/\boat{370}\button{\;ft}
+ \end{itemize}
+ \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
+ \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
+ \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED} 
+ \item[\bi] Hand brake\dotfill\button{RELEASE}
+ \item[\ri] Attitude source\dotfill\button{STBY}
+ \begin{itemize}
+  \item[\oi] Verify HUD shows standby attitude data.
+  \item[\oi] Agreement standby and INS data\dotfill\button{CHECK}
+  \item[\yi] R-DDI: FCS Page CH 1/3 of PROC row\dotfill\button{X}
  \end{itemize}  
- \item[\ri] BINGO fuel\dotfill\button{SET} 
- %\item[\ri] Attitude source\dotfill\button{STBY} 
- \item[\ri] Hand brake\dotfill\button{RELEASE}
- \item[\ri] Standby barometric altimeter\dotfill\button{SET}
+ \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
+ \item[\ni] LDG/TAXI LIGHT switch\dotfill\button{ON}
+ \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+%\vspace{0.5em}
 \newpage
 % TAXI
 \begin{itemize}
  \item[] \myHead{Taxi}
- \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
  \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
- \item[\ri] Normal breakes\dotfill\button{CHECK}
- \item[\ri] Nosewheel steering\dotfill\button{CHECK}
+ \item Normal breakes\dotfill\button{CHECK}
+ \item[\gi] Nosewheel steering\dotfill\button{CHECK}
+ \item[\gi] Throttle \dotfill\button{\textasciitilde70-75\% RPM}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
 %\newpage
 % Before Takeoff
 \begin{itemize}
  \item[] \myHead{Before Takeoff}
+ \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
  \item[\ri] Canopy\dotfill\ok{CLOSED}
- \item[\ri] IFF\dotfill\ok{ON}
- \item[\ri] PARK BRK handle\dotfill\ok{FULLY STOWED}
- \item[\ri] MENU checklist\dotfill\button{COMPLETE}
- \item[\ri] Engines\dotfill\button{MIL CHECK (if desired)}
-  \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
+ \item[\ni] WING FOLD\dotfill\boat{SPREAD \& LOCK}
+ \item[\mi] IFF\dotfill\ok{ON}
+ \item[\bi] PARK BRK handle\dotfill\ok{FULLY STOWED}
+ \item[\yi] MENU checklist\dotfill\button{COMPLETE}
+ \item[\gi] Engines (if desired)\dotfill\button{MIL CHECK}
+ \begin{itemize}
+  \item[\bi] N$_2$ RPM\dotfill\ok{92-102\%}
+  \item[\bi] EGT\dotfill\ok{715-830\degC}
+  \item[\bi] FF\dotfill\ok{6000-9000\;PPH}
+  \item[\bi] NOZ\dotfill\ok{0-57\%}
+  \item[\bi] OIL\dotfill\ok{95-180\;PSI}
+ \end{itemize}
+\end{itemize} 
+% ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
+%\newpage
+% After Takeoff
+\begin{itemize}
+ \item[] \myHead{After Takeoff}
+ \item[\bi] LDG GEAR handle\dotfill\button{UP}
+ \item[\bi] FLAP switch\dotfill\button{AUTO}
+ \item[\bi] ALT switch (>\;3000 ft)\dotfill\button{BARO}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{HUD/RADAR}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+%\vspace{0.5em}
+\newpage
+% Climb
+\begin{itemize}
+ \item[] \myHead{Climb}
+ \item[\gi] Maintain 350 knots to 10,000 feet.
+ \vspace{0.3em}
+ \item[] \myhead{10,000 Feet}
+ \item[\ni] Cockpit altimeter\dotfill\button{CHECK}
+ \item[\bi] Fuel transfer\dotfill\button{CHECK}
+ \item[\bi] Radar altimeter low alt warning system\dotfill\button{CHECK/SET}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
+%\newpage
+% Landing
+\begin{itemize}
+ \item[] \myHead{Landing}
+ \item[\ri] ENG ANTI ICE switch\dotfill\button{CHECK/SET}
+ \item[\ri] PITOT ANTI ICE switch\dotfill\button{AUTO}
+ \item[\ri] DEFOG handle\dotfill\button{HIGH}
+ \item[\ri] WINDSHIELD switch\dotfill\button{AS DESIRED}
+ \item[\oi] Altimeter setting\dotfill\button{CHECK}
+ \item[\ni] Radar altimeter\dotfill\button{SET AND CHECK}
+ \item[\ri] HUD\dotfill\button{NAV MASTER MODE}
+ \item[\ri] ARA-63 (ILS)\dotfill\button{ON AND CHANNEL SET}
+ \item[\ri] IFF\dotfill\button{AS DIRECTED}
+ \item[\ri] Weapons/sensors\dotfill\button{AS REQUIRED}
 \end{itemize} 
 % ---------------------------------------------------------------------------------------------------
 %
 }
 \end{document}
 %
-%
+%\item[\ri] \dotfill\button{}
 % ---------------------------------------------------------------------------------------------------
 % \newpage
 % % PRE-FLIGHT
