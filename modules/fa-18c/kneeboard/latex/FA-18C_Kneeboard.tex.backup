@@ -57,7 +57,7 @@
 \newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
 \newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
 \newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
-\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
 % itemize
 \renewcommand{\labelitemi}{{$\bullet$\;}}
 \renewcommand{\labelitemii}{{$\bullet$\;}}
@@ -98,14 +98,14 @@
 % SCRAMBLE START (Extended)
 \begin{itemize}
  \item[] \myHead{Scramble Operation}
- \item[\mi] Battery switch\dotfill\button{ON}
+ \item[\ri] BATT switch\dotfill\button{ON}
  \item[\mi] APU switch\dotfill\button{ON}
  \begin{itemize}
   \item[\mi] APU READY light\dotfill\ok{GREEN}
  \end{itemize}
  \item[\mi] OBOGS switch\dotfill\button{ON}
  \item[\mi] ENG CRANK switch\dotfill\button{RIGHT POS}
- \item[\gi] Right throttle (\ok{RPM\;>\;16\%})\dotfill\button{IDLE}
+ \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
  \item[\yi] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
  \item[\oi] COMM\;1 \& COMM\;2 radios\dotfill\button{AS REQUIRED}
  \item[\ri] RADAR knob\dotfill\button{OPER}
@@ -114,7 +114,7 @@
  \item[\yi] L-DDI: select page\dotfill\button{FCS}
  \item[\yi] R-DDI: BIT page\dotfill\button{OSB STOP}
  \item[\mi] ENG CRANK switch\dotfill\button{LEFT POS}
- \item[\gi] Left throttle (\ok{RPM\;>\;16\%})\dotfill\button{IDLE}
+ \item[\gi] Left throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
  \item[\ri] Canopy\dotfill\button{CLOSE}
  \item[\bi] FLAP switch\dotfill\button{HALF}
  \item[\mi] T/O TRIM button\dotfill\button{DEPRESS}
@@ -126,20 +126,21 @@
  \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
  \item[\bi] Parking brake\dotfill\button{RELEASE}
  \item[\ri] Ejection seat handle\dotfill\button{ARM}
- \item[\si] ALR-67 power button\dotfill\button{ON}  
+ \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
  \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
+ \item[\yi] L/R-DDIs:\,select pages\dotfill\button{HUD\,/\,RADAR}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \newpage
 % PRE-FLIGHT
 \begin{itemize}
  \item[] \myHead{Preflight Checks}
- \item[\bi] Parking brake\dotfill\ok{SET}
- \item[\bi] ANTI SKID switch\dotfill\ok{ON}/\boat{OFF}
- \item[\bi] Master Arm switch\dotfill\ok{SAFE}
- \item[\ri] OXY FLOW knob\dotfill\ok{ON}
- \item[\ni] Wing fold handle\dotfill\ok{MATCHES WING POS}
- \item[\ni] Ejection seat handle\dotfill\ok{SAFE}
+ \item[\bi] Parking brake\dotfill\button{SET}
+ \item[\bi] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
+ \item[\bi] Master Arm switch\dotfill\button{SAFE}
+ \item[\ni] Wing fold handle\dotfill\button{MATCHES WING POS}
+ \item[\ni] Ejection seat handle\dotfill\button{SAFE}
+ \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \vspace{0.5em}
@@ -151,6 +152,7 @@
  \begin{itemize}
   \item[\ni] Essential and utility batteries\dotfill\ok{\textasciitilde\,28\;V}
  \end{itemize}
+ \item[\bi] Brake pressure\dotfill\ok{\textasciitilde\,3000\;PSI}
  \item FIRE warning test\dotfill\button{PERFORM}
  \begin{itemize}
   \item[\gi] FIRE test switch\dotfill\button{TEST A \& HOLD}
@@ -163,8 +165,8 @@
   \item[\mi] APU READY light\dotfill\ok{GREEN}
  \end{itemize}
  \item[\mi] ENG CRANK switch\dotfill\button{RIGHT POS}
- \item[\gi] Right throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
- \item GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT, ROLL LEFT}
+ \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
+ \item GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT (2x), FLIGHT CONTROLS (2x)}
  \item[\bi]EMI/IFEI - right engine\dotfill\button{CHECK}
  \begin{itemize}
   \item[\bi] N$_2$ RPM\dotfill\ok{63\,-\,70\%}
@@ -192,7 +194,7 @@
  \end{itemize}
  \item[\yi] R-DDI: FCS BIT page\dotfill\button{OBS STOP}
  \item[\mi] ENG CRANK switch\dotfill\button{LEFT POS}
- \item[\gi] Left throttle (\ok{RPM\;>\;15\%})\dotfill\button{IDLE}
+ \item[\gi] Left throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
  \item[\oi] Master caution buttion\dotfill\button{DEPRESS}
  \begin{itemize}
   %\item Left DDI Caution and advisories\dotfill\ok{CHECK}
@@ -209,9 +211,8 @@
  \begin{itemize}
   \item[\yi] A/C coordinates\dotfill\button{CHECK}
  \end{itemize} 
- \item[\si] INS knob\dotfill\button{GND}/\boat{CV}
  \item[\si] RADAR knob\dotfill\button{OPER}
- \item[\ni] WING FOLD\dotfill\button{SPREAD \& LOCK}
+ \item[\si] INS knob\dotfill\button{GND}/\boat{CV}
  \item[\mi] FCS RESET button\dotfill\button{DEPRESS}
  \begin{itemize}
   \item[\yi] L-DDI: FCS page\dotfill\warn{X} (WINGS FOLDED: AILERON \ok{X})
@@ -237,42 +238,56 @@
  \item[\mi] OBOGS switch\dotfill\button{ON}
  \item Four down test:
  \begin{itemize}
-  \item[\ri] Pitot heat\dotfill\button{ON\;$\Rightarrow$\;OFF}
+  \item[\ri] Pitot heat\dotfill\button{ON\;$\Rightarrow$\;AUTO}
   \item[\ni] Arrestor hook\dotfill\button{DOWN\;$\Rightarrow$\;UP}
   \item[\gi] Speed brake\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
-  \item[\ri] Refulling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
+  \item[\ri] Refueling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
   \item[\bi] Launch bar\dotfill\boat{EXTEND\;$\Rightarrow$\;RETRACT}
  \end{itemize}
  \item[\ni] Standby attitude indicator\dotfill\button{UNCAGE}
- %\item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
+ \item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
  \item Soft altitudes\dotfill\button{SET}
  \begin{itemize}
   \item[\yi] MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
   \item[\oi] UFC enter\dotfill\button{450}/\boat{370}\button{\;ft}
- \end{itemize}  
- \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED} 
- %\item[\ri] Attitude source\dotfill\button{STBY} 
+ \end{itemize}
+ \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
+ \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED}
+ \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
  \item[\bi] Hand brake\dotfill\button{RELEASE}
+ \item[\mi] Shoulder harness control handle\dotfill\button{LOCK}
+ \item[\ri] Attitude source\dotfill\button{STBY}
+ \begin{itemize}
+  \item[\oi] Verify HUD shows standby attitude data.
+  \item[\oi] Agreement standby and INS data\dotfill\button{CHECK}
+  \item[\yi] R-DDI: FCS Page CH 1/3 of PROC row\dotfill\button{X}
+ \end{itemize}  
  \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
+ \item[\ni] LDG/TAXI LIGHT switch\dotfill\button{ON}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{CHECKLIST/FCS}
  \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+%\vspace{0.5em}
 \newpage
 % TAXI
 \begin{itemize}
  \item[] \myHead{Taxi}
  \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
- \item[\ri] Normal breakes\dotfill\button{CHECK}
- \item[\ri] Nosewheel steering\dotfill\button{CHECK}
+ \item Normal breakes\dotfill\button{CHECK}
+ \item[\gi] Nosewheel steering\dotfill\button{CHECK}
+ \item[\gi] Throttle N$_2$ RPM\dotfill\button{\textasciitilde70-75\%}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
 %\newpage
 % Before Takeoff
 \begin{itemize}
  \item[] \myHead{Before Takeoff}
- \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}. 
+ \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
  \item[\ri] Canopy\dotfill\ok{CLOSED}
- \item[\mi] IFF\dotfill\ok{ON}
+ \item[\ni] WING FOLD\dotfill\boat{SPREAD \& LOCK}
+ \item[\mi] IFF\dotfill\button{ON}
  \item[\bi] PARK BRK handle\dotfill\ok{FULLY STOWED}
  \item[\yi] MENU checklist\dotfill\button{COMPLETE}
  \item[\gi] Engines (if desired)\dotfill\button{MIL CHECK}
@@ -285,27 +300,31 @@
  \end{itemize}
 \end{itemize} 
 % ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
 %\newpage
 % After Takeoff
 \begin{itemize}
  \item[] \myHead{After Takeoff}
  \item[\bi] LDG GEAR handle\dotfill\button{UP}
  \item[\bi] FLAP switch\dotfill\button{AUTO}
- \item[\bi] L-DDI: select page\dotfill\button{FCS}
- \item[\bi] R-DDI: select page\dotfill\button{RADAR}
+ \item[\bi] ALT switch (>\;3000 ft)\dotfill\button{BARO}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{HUD/RADAR}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
-%\newpage
+%\vspace{0.5em}
+\newpage
 % Climb
 \begin{itemize}
  \item[] \myHead{Climb}
  \item[\gi] Maintain 350 knots to 10,000 feet.
+ \vspace{0.3em}
  \item[] \myhead{10,000 Feet}
  \item[\ni] Cockpit altimeter\dotfill\button{CHECK}
  \item[\bi] Fuel transfer\dotfill\button{CHECK}
  \item[\bi] Radar altimeter low alt warning system\dotfill\button{CHECK/SET}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
+\vspace{0.5em}
 %\newpage
 % Landing
 \begin{itemize}

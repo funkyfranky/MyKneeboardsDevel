@@ -57,7 +57,7 @@
 \newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
 \newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
 \newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
-\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
 % itemize
 \renewcommand{\labelitemi}{{$\bullet$\;}}
 \renewcommand{\labelitemii}{{$\bullet$\;}}
@@ -135,11 +135,11 @@
 % PRE-FLIGHT
 \begin{itemize}
  \item[] \myHead{Preflight Checks}
- \item[\bi] Parking brake\dotfill\ok{SET}
- \item[\bi] ANTI SKID switch\dotfill\ok{ON}/\boat{OFF}
- \item[\bi] Master Arm switch\dotfill\ok{SAFE}
- \item[\ni] Wing fold handle\dotfill\ok{MATCHES WING POS}
- \item[\ni] Ejection seat handle\dotfill\ok{SAFE}
+ \item[\bi] Parking brake\dotfill\button{SET}
+ \item[\bi] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
+ \item[\bi] Master Arm switch\dotfill\button{SAFE}
+ \item[\ni] Wing fold handle\dotfill\button{MATCHES WING POS}
+ \item[\ni] Ejection seat handle\dotfill\button{SAFE}
  \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
@@ -166,7 +166,7 @@
  \end{itemize}
  \item[\mi] ENG CRANK switch\dotfill\button{RIGHT POS}
  \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
- \item GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT, ROLL LEFT}
+ \item GPWS voice alerts\dotfill\dotfill\ok{ROLL LEFT (2x), FLIGHT CONTROLS (2x)}
  \item[\bi]EMI/IFEI - right engine\dotfill\button{CHECK}
  \begin{itemize}
   \item[\bi] N$_2$ RPM\dotfill\ok{63\,-\,70\%}
@@ -251,10 +251,11 @@
   \item[\yi] MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
   \item[\oi] UFC enter\dotfill\button{450}/\boat{370}\button{\;ft}
  \end{itemize}
- \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
  \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
- \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED} 
+ \item[\bi] BINGO fuel\dotfill\button{AS REQUIRED}
+ \item[\ri] INS knob (\ok{alignment complete})\dotfill\button{NAV}
  \item[\bi] Hand brake\dotfill\button{RELEASE}
+ \item[\mi] Shoulder harness control handle\dotfill\button{LOCK}
  \item[\ri] Attitude source\dotfill\button{STBY}
  \begin{itemize}
   \item[\oi] Verify HUD shows standby attitude data.
@@ -263,6 +264,7 @@
  \end{itemize}  
  \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
  \item[\ni] LDG/TAXI LIGHT switch\dotfill\button{ON}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{CHECKLIST/FCS}
  \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
@@ -274,7 +276,7 @@
  \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
  \item Normal breakes\dotfill\button{CHECK}
  \item[\gi] Nosewheel steering\dotfill\button{CHECK}
- \item[\gi] Throttle \dotfill\button{\textasciitilde70-75\% RPM}
+ \item[\gi] Throttle N$_2$ RPM\dotfill\button{\textasciitilde70-75\%}
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \vspace{0.5em}
@@ -285,9 +287,10 @@
  \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
  \item[\ri] Canopy\dotfill\ok{CLOSED}
  \item[\ni] WING FOLD\dotfill\boat{SPREAD \& LOCK}
- \item[\mi] IFF\dotfill\ok{ON}
+ \item[\mi] IFF\dotfill\button{ON}
  \item[\bi] PARK BRK handle\dotfill\ok{FULLY STOWED}
  \item[\yi] MENU checklist\dotfill\button{COMPLETE}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{HUD/FC} 
  \item[\gi] Engines (if desired)\dotfill\button{MIL CHECK}
  \begin{itemize}
   \item[\bi] N$_2$ RPM\dotfill\ok{92-102\%}
