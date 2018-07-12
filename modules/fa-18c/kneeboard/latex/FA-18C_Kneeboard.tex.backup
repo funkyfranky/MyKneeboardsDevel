@@ -108,8 +108,8 @@
  \item[\gi] Right throttle (\ok{RPM\;>\;25\%})\dotfill\button{IDLE}
  \item[\yi] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
  \item[\oi] COMM\;1 \& COMM\;2 radios\dotfill\button{AS REQUIRED}
- \item[\ri] RADAR knob\dotfill\button{OPER}
- \item[\ri] INS knob\dotfill\button{GND}/\boat{CV}
+ \item[\si] RADAR knob\dotfill\button{OPER}
+ \item[\si] INS knob\dotfill\button{GND}/\boat{CV}
  \item[\bi] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
  \item[\yi] L-DDI: select page\dotfill\button{FCS}
  \item[\yi] R-DDI: BIT page\dotfill\button{OSB STOP}
@@ -137,9 +137,10 @@
  \item[] \myHead{Preflight Checks}
  \item[\bi] Parking brake\dotfill\button{SET}
  \item[\bi] ANTI SKID switch\dotfill\button{ON}/\boat{OFF}
- \item[\bi] Master Arm switch\dotfill\button{SAFE}
- \item[\ni] Wing fold handle\dotfill\button{MATCHES WING POS}
- \item[\ni] Ejection seat handle\dotfill\button{SAFE}
+ \item[\bi] HOOK BYPASS switch switch\dotfill\button{FIELD}/\boat{CARRIER}
+ \item[\bi] MASTER arm switch\dotfill\button{SAFE}
+ \item[\ni] WING FOLD handle\dotfill\button{MATCHES WING POS}
+ \item[\mi] Ejection seat arming handle\dotfill\button{SAFE}
  \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
@@ -175,22 +176,24 @@
   \item[\bi] NOZ\dotfill\ok{73\,-\,84\%}
   \item[\bi] OIL\dotfill\ok{45\,-\,110\;PSI}
  \end{itemize}
+ \item[\ri] BLEED AIR knob (\ok{RPM\;>\;60\%})\dotfill\button{CW\;360\textdegree} 
 \end{itemize}
  % ---------------------------------------------------------------------------------------------------
 \newpage
 % ENGINE START
 \begin{itemize}
  \item[] \myHead{Engine Start} 
- \item[\ri] BLEED AIR knob (\ok{RPM\;>\;60\%})\dotfill\button{CW\;360\textdegree}
+ \item[\oi] Master caution button\dotfill\button{DEPRESS}
  \item[\ri] Caution and warning lights switch\dotfill\button{TEST}
  \item[\ri] Internal lighting\dotfill\button{AS REQUIRED}
  \item[\ri] Canopy\dotfill\button{CLOSE}
  \item[\yi] L/R-DDIs, MPCD and HUD\dotfill\button{ON}
+ \item[\yi] L-DDI: select page\dotfill\button{FCS}
  \item[\oi] COMM\;1 and COMM\;2 radios\dotfill\button{AS REQUIRED}
  \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
  \item[\oi] Master caution button\dotfill\button{DEPRESS}
  \begin{itemize}
-  \item[\yi] L-DDI - FCS page\dotfill\warn{2 or R}
+  \item[\yi] L-DDI: FCS page\dotfill\warn{2 or R}
  \end{itemize}
  \item[\yi] R-DDI: FCS BIT page\dotfill\button{OBS STOP}
  \item[\mi] ENG CRANK switch\dotfill\button{LEFT POS}
@@ -217,12 +220,13 @@
  \begin{itemize}
   \item[\yi] L-DDI: FCS page\dotfill\warn{X} (WINGS FOLDED: AILERON \ok{X})
  \end{itemize}
- \item[\bi] Flap switch\dotfill\button{AUTO}
+ \item[\bi] FLAP switch\dotfill\button{AUTO}
  \item FCS (cold weather)\dotfill\button{BIT}
  \begin{itemize}
   \item[\si] FCS switch\dotfill\button{DEPRESS\,\&\,HOLD}
   \item[\yi] R-DDI: FCS page\dotfill\button{OBS FCS-MC}
   \item[\yi] R-DDI: FCS-MC page\dotfill\button{OBS FCS}
+  \item[\yi] R-DDI: FCSA, FCSB\dotfill\button{TESTING $\Rightarrow$ }\ok{GO}
  \end{itemize}
 \end{itemize} 
 % ---------------------------------------------------------------------------------------------------
@@ -230,15 +234,15 @@
 % Before Taxi (continued)
 \begin{itemize}
  \item[] \myHead{Before Taxi}
- \item[\bi] Flap switch\dotfill\button{HALF}
- \item[\mi] Takeoff trim button\dotfill\button{DEPRESS}
+ \item[\bi] FLAP switch\dotfill\button{HALF}
+ \item[\mi] T/O TRIM button\dotfill\button{DEPRESS}
  \begin{itemize}
   \item[\yi] Stabilator\dotfill\button{12\textdegree}/\boat{16\textdegree-19\textdegree}
  \end{itemize}
  \item[\mi] OBOGS switch\dotfill\button{ON}
  \item Four down test:
  \begin{itemize}
-  \item[\ri] Pitot heat\dotfill\button{ON\;$\Rightarrow$\;AUTO}
+  \item[\ri] PITOT heat\dotfill\button{ON\;$\Rightarrow$\;AUTO}
   \item[\ni] Arrestor hook\dotfill\button{DOWN\;$\Rightarrow$\;UP}
   \item[\gi] Speed brake\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
   \item[\ri] Refueling probe\dotfill\button{EXTEND\;$\Rightarrow$\;RETRACT}
@@ -248,7 +252,7 @@
  \item[\ri] RADAR altimeter\dotfill\button{450/\boat{370}\;ft}
  \item Soft altitudes\dotfill\button{SET}
  \begin{itemize}
-  \item[\yi] MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR ALT}
+  \item[\yi] MPCD: A/C page\dotfill\button{OBS DATA\;$\Rightarrow$\;A/C\;$\Rightarrow$\;RADAR}
   \item[\oi] UFC enter\dotfill\button{450}/\boat{370}\button{\;ft}
  \end{itemize}
  \item[\ai] ALR-67 RWR power button\dotfill\button{ON}
@@ -265,6 +269,7 @@
  \item[\ni] Standby barometric altimeter\dotfill\button{QFE}
  \item[\ni] LDG/TAXI LIGHT switch\dotfill\button{ON}
  \item[\bi] L/R-DDI: select pages\dotfill\button{CHECKLIST/FCS}
+ \item[\gi] NWS\dotfill\button{ON}
  \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
@@ -289,7 +294,9 @@
  \item[\ni] WING FOLD\dotfill\boat{SPREAD \& LOCK}
  \item[\mi] IFF\dotfill\button{ON}
  \item[\bi] PARK BRK handle\dotfill\ok{FULLY STOWED}
+ \item[\ri] Ejection seat handle\dotfill\button{ARM} 
  \item[\yi] MENU checklist\dotfill\button{COMPLETE}
+ \item[\bi] L/R-DDI: select pages\dotfill\button{HUD/FC} 
  \item[\gi] Engines (if desired)\dotfill\button{MIL CHECK}
  \begin{itemize}
   \item[\bi] N$_2$ RPM\dotfill\ok{92-102\%}
@@ -339,6 +346,18 @@
  \item[\ri] ARA-63 (ILS)\dotfill\button{ON AND CHANNEL SET}
  \item[\ri] IFF\dotfill\button{AS DIRECTED}
  \item[\ri] Weapons/sensors\dotfill\button{AS REQUIRED}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Field Landing Pattern
+\begin{itemize}
+ \item[] \myHead{Field Landing Pattern}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+% Field Landing Pattern
+\begin{itemize}
+ \item[] \myHead{Carrier Landing Pattern}
 \end{itemize} 
 % ---------------------------------------------------------------------------------------------------
 %
