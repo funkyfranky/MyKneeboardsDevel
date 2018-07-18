@@ -45,18 +45,22 @@
 \newcommand{\rot}[1]{\textcolor{red}{#1}}
 \newcommand{\blau}[1]{\textcolor{blue}{#1}}
 \newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
 \newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
 \newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
 \newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
 \newcommand{\radio}[1]{\textcolor{blue}{#1}}
 \newcommand{\call}[1]{\textcolor{blue}{{#1}}}
 \newcommand{\button}[1]{\textbf{#1}}
 \newcommand{\degC}{\textdegree{}C}
 \newcommand{\Deg}{\textdegree{}}
 \newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
 \newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
 \newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
-\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
 % itemize
 \renewcommand{\labelitemi}{{$\bullet$\;}}
 \renewcommand{\labelitemii}{{$\bullet$\;}}
@@ -72,6 +76,7 @@
 \newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
 \newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
 \renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
 %
 \newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
 \newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
@@ -82,21 +87,18 @@
 %
 % some info
 \pdfinfo{%
-  /Title    (F-86F Sabre Procedures)
+  /Title    (A-10C Kneeboard)
   /Author   (funkyfranky)
-  /Creator  ()
-  /Producer ()
-  /Subject  ()
-  /Keywords (F-86F, Sabre, Kneeboard, Procedures)
+  /Keywords (A-10C, Warthog, Kneeboard, Procedures)
 }
 %
 % Note: max 29 items per page
 \begin{document}
 \texttt{
-% Preflight Check
-% Cockpit check
+% ---------------------------------------------------------------------------------------------------
+% PREFLIGHT CHECKS
 \begin{itemize}
- \item[] \myHead{Cockpit Checks}
+ \item[] \myHead{Preflight Checks}
  \item Emergency flood lights\dotfill\button{AS REQUIRED}
  \item Throttles\dotfill\button{OFF}
  \item Speed brake\dotfill\button{CENTER POSITION}
@@ -108,11 +110,12 @@
  \item RDR ALTM (radar altimeter)\dotfill\button{DIS}
  \item APU generator\dotfill\button{OFF}
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%
+% ---------------------------------------------------------------------------------------------------
 %\newpage
-% Preflight check
+\vspace{0.5em}
+% PRE-FLIGHT
 \begin{itemize}
- \item[] \myHead{Preflight Checks}
+ \item[] \myHead{Before Engine Start}
  \item Battery\dotfill\button{PWR}
  \item Inverter\dotfill\button{STBY}
  \item AC Generators\dotfill\button{PWR}
@@ -131,10 +134,13 @@
  \item Boost pumps WING\dotfill\button{ON}
  \item Canopy\dotfill\button{CLOSE}
 \end{itemize}
+% ---------------------------------------------------------------------------------------------------
 \newpage
+%\vspace{0.5em}
+% ENGINE START
 \begin{itemize}
 % Engine startup
- \item[] \myHead{Engine Startup}
+ \item[] \myHead{Engine Start}
  \item Radio \radio{ATC} and \radio{REQUEST START-UP}
  \item APU\dotfill\button{START}
   \begin{itemize}
@@ -153,9 +159,10 @@
  \item APU generator\dotfill\button{OFF/RESET}
  \item APU switch\dotfill\button{OFF}
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
- % Before Taxi
+% ---------------------------------------------------------------------------------------------------
+%\newpage
+\vspace{0.5em}
+% BEFORE TAXI
 \begin{itemize}
  \item[] \myHead{Before Taxi}
  \item EGI switch\dotfill\button{ON}
@@ -174,18 +181,20 @@
  \item CICU switch\dotfill\button{ON}
  \item JTRS switch\dotfill\button{ON}
  \item IFFCC switch\dotfill\button{TEST}
- \item Engage prefilght BIT)\dotfill\button{UFC ENT}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+%\vspace{0.5em}
+% BEFORE TAXI (continued)
+\begin{itemize}
+ \item[] \myHead{Before Taxi}
+ \item Engage prefilght BIT\dotfill\button{UFC ENT}
  \item DTS upload: Load all (wait until asterisks appear)\dotfill\button{OSB 10}
  \item Once BIT is completed\dotfill\button{UFC ENT}
  \item Exit HUD menu\dotfill\button{UFC ENT}
  \item IFFCC switch\dotfill\button{ON}
  \item Select CDU on right MFCD\dotfill\button{OSB 13}
  \item Once T=4.0 0.8 EGI and CDU are aligned - press NAV\dotfill\button{OSB 9}
-\end{itemize}
-\newpage
-% Before Taxi 2
-\begin{itemize}
- \item[] \myHead{Before Taxi}
  \item Steerpoint selector\dotfill\button{FLIGHT PLAN}
  \item Select navigation mode\dotfill\button{EGI}
  \item Anti-skid\dotfill\button{ON}
@@ -194,8 +203,10 @@
  \item Ejection seat\dotfill\button{ARM}
  \item Caution panel lights\dotfill\button{CHECK ALL OFF}
 \end{itemize}
+% ---------------------------------------------------------------------------------------------------
 %\newpage
-% Taxi
+\vspace{0.5em}
+% TAXI
 \begin{itemize}
  \item[] \myHead{Taxi}
  \item Radio \radio{ATC} and \radio{REQUEST TAXI}
@@ -208,7 +219,9 @@
  \item Canopy\dotfill\button{CLOSED/LIGHTS OUT}
  \item Ejection seat\dotfill\button{ARMED}
 \end{itemize}
-%\newpage
+% ---------------------------------------------------------------------------------------------------
+\newpage
+%\vspace{0.5em}
 % Before Takeoff
 \begin{itemize}
  \item[] \myHead{Before Takeoff}
@@ -217,6 +230,40 @@
  \item Landing lights\dotfill\button{ON}
  \item Radio \radio{ATC} and \radio{REQUEST TAKEOFF}
 \end{itemize}
+% --------------------------------------------------------------------------------------------------- 
 }
 \end{document}
-% ---------------------------------------------------------------------------------------------------
+%
+% % Template example commands
+% \begin{itemize}
+%  \item[] \myHead{Heading}
+%  \item[\ri] BATT switch\dotfill\button{ON}
+%  \item[\mi] APU switch\dotfill\button{ON}
+%  \begin{itemize}
+%   \item[\mi] APU READY light\dotfill\ok{LIT}
+%  \end{itemize}
+%  \vspace{0.3em}
+%  \item[] \myhead{Radio Commands}
+%  \item If required, tell \radio{Chief} to \radio{PLACE the WHEEL CHOCKS}.
+%  \item If required, tell \radio{Chief} to \radio{REMOVE the WHEEL CHOCKS}.
+%  \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+%  \item Radio \radio{ATC} and \radio{REQUEST} premission to \radio{TAXI TO RUNWAY}.
+%  \item Radio \radio{ATC} and \radio{REQUEST} permission for \radio{TAKE-OFF}.
+% \end{itemize}
+% % ---------------------------------------------------------------------------------------------------
+% \newpage
+% %\vspace{0.5em}
+% % PRE-FLIGHT
+% \begin{itemize}
+%  \item[] \myHead{Colors}
+%  \item[\bi] ProcessBlue\dotfill\button{ON}/\boat{OFF}
+%  \item[\ri] Red\dotfill\button{ON}
+%  \item[\gi] Green\dotfill\button{ON}
+%  \item[\yi] Yellow\dotfill\button{ON}
+%  \item[\vi] Plum\dotfill\button{ON}
+%  \item[\mi] Magenta\dotfill\button{OFF}
+%  \item[\oi] Orange\dotfill\button{SAFE}
+%  \item[\ai] Apricot\dotfill\button{SAFE}
+%  \item[\ni] Brown\dotfill\button{SAFE}
+%  \item[\si] SpringGreen\dotfill\button{SAFE}
+% \end{itemize}
