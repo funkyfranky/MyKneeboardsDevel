@@ -45,27 +45,38 @@
 \newcommand{\rot}[1]{\textcolor{red}{#1}}
 \newcommand{\blau}[1]{\textcolor{blue}{#1}}
 \newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
 \newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
 \newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
 \newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
 \newcommand{\radio}[1]{\textcolor{blue}{#1}}
 \newcommand{\call}[1]{\textcolor{blue}{{#1}}}
 \newcommand{\button}[1]{\textbf{#1}}
 \newcommand{\degC}{\textdegree{}C}
 \newcommand{\Deg}{\textdegree{}}
 \newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
 \newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
-
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
 % itemize
 \renewcommand{\labelitemi}{{$\bullet$\;}}
 \renewcommand{\labelitemii}{{$\bullet$\;}}
 \renewcommand{\labelitemiii}{$\bullet$\;}
 \renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
 \newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
-\newcommand{\ri}{\textcolor{red}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
 \newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
 \newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
 \newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
 %
 \newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
 \newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
@@ -76,11 +87,8 @@
 %
 % some info
 \pdfinfo{%
-  /Title    (AV-8B Harrier Procedures)
+  /Title    (AV-8B Harrier Kneeboard)
   /Author   (funkyfranky)
-  /Creator  ()
-  /Producer ()
-  /Subject  ()
   /Keywords (AV-8B, Harrier, Kneeboard, Procedures)
 }
 %
@@ -829,6 +837,12 @@
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \newpage
+% Vertical Landing - picture
+\begin{itemize}
+\item[] {\LARGE\textbf{Vertical Landing}}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
 % Rolling Vertical Landing
 \begin{itemize}
 \item[] {\LARGE\textbf{Rolling Vertical Landing}}
@@ -908,6 +922,12 @@
 \end{itemize}
 % ---------------------------------------------------------------------------------------------------
 \newpage
+% Slow Landing Fixed Nozzle -- Image
+\begin{itemize}
+ \item[] {\LARGE\textbf{Slow Landing - Fixed Nozzle}}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
 % AWL Channels
 \begin{itemize}
 \item[] {\LARGE\textbf{AWL Channels}}
@@ -943,51 +963,6 @@
 \begin{itemize}
 \item[] {\LARGE\textbf{Carrier Day Recovery Procedure}}
 \end{itemize}
-%
 }
 \end{document}
 %
-%
-% ---------------------------------------------------------------------------------------------------
-\newpage
-% Takeoff Checklist
-\begin{itemize}
-\item[] {\LARGE\textbf{Takeoff Checklist}}
-\item[\yi] Nozzle rotation airspeed\dotfill\button{AS REQUIRED}
-\begin{itemize}
- \item[\yi] Master mode\dotfill\button{V/STOL}
- \item[\yi] ODU select\dotfill\button{NRAS}
- \item[\yi] UFC enter\dotfill\button{NRAS VALUE}
-\end{itemize}
-\item[\yi] Pitch carets\dotfill\button{SET}
-\begin{itemize}
- \item[\yi] ODU select\dotfill\button{PC}
- \item[\yi] UFC enter\dotfill\button{14}
-\end{itemize}
-\item[\gi] STO stop\dotfill\button{AS REQUIRED}
-\item[\yi] Trim\dotfill\button{2\Deg\;ND}
-\item[\yi] Flaps\dotfill\button{AS REQUIRED}
-\item[\yi] Warning/caution lights\dotfill\button{OUT}
-\item[\yi] Engine\dotfill\button{CHECK}
-\begin{itemize}
- \item[\yi] MPCD select\dotfill\button{ENG/BOX ACCEL}
- \item[\yi] Engine RPM\dotfill\button{IDLE $\rightarrow$ 60\%}
- \begin{itemize}
-  \item[\yi] Check timing 35\,-\,60\%\dotfill\ok{2.4\,-\,3.1\;sec}
-  \item[\yi] IGVs\dotfill\ok{10\Deg\,-\,21\Deg}	
- \end{itemize}
-\end{itemize}
-\item[\yi] Water\dotfill\button{AS REQUIRED}
-\begin{itemize}
- \item[] If water is required:
- \item[\yi] Water switch \dotfill\button{TO}\;$\Rightarrow$\;\ok{RPM INCREASE}
- \item[\gi] Engine RPM\dotfill\button{RESET TO TOP END OF ACCELERATION BAND}
-\end{itemize}
-\item[\yi] Nozzle/flaps/duct pressure\dotfill\button{CHECK}
-\begin{itemize}
- \item[\gi] Nozzles momentrarily\dotfill\button{STO stop (or 50\%)}
- \item[\yi] Flaps\dotfill\button{CHECK PROPER ANGLE BASED ON FLAPS MODE}
- \item[\yi] Duct pressure\dotfill\ok{$\sim$45\;PSI}
- \item[\gi] Nozzles\dotfill\button{TO position}
-\end{itemize}
-\end{itemize}

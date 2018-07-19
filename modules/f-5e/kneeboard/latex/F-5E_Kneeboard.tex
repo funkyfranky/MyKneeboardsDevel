@@ -45,18 +45,22 @@
 \newcommand{\rot}[1]{\textcolor{red}{#1}}
 \newcommand{\blau}[1]{\textcolor{blue}{#1}}
 \newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
 \newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
 \newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
 \newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
 \newcommand{\radio}[1]{\textcolor{blue}{#1}}
 \newcommand{\call}[1]{\textcolor{blue}{{#1}}}
 \newcommand{\button}[1]{\textbf{#1}}
 \newcommand{\degC}{\textdegree{}C}
 \newcommand{\Deg}{\textdegree{}}
 \newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
 \newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
 \newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
-\newcommand{\myhead}[1]{{\Large\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
 % itemize
 \renewcommand{\labelitemi}{{$\bullet$\;}}
 \renewcommand{\labelitemii}{{$\bullet$\;}}
@@ -72,6 +76,7 @@
 \newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
 \newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
 \renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
 %
 \newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
 \newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
@@ -82,15 +87,11 @@
 %
 % some info
 \pdfinfo{%
-  /Title    (F-5E-3 Tiger II Procedures)
+  /Title    (F-5E-3 Tiger II Kneeboard)
   /Author   (funkyfranky)
-  /Creator  ()
-  /Producer ()
-  /Subject  ()
-  /Keywords (F-5E, Tiger II, Kneeboard, Procedures)
+  /Keywords (F-5, Tiger II, Kneeboard, Procedures)
 }
 %
-%\item[] \myHead{Preflight Checks}
 % Note: max 29 items per page
 \begin{document}
 \texttt{
@@ -170,9 +171,9 @@
 \end{itemize}
 % ----------------------------------- 
 \newpage
-% Engine Start-up
+% Engine Start
 \begin{itemize}
- \item[] \myHead{Engine Startup}
+ \item[] \myHead{Engine Start}
  \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
  \item Tell \radio{Chief} to \radio{CONNECT GROUND AIR Supply} unit.
  \item Tell \radio{Chief} to \radio{APPLY GROUND AIR} to motor left engine.
@@ -203,21 +204,6 @@
  \item[\yi] Auxiliary intake doors indicator\dotfill\ok{OPEN}
  \item Tell \radio{Chief} to \radio{DISCONNECT GROUND AIR Supply} unit.
  \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
-\end{itemize}
-% --------------------------------------
-\newpage
-% Crossbleed start
-\begin{itemize}
- \item[] \myHead{Crossbleed Start}
- \item Tell \radio{Chief} to \radio{DISCONNECT GROUND AIR Supply} unit.
- \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
- \item[\yi] Left engine RPM\dotfill\button{95\;\%}
- \item[\bi] Reft engine start button\dotfill\button{PUSH}
- \item[\gi] At 10\;\% engine RPM\dotfill\button{RIGHT THROTTLE IDLE}
- \item[\yi] Engine instruments\dotfill\button{CHECK}
- \item[\gi] After right engine at idle RPM\dotfill\button{LEFT THROTTLE IDLE}
- \item[\ri] Generator caution lights\dotfill\button{OUT}
- \item[\yi] Aux intake doors indicator\dotfill\button{OPEN}
 \end{itemize}
 % -------------------------------------------------------
 \newpage
@@ -334,6 +320,22 @@
  \item[\yi] Altimeter mode\dotfill\button{AS REQUIRED}
  \end{itemize}
 \end{itemize}
+% --------------------------------------
+\vspace{0.5em}
+%\newpage
+% Crossbleed start
+\begin{itemize}
+ \item[] \myHead{Crossbleed Start}
+ \item Tell \radio{Chief} to \radio{DISCONNECT GROUND AIR Supply} unit.
+ \item If required, tell \radio{Chief} to turn \radio{GROUND POWER OFF}.
+ \item[\yi] Left engine RPM\dotfill\button{95\;\%}
+ \item[\bi] Reft engine start button\dotfill\button{PUSH}
+ \item[\gi] At 10\;\% engine RPM\dotfill\button{RIGHT THROTTLE IDLE}
+ \item[\yi] Engine instruments\dotfill\button{CHECK}
+ \item[\gi] After right engine at idle RPM\dotfill\button{LEFT THROTTLE IDLE}
+ \item[\ri] Generator caution lights\dotfill\button{OUT}
+ \item[\yi] Aux intake doors indicator\dotfill\button{OPEN}
+\end{itemize}
 % ---------------------------------------------------------------------------------------------------------
 \newpage
 % Before Landing
@@ -379,7 +381,7 @@
 \begin{itemize}
  % After landing
  \item[] \myHead{After Landing}
- \item[\yi] Jettison drag chute.
+ \item[\yi] Drag chute\dotfill\button{JETTISON}
  \item[\ni] Cockpit pressurization switch\dotfill\button{RAM DUMP}
  \item[\gi] Flap thumb switch\dotfill\button{UP}
  \item[\gi] Speed brake\dotfill\button{OUT}
@@ -394,7 +396,7 @@
  \item[\ni] Cockpit pressurization switch\dotfill\button{RAM DUMP}
  \item Canopy\dotfill\button{OPEN}
  \item[\ri] Cockpit pressurization switch\dotfill\button{NORMAL/CABIN PRESS}
- \item All unguarded switches (except batt, gen, boos pumps)\dotfill\button{OFF}
+ \item All unguarded switches (except batt, gen, boost pumps)\dotfill\button{OFF}
  \item[\gi] Throttles\dotfill\button{OFF}
  \item[\yi] Standby attitude indicator\dotfill\button{CAGE and LOCK}
  \item[\ni] Generator switches\dotfill\button{OFF}
@@ -537,4 +539,4 @@
 % -----------------------------------------------------------
 }
 \end{document}
-% ---------------------------------------------------------------------------------------------------
+%
