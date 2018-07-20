@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.11.23)  9 FEB 2018 11:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.6.12)  20 JUL 2018 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,26 +985,26 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
  (./Spitfire_Kneeboard.aux)
 \openout1 = `Spitfire_Kneeboard.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 96.
 
 (/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 94.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 96.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1103,81 +1103,81 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 210.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 217.
 
 (/usr/share/texmf/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/sc' in size <20.74> not available
-(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 210.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 210.
+(Font)              Font shape `T1/pcr/b/sc' tried instead on input line 217.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 217.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 210.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 217.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 210
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 217
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 210
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 217
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 210.
+(Font)              <12> on input line 217.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 210.
+(Font)              <8> on input line 217.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 210.
-LaTeX Font Info:    Try loading font information for U+msa on input line 210.
+(Font)              <6> on input line 217.
+LaTeX Font Info:    Try loading font information for U+msa on input line 217.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 210.
+LaTeX Font Info:    Try loading font information for U+msb on input line 217.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 210.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 217.
 
 (/usr/share/texmf/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 210.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 217.
 
 
 (/usr/share/texmf/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 210.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 217.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 210.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 217.
 
  (/usr/share/texmf/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
 LaTeX Font Info:    Font shape `TS1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `TS1/pcr/b/n' tried instead on input line 210.
+(Font)              Font shape `TS1/pcr/b/n' tried instead on input line 217.
  [2]
 [3] [4] (./Spitfire_Kneeboard.aux) ) 
 Here is how much of TeX's memory you used:
- 15029 strings out of 494035
- 274027 string characters out of 6158520
- 313756 words of memory out of 5000000
- 18055 multiletter control sequences out of 15000+600000
+ 15034 strings out of 494035
+ 274047 string characters out of 6158521
+ 313831 words of memory out of 5000000
+ 18060 multiletter control sequences out of 15000+600000
  24614 words of font info for 50 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  55i,5n,54p,420b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1185,7 +1185,7 @@ Here is how much of TeX's memory you used:
 nc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/t
 ype1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/urw/courier/ucrb8a.pfb>
 </usr/share/texmf/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Spitfire_Kneeboard.pdf (4 pages, 36943 bytes).
+Output written on Spitfire_Kneeboard.pdf (4 pages, 36962 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream

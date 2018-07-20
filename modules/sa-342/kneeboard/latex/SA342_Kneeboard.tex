@@ -1,0 +1,171 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (SA-342 Gazelle Kneeboard)
+  /Author   (funkyfranky)
+  /Keywords (SA-342, Gazelle, Kneeboard, Procedures)
+}
+%
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% ------------------------------------------------------------------------------------------
+% Engine Startup
+\begin{itemize}
+ \item[] \myHead{Engine Start}
+ \item Doors\dotfill\button{CLOSE}
+ \item UV lights\dotfill\button{AS REQUIRED}
+ \item Battery BATT switch\dotfill\button{ON}
+ \item Alternator ALT switch\dotfill\button{ON}
+ \item Generator GENE switch\dotfill\button{ON}
+ \item AM radio\dotfill\button{ON}
+ \item Navigation lights\dotfill\button{AS REQUIRED}
+ \item Strobe lights\dotfill\button{AS REQUIRED}
+ \item NADIR\dotfill\button{VEILLE}
+ \item Radio \radio{ATC} and \radio{REQUEST START-UP}.
+ \item Fuel pump POMPE\dotfill\button{ON}
+ \item[] Wait for 20 seconds using stopwatch.
+ \item Starter DEM switch\dotfill\button{ON}
+ \item DEM light\dotfill\ok{ON}
+ \item Turbine IDLE\dotfill\ok{25100 RPM}
+ \item DEM light\dotfill\ok{OUT}
+ \item Rotor brake lever\dotfill\button{FORWARD}
+ \item Fuel flow lever\dotfill\button{FORWARD until ROTOR}
+ \item Turbine and rotor RPM\dotfill\button{WAIT TO SYNC}
+ \item Fuel flow lever\dotfill\button{SLOWLY FULLY FORWARD}
+ \item Starter switch\dotfill\button{OFF}
+ \item Pitot heat switch\dotfill\button{ON}
+ \item Trim switch\dotfill\button{ON}
+ \item Magnetic brake DEBR. EFF\dotfill\button{ON}
+ \item Gyro mode\dotfill\button{GM}
+ \item Autopilot master switch\dotfill\button{ON}
+ \item Autopilot pitch switch\dotfill\button{ON}
+ \item Autopilot yaw switch\dotfill\button{ON}
+\end{itemize}
+% ------------------------------------------------------------------------------------------
+\newpage
+% Engine Startup 2
+\begin{itemize}
+ \item[] \myHead{Engine Start}
+ \item ADI\dotfill\button{UNCAGE}
+ \item Standby ADI\dotfill\button{UNCAGE} 
+ \item Radar altimeter\dotfill\button{ON}
+ \item Radar altimeter\dotfill\button{SET ALTITUDE}
+ \item DRAX33 RWR\dotfill\button{ON}
+ \item NADIR\dotfill\button{TERRE}
+ \item Flare dispenser mode\dotfill\button{LE or VE}
+ \item Flare dispenser launch quantity\dotfill\button{C/C or SEQ}
+ \item Flare dispenser cover\dotfill\button{CLOSE}
+ \item Radio \radio{ATC} and \radio{REQUEST TAXI}.
+\end{itemize}
+% ------------------------------------------------------------------------------------------
+\newpage
+% Viviane
+\begin{itemize} 
+ \item[] \myHead{Viviane}
+ \item TV monitor\dotfill\button{ON}
+ \item VCB IR power switch\dotfill\button{ON}
+ \item CTH power swtich\dotfill\button{ON}
+ \item VCB mode\dotfill\button{ASS}
+ \begin{itemize}
+  \item Wait 90 sec before moving camera.
+  \item Wait 180 sec for cooling to complete.
+ \end{itemize}
+ \item Monitor brightness and contrast\dotfill\button{AS REQUIRED}
+ \item Turn key\dotfill\button{JOUR}
+ \item Master arm\dotfill\button{ON}
+ \item VCB mode\dotfill\button{PIL}
+ \item Weapon station selector\dotfill\button{AS REQUIRED}
+ \item Safety cap LASE\dotfill\button{REMOVE}
+ \item Safety cap FIRE\dotfill\button{REMOVE}  
+\end{itemize}
+% ------------------------------------------------------------------------------------------
+}
+\end{document}
+%
