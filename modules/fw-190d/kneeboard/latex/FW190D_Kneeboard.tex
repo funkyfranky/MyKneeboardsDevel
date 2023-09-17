@@ -1,0 +1,133 @@
+\documentclass[a4paper,12pt,dvipsnames]{letter}
+%
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{courier}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{enumitem}
+%
+% set page geometry
+\geometry{top=0.5cm,left=1cm,right=4cm,bottom=1cm}
+\pagestyle{empty}
+%
+% special columns
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%
+% increase row height
+\renewcommand{\arraystretch}{1.0}
+%
+\makeatletter
+\newcommand{\thickhline}{\noalign {\ifnum 0=`}\fi \hrule height 2pt \futurelet \reserved@a \@xhline}
+\newcommand{\medhline}{\noalign {\ifnum 0=`}\fi \hrule height 1pt \futurelet \reserved@a \@xhline}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+%
+\newlength{\Oldarrayrulewidth}
+\newcommand{\Cline}[2]{\noalign{\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}}\noalign{\global\setlength{\arrayrulewidth}{#1}}\cline{#2}\noalign{\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}}}
+%
+% my commands
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\blau}[1]{\textcolor{blue}{#1}}
+\newcommand{\grun}[1]{\textcolor{Green}{#1}}
+\newcommand{\gelb}[1]{\textcolor{Yellow}{#1}}
+\newcommand{\rotb}[1]{\textcolor{red}  {\textbf{#1}}}
+\newcommand{\grnb}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\blub}[1]{\textcolor{blue} {\textbf{#1}}}
+\newcommand{\oranb}[1]{\textcolor{BurntOrange} {\textbf{#1}}}
+\newcommand{\gelbb}[1]{\textcolor{Yellow} {\textbf{#1}}}
+\newcommand{\radio}[1]{\textcolor{blue}{#1}}
+\newcommand{\call}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\button}[1]{\textbf{#1}}
+\newcommand{\degC}{\textdegree{}C}
+\newcommand{\Deg}{\textdegree{}}
+\newcommand{\ok}[1]{\textcolor{Green}{\textbf{#1}}}
+\newcommand{\boat}[1]{\textcolor{Blue}{\textbf{#1}}}
+\newcommand{\warn}[1]{\textcolor{Red}{\textbf{#1}}}
+\newcommand{\myHead}[1]{{\LARGE\textsc{\textbf{#1}}}}
+\newcommand{\myhead}[1]{{\large\textsc{\textbf{#1}}}}
+% itemize
+\renewcommand{\labelitemi}{{$\bullet$\;}}
+\renewcommand{\labelitemii}{{$\bullet$\;}}
+\renewcommand{\labelitemiii}{$\bullet$\;}
+\renewcommand{\labelitemiv}{$\bullet$\;}
+% color bullets
+\newcommand{\bi}{\textcolor{ProcessBlue}{$\bullet$\;}}
+\newcommand{\ri}{\textcolor{Red}{$\bullet$\;}}
+\newcommand{\gi}{\textcolor{Green}{$\bullet$\;}}
+\newcommand{\yi}{\textcolor{Yellow}{$\bullet$\;}}
+\newcommand{\vi}{\textcolor{Plum}{$\bullet$\;}}
+\newcommand{\mi}{\textcolor{Magenta}{$\bullet$\;}}
+\newcommand{\oi}{\textcolor{Orange}{$\bullet$\;}}
+\newcommand{\ai}{\textcolor{Apricot}{$\bullet$\;}}
+\renewcommand{\ni}{\textcolor{Brown}{$\bullet$\;}}
+\newcommand{\si}{\textcolor{SpringGreen}{$\bullet$\;}}
+%
+\newcommand{\mr}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mcl}[2]{\multicolumn{#1}{|c|}{#2}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\tp}[1]{\textsf{#1}}
+\renewcommand{\tp}[1]{\fontfamily{cmss}\selectfont #1}
+\newcommand{\refn}{Ref.\,\fontfamily{ppl}\selectfont\#\fontfamily{cmss}\selectfont}
+%
+% some info
+\pdfinfo{%
+  /Title    (F-16C Falcon Procedures)
+  /Author   (funkyfranky)
+  /Keywords (F16C, Falcon, Kneeboard, Procedures)
+}
+%
+% Note: max 29 items per page
+\begin{document}
+\texttt{
+% Preflight Checks
+\begin{itemize}
+ \item[] \myHead{Preflight Checks}
+ \item Seating position\dotfill\button{AS REQUIRED}
+ \item Check if rudder has full free and correct movement
+ \item Oxygen system valve\dotfill\button{ON}
+ \item Landing grear\dotfill\button{OFF}
+ \item Magneto\dotfill\button{0}
+\end{itemize}
+% Preflight Checks
+\begin{itemize}
+ \item[] \myHead{Engine Start}
+ \item Radio \radio{Chief} to \radio{TURN ON GROUND POWER}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+\newpage
+%\vspace{0.5em}
+% PRE-FLIGHT
+\begin{itemize}
+ \item[] \myHead{Colors}
+ \item[\bi] ProcessBlue\dotfill\button{ON}/\boat{OFF}
+ \item[\ri] Red\dotfill\button{ON}
+ \item[\gi] Green\dotfill\button{ON}
+ \item[\yi] Yellow\dotfill\button{ON}
+ \item[\vi] Plum\dotfill\button{ON}
+ \item[\mi] Magenta\dotfill\button{OFF}
+ \item[\oi] Orange\dotfill\button{SAFE}
+ \item[\ai] Apricot\dotfill\button{SAFE}
+ \item[\ni] Brown\dotfill\button{SAFE}
+ \item[\si] SpringGreen\dotfill\button{SAFE}
+\end{itemize}
+% ---------------------------------------------------------------------------------------------------
+%
+}
+\end{document}
+%
